@@ -1,14 +1,14 @@
 <template>
-    <Nav />
+    <section>Kurse</section>
 </template>
 
 <script>
 import Nav from './Nav.vue'
 
 export default {
-  name: 'Home',
+  name: 'Courses',
   components: {
-    Nav
+    
   },
   props: {
   }

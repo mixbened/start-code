@@ -1,14 +1,14 @@
 <template>
-    <Nav />
+    <section>Über uns</section>
 </template>
 
 <script>
 import Nav from './Nav.vue'
 
 export default {
-  name: 'Home',
+  name: 'About',
   components: {
-    Nav
+    
   },
   props: {
   }
