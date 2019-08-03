@@ -1,14 +1,19 @@
 <template>
-    <section>Kurse</section>
+  <div>
+    <Title title="Kurse" subtitle="Subtitle"/>
+    <CourseCard />
+  </div>
 </template>
 
 <script>
-import Nav from './Nav.vue'
+import CourseCard from './CourseCard.vue'
+import Title from './Title.vue'
 
 export default {
   name: 'Courses',
   components: {
-    
+    CourseCard,
+    Title
   },
   props: {
   }

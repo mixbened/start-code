@@ -1,5 +1,6 @@
 <template>
     <nav class="navbar" role="navigation" aria-label="main navigation">
+        
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
             <img alt="Vue logo" src="../assets/logo.png">
@@ -14,56 +15,79 @@
 
         <div id="navbarBasicExample" v-bind:class="{'navbar-menu': true, 'is-active': mobileMenu}">
             <div class="navbar-start">
-            <a class="navbar-item">
-                Start
-            </a>
 
-            <a class="navbar-item">
-                Programme
-            </a>
+                <router-link to="/" class="navbar-item">
+                    Start
+                </router-link>
 
-            <a class="navbar-item">
-                Für Teams
-            </a>
+                <router-link to="/kurse" class="navbar-item">
+                    Kurse
+                </router-link>
 
-            <a class="navbar-item">
-                Know-How
-            </a>
+                <router-link to="/teams" class="navbar-item">
+                    Für Teams
+                </router-link>
 
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                Fragen
+                <a target="_blank" href="https://medium.com/start-code" class="navbar-item">
+                    Know-How
                 </a>
 
-                <div class="navbar-dropdown">
-                <a class="navbar-item">
-                    FAQs
-                </a>
-                <a class="navbar-item">
-                    Kursauswahl
-                </a>
-                <a class="navbar-item">
-                    Kontakt
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item">
-                    Über Uns
-                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Fragen
+                    </a>
+
+                    <div class="navbar-dropdown">
+
+                        <router-link to="/faqs">
+                        <a class="navbar-item">
+                            FAQs
+                        </a>
+                        </router-link>
+
+                        <router-link to="/kurse">
+                        <a class="navbar-item">
+                            Kursauswahl
+                        </a>
+                        </router-link>
+
+                        <router-link to="/kontakt">
+                            <a class="navbar-item">
+                                Kontakt
+                            </a>
+                        </router-link>
+
+                        <hr class="navbar-divider">
+
+                        <router-link to="/about">
+                            <a class="navbar-item">
+                                Über Uns
+                            </a>
+                        </router-link>
+
+                    </div>
+
                 </div>
-            </div>
+
             </div>
 
             <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                <a class="button is-primary">
-                    <strong>Students</strong>
-                </a>
+
+                <div class="navbar-item">
+                    <div class="buttons">
+
+                    <a class="button is-primary">
+                        <strong>Students</strong>
+                    </a>
+
+                    </div>
                 </div>
+
             </div>
-            </div>
+
         </div>
-        </nav>
+
+    </nav>
 </template>
 
 <script>
@@ -84,7 +108,9 @@ export default {
 </script>
 
 <style scoped>
-
+    .navbar {
+        padding: 0.5em 0.3em;
+    }
 </style>
 
 
