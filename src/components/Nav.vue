@@ -59,7 +59,7 @@
 
                         <hr class="navbar-divider">
 
-                        <router-link to="/about">
+                        <router-link to="/über-uns">
                             <a class="navbar-item">
                                 Über Uns
                             </a>

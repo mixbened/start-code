@@ -2,27 +2,40 @@
   <div id="app">
     <Nav/>
     <hr>
-    <div class="container">
+    <div style="min-height: 100vh;">
       <router-view></router-view>
     </div>
+    <b-button v-if="$route.path !== '/kontakt'" class="contact is-warning">Kontakt</b-button>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
 import Nav from './components/Nav.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'app',
   components: {
-    Nav
+    Nav,
+    Footer
   }
 }
 </script>
 
 <style>
+.input:active, .input:focus, .is-active.input, .is-active.textarea, .is-focused.input, .is-focused.textarea, .select select.is-active, .select select.is-focused, .select select:active, .select select:focus, .taginput .is-active.taginput-container.is-focusable, .taginput .is-focused.taginput-container.is-focusable, .taginput .taginput-container.is-focusable:active, .taginput .taginput-container.is-focusable:focus, .textarea:active, .textarea:focus {
+  border-color: #17a2b8;
+}
+.contact {
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+}
 body, .title, .navbar-item {
   color: #323232;
+  font-family: 'Montserrat';
 }
 a {
   color: #17a2b8;
@@ -53,5 +66,8 @@ a.navbar-item:focus {
 }
 .navbar-link:not(.is-arrowless)::after {
   border-color: #17a2b8;
+}
+.navbar-item img {
+  max-height: 3em;
 }
 </style>

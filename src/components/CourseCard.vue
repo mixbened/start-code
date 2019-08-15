@@ -2,7 +2,7 @@
     <div class="card">
     <header class="card-header">
         <p class="card-header-title">
-            Frontend Developer
+            {{ title }}
         </p>
         <a href="#" class="card-header-icon" aria-label="more options">
         <span class="icon">
@@ -13,23 +13,27 @@
         </span>
         </a>
     </header>
-    <div class="card-image">
-        <figure class="courseImage">
-        </figure>
-    </div>
     <div class="card-content">
-        <div class="content">
-            Short Description
-        <div>
-            <b-tag type="is-primary" size="is-small">
-                <time datetime="2016-1-1">1 Jan 2016 - 1 Apr 2016</time>
-            </b-tag>
-        </div>
+        <div class="content columns">
+            <div class="column is-one-third">
+                <div class="card-image">
+                    <figure class="courseImage">
+                    </figure>
+                </div>
+            </div>
+            <div class="column">
+                <b-tag type="is-primary" size="is-small">
+                    <time v-bind:datetime="date">{{ date }}</time>
+                </b-tag>
+                <div class="is-size-7">
+                    {{ desc }}
+                </div>
+            </div>
         </div>
     </div>
     <footer class="card-footer">
-        <a href="#" class="card-footer-item">Curriculum</a>
-        <a href="#" class="card-footer-item">Anmeldung</a>
+        <a v-bind:href="'/kurs/'+id" class="card-footer-item">Curriculum</a>
+        <a v-bind:href="'/kurs/'+id" class="card-footer-item">Anmeldung</a>
     </footer>
     </div>
 </template>
@@ -41,7 +45,11 @@ export default {
   components: {
   },
   props: {
-  }
+    'title': String,
+    'date': String,
+    'id': Number,
+    'desc': String
+    }
 }
 </script>
 
@@ -49,8 +57,14 @@ export default {
 <style scoped>
 .courseImage {
     background-image: url('https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
-    height: 200px;
+    height: 150px;
     background-position: center;
     background-size: cover;
+    border-radius: 5px;
+    filter: grayscale(50%);
+}
+.card {
+    width: 60%;
+    margin: 5% auto;
 }
 </style>

@@ -1,45 +1,27 @@
 <template>
-    <section>
-        <Title title="Fragen" subtitle="Subtitle"/>
+    <section class="section">
+        <Title title="Fragen" subtitle="Wie können wir dir helfen?"/>
         <b-field>
             <b-input placeholder="Finde Antworten" rounded></b-input>
         </b-field>
-        <section>
-            <b-collapse class="card" aria-id="contentIdForA11y3">
-                <div
-                    open=false
-                    slot="trigger" 
-                    slot-scope="props"
-                    class="card-header"
-                    role="button"
-                    aria-controls="contentIdForA11y3">
-                    <p class="card-header-title">
-                        Frage
-                    </p>
-                    <a class="card-header-icon">
-                        <b-icon
-                            :icon="props.open ? 'menu-up' : 'menu-down'">
-                        </b-icon>
-                    </a>
-                </div>
-                <div class="card-content">
-                    <div class="content">
-                        Antwort auf die Frage
-                    </div>
-                </div>
-            </b-collapse>
+        <section class="section">
+            <h5 class="title is-4 has-text-centered">FAQ</h5>
+            <div class="questions">
+                <Question title="Fragentitel" content="antwort"/>
+                <Question title="Fragentitel" content="antwort"/>
+            </div>
         </section>
     </section>
 </template>
 
 <script>
-import CourseCard from './CourseCard.vue'
 import Title from './Title.vue'
+import Question from './Question'
 
 export default {
   name: 'Courses',
   components: {
-    CourseCard,
+    Question,
     Title
   },
   props: {
@@ -49,5 +31,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.field {
+    width: 60%;
+    margin: 0 auto;
+}
 </style>

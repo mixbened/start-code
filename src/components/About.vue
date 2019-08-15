@@ -1,14 +1,16 @@
 <template>
-    <section>Über uns</section>
+    <section class="section">
+      <Title title="Team & Vision" subtitle="Wer wir sind und was wir tun"/>
+    </section>
 </template>
 
 <script>
-import Nav from './Nav.vue'
+import Title from './Title'
 
 export default {
   name: 'About',
   components: {
-    
+    Title
   },
   props: {
   }

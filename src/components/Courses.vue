@@ -1,7 +1,9 @@
 <template>
   <div>
     <Title title="Kurse" subtitle="Subtitle"/>
-    <CourseCard />
+    <CourseCard title="Frontend Developer" id="334" date="Januar 2019"/>
+    <CourseCard title="SQL & Datenbanken" id="334" date="Januar 2019"/>
+    <CourseCard title="Data Analytics" id="334" date="Januar 2019" desc="In unserem Data Analytics Kurs zeigen wir euch, wie ihr mit Grundlagen in Python einfach Berechnungen und Analysen mit großen Datenmengen erledigen könnt."/>
   </div>
 </template>
 
