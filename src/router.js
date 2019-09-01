@@ -8,6 +8,8 @@ import Course from './components/Course'
 import Home from './components/Home'
 import Contact from './components/Contact'
 import Products from './components/Products'
+import COID from './components/COID'
+import Coaching from './components/Coaching'
 
 // define routes 
 const routes = [
@@ -17,6 +19,8 @@ const routes = [
     { path: '/faqs', component: Faqs },
     { path: '/kurs/:id', component: Course },
     { path: '/teams', component: Products },
+    { path: '/coid', component: COID },
+    { path: '/coaching', component: Coaching },
     { path: '/', component: Home }
 ]
 

@@ -52,8 +52,14 @@ hr {
 .button.is-primary {
   background-color: #2a3758;
 }
+.button.is-link {
+  background-color: #17a2b8;
+}
 .button.is-primary:hover {
   background-color: #4964a9;
+}
+.button.is-link:hover {
+  background-color: #38bed3;
 }
 .navbar-link:hover {
   color: #17a2b8;

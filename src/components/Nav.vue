@@ -25,11 +25,11 @@
                 </router-link>
 
                 <router-link to="/teams" class="navbar-item">
-                    Für Teams
+                    Für Unternehmen
                 </router-link>
 
                 <a target="_blank" href="https://medium.com/start-code" class="navbar-item">
-                    Know-How
+                    Blog
                 </a>
 
                 <div class="navbar-item has-dropdown is-hoverable">
