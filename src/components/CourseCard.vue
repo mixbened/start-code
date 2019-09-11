@@ -25,14 +25,14 @@
                 <b-tag type="is-primary" size="is-small">
                     <time v-bind:datetime="date">{{ date }}</time>
                 </b-tag>
-                <div class="is-size-7">
+                <div class="is-size-6 content">
                     {{ desc }}
                 </div>
             </div>
         </div>
     </div>
     <footer class="card-footer">
-        <a v-bind:href="'/kurs/'+id" class="card-footer-item">Curriculum</a>
+        <a v-bind:href="'/kurs/'+id" class="card-footer-item">Syllabus</a>
         <a v-bind:href="'/kurs/'+id" class="card-footer-item">Anmeldung</a>
     </footer>
     </div>

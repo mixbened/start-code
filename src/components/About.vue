@@ -1,6 +1,31 @@
 <template>
-    <section class="section">
-      <Title title="Team & Vision" subtitle="Wer wir sind und was wir tun"/>
+    <section>
+      <section class="section">
+        <Title title="Team & Vision" subtitle="Wer wir sind und was wir tun"/>
+      </section>
+      <section class="section">
+        <div class="container columns">
+          <div class="column">
+            <h3 class="title is-3">Team</h3>
+            <p>Lorem Ipsum dolor sit amet</p>
+          </div>
+          <div class="column">
+            Grid mit instruktoren und Team
+          </div>
+        </div>
+        <b-button class="is-warning">Offene Positionen</b-button>
+      </section>
+      <section class="section">
+        <div class="container columns">
+          <div class="column">
+            <h3 class="title is-3">Motivation</h3>
+            <p>Wieso wir START.CODE sind</p>
+          </div>
+          <div class="column">
+            Karikatur
+          </div>
+        </div>
+      </section>
     </section>
 </template>
 

@@ -28,9 +28,9 @@
                     Für Unternehmen
                 </router-link>
 
-                <a target="_blank" href="https://medium.com/start-code" class="navbar-item">
+                <router-link to="/blog" class="navbar-item">
                     Blog
-                </a>
+                </router-link>
 
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">

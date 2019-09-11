@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import Home from './components/Home.vue'
 import Nav from './components/Nav.vue'
 import Footer from './components/Footer.vue'
 
@@ -25,6 +24,9 @@ export default {
 </script>
 
 <style>
+.container {
+  padding: 0 2em;
+}
 .input:active, .input:focus, .is-active.input, .is-active.textarea, .is-focused.input, .is-focused.textarea, .select select.is-active, .select select.is-focused, .select select:active, .select select:focus, .taginput .is-active.taginput-container.is-focusable, .taginput .is-focused.taginput-container.is-focusable, .taginput .taginput-container.is-focusable:active, .taginput .taginput-container.is-focusable:focus, .textarea:active, .textarea:focus {
   border-color: #17a2b8;
 }

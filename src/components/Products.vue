@@ -35,23 +35,32 @@
             </div>
         </div>
         <section class="section">
-            <div class="columns">
-                <div class="card column has-text-centered">
-                    <h5 class="title is-4 has-text-centered">CODE.INONEDAY</h5>
-                    <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
-                    <router-link to="/coid"><b-button type="is-primary">Details</b-button></router-link>
-                </div>
-                <div class="card column has-text-centered">
-                    <h5 class="title is-4 has-text-centered">Coaching</h5>
-                    <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
-                    <router-link to="/coaching"><b-button type="is-primary">Details</b-button></router-link>
+            <div class="container">
+                <h3 class="title is-3">Nachhaltig Umdenken</h3>
+                <p></p>
+                <div class="columns">
+                    <div class="card column has-text-centered">
+                        <h5 class="title is-4 has-text-centered">CODE.INONEDAY</h5>
+                        <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
+                        <router-link to="/coid"><b-button type="is-primary">Details</b-button></router-link>
+                    </div>
+                    <div class="card column has-text-centered">
+                        <h5 class="title is-4 has-text-centered">Coaching</h5>
+                        <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
+                        <router-link to="/coaching"><b-button type="is-primary">Details</b-button></router-link>
+                    </div>
                 </div>
             </div>
         </section>
-        <section>
-            <footer>
-                Ansprechpartner
-            </footer>
+        <section class="section">
+        <div class="container">
+            <h3 class="title is-3">Erahrungsbericht</h3>
+        </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h3 class="title is-3">Statistik</h3>
+            </div>
         </section>
     </section>
 </template>
