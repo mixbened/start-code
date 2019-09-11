@@ -3,12 +3,24 @@
       <section class="hero">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">
-            Hero title
-          </h1>
-          <h2 class="subtitle">
-            Hero subtitle
-          </h2>
+          <div class="columns">
+            <div class="column is-three-quarters">
+              <h1 class="title head-title">
+                Digitale Skills <br> für jeden.
+              </h1>
+              <div class="columns">
+                <div class="column card action-card blue-card">
+                  <h5 class="title is-5 text-white">Kurse</h5>
+
+                </div>
+                <div class="column card action-card green-card">
+                  <h5 class="title is-5 text-white">Für Unternehmen</h5>
+                </div>
+              </div>
+            </div>
+            <div class="column is-one-quarter">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -53,13 +65,40 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.head-title {
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: underline;
+  margin-bottom: 2em;
+}
+.hero {
+  min-height: 100vh;
+}
 .fact {
   margin-top: 3em;
 }
 .fact-title {
   margin-left: 1em;
 }
+.action-card {
+  min-height: 15em;
+  padding: 2em;
+}
+.green-card {
+  background-color: #17a2b8;
+}
+.blue-card {
+  background-color: #2a3758;
+}
+.text-white {
+  color: white;
+}
 @media (max-width: 768px){
+  .head-title {
+    font-size: 2em;
+  }
   .fact {
     text-align: center;
   }

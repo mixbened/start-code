@@ -120,7 +120,7 @@ p.title {
 .hero {
     width: 100%;
     height: 35vh;
-    background: url('../assets/img/FINAL-12.jpg');
+    background: url();
     background-size: cover;
     background-position: center;
     position: relative;

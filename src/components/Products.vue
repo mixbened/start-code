@@ -99,7 +99,7 @@ export default {
 .hero {
     width: 100%;
     height: 35vh;
-    background: url('../assets/img/FINAL-12.jpg');
+    background: url('../assets/img/course2.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
