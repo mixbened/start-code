@@ -16,22 +16,29 @@
         <div id="navbarBasicExample" v-bind:class="{'navbar-menu': true, 'is-active': mobileMenu}">
             <div class="navbar-start">
 
-                <router-link to="/" class="navbar-item">
-                    Start
-                </router-link>
+                <div class="navbar-item" v-on:click="toggleMenu">
+                    <router-link to="/">
+                        Start
+                    </router-link>
+                </div>
 
-                <router-link to="/kurse" class="navbar-item">
-                    Kurse
-                </router-link>
+                <div class="navbar-item" v-on:click="toggleMenu">
+                    <router-link to="/kurse">
+                        Kurse
+                    </router-link>
+                </div>
 
-                <router-link to="/teams" class="navbar-item">
-                    Für Unternehmen
-                </router-link>
+                <div class="navbar-item" v-on:click="toggleMenu">
+                    <router-link to="/teams">
+                        Für Unternehmen
+                    </router-link>
+                </div>
 
-                <router-link to="/blog" class="navbar-item">
-                    Blog
-                </router-link>
-
+                <div class="navbar-item" v-on:click="toggleMenu">
+                    <router-link to="/blog">
+                        Blog
+                    </router-link>
+                </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
                         Fragen
@@ -40,19 +47,19 @@
                     <div class="navbar-dropdown">
 
                         <router-link to="/faqs">
-                        <a class="navbar-item">
-                            FAQs
-                        </a>
+                            <a class="navbar-item" v-on:click="toggleMenu">
+                                FAQs
+                            </a>
                         </router-link>
 
                         <router-link to="/kurse">
-                        <a class="navbar-item">
+                        <a class="navbar-item" v-on:click="toggleMenu">
                             Kursauswahl
                         </a>
                         </router-link>
 
                         <router-link to="/kontakt">
-                            <a class="navbar-item">
+                            <a class="navbar-item" v-on:click="toggleMenu">
                                 Kontakt
                             </a>
                         </router-link>
@@ -60,7 +67,7 @@
                         <hr class="navbar-divider">
 
                         <router-link to="/über-uns">
-                            <a class="navbar-item">
+                            <a class="navbar-item" v-on:click="toggleMenu">
                                 Über Uns
                             </a>
                         </router-link>
@@ -100,7 +107,7 @@ export default {
     },
     methods: {
         toggleMenu: function(){
-            console.log('Toggle Menu!')
+            // console.log('Toggle Menu!')
             this.mobileMenu = !this.mobileMenu
         }
     }
@@ -110,6 +117,10 @@ export default {
 <style scoped>
     .navbar {
         padding: 0.5em 0.3em;
+    }
+    .navbar-item > a {
+        color: #2a3758;
+        font-weight: 800;
     }
 </style>
 

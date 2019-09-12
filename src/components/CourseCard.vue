@@ -17,7 +17,7 @@
         <div class="content columns">
             <div class="column is-one-third">
                 <div class="card-image">
-                    <figure class="courseImage">
+                    <figure class="courseImage" style="background-image: url('https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')">
                     </figure>
                 </div>
             </div>
@@ -32,8 +32,8 @@
         </div>
     </div>
     <footer class="card-footer">
-        <a v-bind:href="'/kurs/'+id" class="card-footer-item">Syllabus</a>
-        <a v-bind:href="'/kurs/'+id" class="card-footer-item">Anmeldung</a>
+        <router-link v-bind:to="'/kurs/'+id" class="card-footer-item">Syllabus</router-link>
+        <router-link v-bind:to="'/kurs/'+id" class="card-footer-item">Anmeldung</router-link>
     </footer>
     </div>
 </template>
@@ -41,14 +41,17 @@
 <script>
 
 export default {
-  name: 'CourseCart',
+  name: 'CourseCard',
   components: {
   },
   props: {
     'title': String,
     'date': String,
     'id': Number,
-    'desc': String
+    'desc': String,
+    'price': Number,
+    'picUrl': String,
+    'location': String
     }
 }
 </script>
@@ -56,7 +59,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .courseImage {
-    background-image: url('https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
     height: 150px;
     background-position: center;
     background-size: cover;

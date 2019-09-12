@@ -2,9 +2,7 @@
   <section>
     <Title title="Kurse" subtitle="Subtitle"/>
     <section class="section">
-        <CourseCard title="Frontend Developer" id="334" date="Januar 2019" desc="In unserem Data Analytics Kurs zeigen wir euch, wie ihr mit Grundlagen in Python einfach Berechnungen und Analysen mit großen Datenmengen erledigen könnt."/>
-        <CourseCard title="SQL & Datenbanken" id="334" date="Januar 2019" desc="In unserem Data Analytics Kurs zeigen wir euch, wie ihr mit Grundlagen in Python einfach Berechnungen und Analysen mit großen Datenmengen erledigen könnt."/>
-        <CourseCard title="Data Analytics" id="334" date="Januar 2019" desc="In unserem Data Analytics Kurs zeigen wir euch, wie ihr mit Grundlagen in Python einfach Berechnungen und Analysen mit großen Datenmengen erledigen könnt."/>
+        <CourseCard v-for="(course,index) in courses" v-bind:key="index" v-bind:id="course.id" v-bind:title="course.title" v-bind:desc="course.desc" v-bind:picUrl="course.picUrl" v-bind:date="course.date" v-bind:price="course.price" v-bind:location="course.location"/>
     </section>
     <section class="section">
       <div class="container">
@@ -51,6 +49,11 @@ export default {
   components: {
     CourseCard,
     Title
+  },
+  data(){
+    return {
+      courses: [{id:223 ,title: "Frontend Developer", desc: "In diesem Kurs werden wir mittels der Technologien HTML, CSS und JavaScript lernen, schöne Frontends im Web zu gestalten und zu programmieren.", date: "26.10.2019", price: "999", longDesc: "Lorem Ipsum"}]
+    }
   },
   props: {
   }
