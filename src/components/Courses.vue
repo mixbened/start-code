@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Title title="Kurse" subtitle="Subtitle"/>
+    <Title title="Kurse" subtitle="Programmieren für Beginner"/>
     <section class="section">
         <CourseCard v-for="(course,index) in courses" v-bind:key="index" v-bind:id="course.id" v-bind:title="course.title" v-bind:desc="course.desc" v-bind:picUrl="course.picUrl" v-bind:date="course.date" v-bind:price="course.price" v-bind:location="course.location"/>
     </section>
@@ -15,9 +15,9 @@
                   <p class="content"></p>
                 </div>
                 <div class="column is-half">
-                  <figure class="image">
-                    <img src="../assets/img/course1.jpg" alt="Startplatz Köln">
-                  </figure>
+                    <div class="impressionImage">
+                      <div class="impressionImage-inner"></div>
+                    </div>
                 </div>
               </div>
             </b-tab-item>
@@ -28,10 +28,9 @@
                   <p class="content"></p>
                 </div>
                 <div class="column is-half">
-                  <figure class="image">
-                    <img src="../assets/img/course1.jpg" alt="Startplatz Köln">
-                  </figure>
-                </div>
+                    <div class="impressionImage">
+                      <div class="impressionImage-inner"></div>
+                    </div>                </div>
               </div>
             </b-tab-item>
         </b-tabs>
@@ -70,7 +69,27 @@ figure {
       box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
       transition: 0.6s;
 }
-
+.impressionImage {
+  height: 300px;
+  background-image: url('../assets/img/course2.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(10%);
+  position: relative;
+  border-radius: 5px;
+}
+.impressionImage-inner {
+  width: 50%;
+  height: 150px;
+  background-image: url('../assets/img/party.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(10%);
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  border-radius: 5px;
+}
 figure:hover {
   transform: scale(1.02);
   transition: 0.6s;

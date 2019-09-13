@@ -41,3 +41,31 @@ git commit -m 'feat: ...'
 git push -u origin master
 ```
 
+## Application
+
+### API Data Structures
+
+#### Courses
+
+* title
+* desc
+* instructor
+* price
+* date
+* picUrl
+* targetGroup
+* topics (sub data points)
+* prerequesites
+* goals
+* location
+* lessons
+* duration
+
+#### Posts
+
+* title
+* content
+* picUrl
+* date
+* author
+

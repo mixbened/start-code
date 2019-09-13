@@ -7,7 +7,7 @@
     <div class="circle big"></div>
     <Nav/>
     <hr>
-    <div style="min-height: 100vh;">
+    <div style="min-height: 100vh; margin-bottom: 3em;">
       <router-view></router-view>
     </div>
     <router-link to="/kontakt">
@@ -86,10 +86,16 @@ hr {
 .navbar-item img {
   max-height: 3em;
 }
+h6 {
+  text-decoration: #17a2b8 underline;
+}
 #app {
   	/* background-image: linear-gradient(to bottom right, #ffffff, #eee); */
     position: relative;
     overflow: hidden;
+}
+.title {
+  word-break: normal;
 }
 .circle {
 	background-image: linear-gradient(to top right, #ffffff, #eee);

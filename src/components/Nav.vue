@@ -17,12 +17,6 @@
             <div class="navbar-start">
 
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/">
-                        Start
-                    </router-link>
-                </div>
-
-                <div class="navbar-item" v-on:click="toggleMenu">
                     <router-link to="/kurse">
                         Kurse
                     </router-link>
@@ -36,12 +30,18 @@
 
                 <div class="navbar-item" v-on:click="toggleMenu">
                     <router-link to="/blog">
-                        Blog
+                        News
+                    </router-link>
+                </div>
+
+                <div class="navbar-item" v-on:click="toggleMenu">
+                    <router-link to="/partner">
+                        Partner
                     </router-link>
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
-                        Fragen
+                        Kontakt
                     </a>
 
                     <div class="navbar-dropdown">
@@ -60,7 +60,7 @@
 
                         <router-link to="/kontakt">
                             <a class="navbar-item" v-on:click="toggleMenu">
-                                Kontakt
+                                Direkte Nachricht
                             </a>
                         </router-link>
 

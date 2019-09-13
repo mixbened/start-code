@@ -95,7 +95,6 @@ export default {
     padding: 3%;
 }
 
-
 .hero {
     width: 100%;
     height: 35vh;
@@ -105,14 +104,9 @@ export default {
     position: relative;
     flex-direction: row;
     align-items: center;
+    filter: grayscale(50%)
 }
-.hero:before {
-    content: ' ';
-    position: absolute;
-    left: 0;
-    right: 0;   
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.582);
+.hero-body {
+    width: 50%;
 }
 </style>
