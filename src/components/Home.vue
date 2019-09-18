@@ -5,7 +5,7 @@
         <div class="container">
           <div class="columns">
             <div class="column is-three-quarters">
-              <h1 class="title head-title">
+              <h1 class="title head">
                 Digitale Skills <br> für jeden.
               </h1>
               <div class="columns section">
@@ -65,7 +65,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.head-title {
+h1.head {
   font-size: 5em;
   font-weight: 800;
   text-transform: uppercase;
