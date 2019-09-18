@@ -3,9 +3,9 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container">
-                    <h1 style="color: white;" class="title has-text-centered">
-                    Für innovative Teams
-                    </h1>
+                    <h2 style="color: white;" class="title is-2 has-text-centered">
+                    Für Innovative Teams
+                    </h2>
                     <h2 style="color: white;" class="subtitle has-text-centered">
                     Lebenslanges lernen bleibt keine Ausnahme
                     </h2>

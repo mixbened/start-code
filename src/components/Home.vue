@@ -65,11 +65,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hero {
-  min-height: 100vh;
+.some-style {
+  color: white;
 }
 .fact {
   margin-top: 3em;
+}
+.hero {
+  min-height: 100vh;
 }
 .fact-title {
   margin-left: 1em;
