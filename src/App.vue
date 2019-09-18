@@ -97,6 +97,14 @@ h6 {
 .title {
   word-break: normal;
 }
+h1  {
+  font-size: 5em !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: underline;
+  margin-bottom: 2em;
+}
 .circle {
 	background-image: linear-gradient(to top right, #ffffff, #eee);
 	border-radius: 50%;

@@ -65,14 +65,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1  {
-  font-size: 5em;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-decoration: underline;
-  margin-bottom: 2em;
-}
 .hero {
   min-height: 100vh;
 }
