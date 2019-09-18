@@ -12,6 +12,7 @@ import COID from './components/COID'
 import Coaching from './components/Coaching'
 import Blog from './components/Blog'
 import Partner from './components/Partner'
+import Contributions from './components/Contributions'
 
 // define routes 
 const routes = [
@@ -25,6 +26,7 @@ const routes = [
     { path: '/coaching', component: Coaching },
     { path: '/blog', component: Blog },
     { path: '/partner', component: Partner },
+    { path: '/cont', component: Contributions },
     { path: '/', component: Home }
 ]
 
