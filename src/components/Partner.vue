@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Title title="Blog" subtitle="Infos rund um das Thema Programmieren lernen"/>
+    <Title title="Partner & Projekte" subtitle="Wir lieben und pflegen Kooperationen"/>
     <section class="section">
         Artikel
     </section>
@@ -13,7 +13,7 @@
 import Title from './Title.vue'
 
 export default {
-  name: 'Blog',
+  name: 'Partner',
   components: {
       Title
   },

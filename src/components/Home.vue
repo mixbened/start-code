@@ -10,11 +10,11 @@
               </h1>
               <div class="columns">
                 <div class="column card action-card blue-card">
-                  <h5 class="title is-5 text-white">Kurse</h5>
+                  <router-link to="/teams"><h5 class="title is-5 text-white">Kurse <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
 
                 </div>
                 <div class="column card action-card green-card">
-                  <h5 class="title is-5 text-white">Für Unternehmen</h5>
+                  <router-link to="/teams"><h5 class="title is-5 text-white">Für Unternehmen <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default {
   margin-left: 1em;
 }
 .action-card {
-  min-height: 15em;
+  min-height: 8em;
   padding: 2em;
 }
 .green-card {

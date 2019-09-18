@@ -40,6 +40,16 @@
                   <p class="content">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                   </p>
+                  <section class="testimonial-box columns section">
+                    <div class="column is-one-third">
+                      <div class="profile column"></div>
+                    </div>
+                    <div class="column is-two-thirds">
+                      <small>
+                        <i>"Ich hatte ... lorem Ipsum"</i>
+                      </small>
+                    </div>
+                  </section>
                 </div>
                 <h4 class="title is-4">Was benötige ich für den Kurs?</h4>
                 <div class="container">
@@ -150,6 +160,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.profile {
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+  background-size: cover;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+}
 .title {
   font-size: 1.5em;
 }
