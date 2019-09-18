@@ -8,7 +8,7 @@
               <h1 class="title head-title">
                 Digitale Skills <br> für jeden.
               </h1>
-              <div class="columns">
+              <div class="columns section">
                 <div class="column card action-card blue-card">
                   <router-link to="/teams"><h5 class="title is-5 text-white">Kurse <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
 
@@ -64,7 +64,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 .head-title {
   font-size: 5em;
   font-weight: 800;
