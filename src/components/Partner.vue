@@ -2,69 +2,77 @@
   <section>
     <Title title="Partner & Projekte" subtitle="Wir lieben und pflegen Kooperationen"/>
     <section class="section">
-        <div class="tile is-ancestor container mx-auto">
-          <div class="tile is-vertical is-8">
-            <div class="tile">
-              <div class="tile is-parent is-vertical">
-                <article class="tile is-child notification">
-                  <p class="title">Oscar GmbH</p>
-                  <p class="subtitle">Partner</p>
-                </article>
-                <article class="tile is-child notification">
-                  <p class="title">Komm IT</p>
-                  <p class="subtitle">Kunde & Partner</p>
-                </article>
-              </div>
-              <div class="tile is-parent">
-                <article class="tile is-child notification">
-                  <p class="title">AXA Versicherungen</p>
-                  <p class="subtitle">Kunde</p>
-                  <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                  </figure>
-                </article>
-              </div>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification">
-                <p class="title">Click to Success</p>
-                <p class="subtitle">Partner</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification">
-                <p class="title">Click to Success</p>
-                <p class="subtitle">Partner</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </article>
-            </div>
+      <div class="tile is-ancestor container mx-auto is-parent">
+        <div class="tile is-vertical is-parent">
+          <div class="tile box is-child has-text-centered">
+            <p class="title is-5">Oscar GmbH</p>
+            <p class="subtitle">Top tile</p>
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
           </div>
-          <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification">
-              <div class="content">
-                <p class="title">Unitymedia</p>
-                <p class="subtitle">Kunde & Partner</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </div>
-            </article>
-            <article class="tile is-child notification">
-              <div class="content">
-                <p class="title">Unitymedia</p>
-                <p class="subtitle">Kunde & Partner</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </div>
-            </article>
+          <div class="tile box is-child has-text-centered">
+            <p class="title is-5">Unitymedia</p>
+            <p class="subtitle">Top tile</p>
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </div>
+          <div class="tile box is-child has-text-centered">
+            <p class="title is-5">Komm IT</p>
+            <p class="subtitle">Top tile</p>
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
           </div>
         </div>
+        <div class="tile is-vertical is-parent">
+          <div class="tile box is-child has-text-centered">
+            <p class="title is-5">Poolie Studios</p>
+            <p class="subtitle">Top tile</p>
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </div>
+          <div class="tile box is-child has-text-centered">
+            <p class="title is-5">Foxbase</p>
+            <p class="subtitle">Top tile</p>
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </div>
+          <div class="tile box is-child has-text-centered">
+            <p class="title is-5">Click to Success</p>
+            <p class="subtitle">Top tile</p>
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </div>
+        </div>
+        <div class="tile is-vertical is-parent">
+          <div class="tile box is-child has-text-centered">
+            <p class="title is-5">Roland Versicherungen</p>
+            <p class="subtitle">Top tile</p>
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </div>
+          <div class="tile box is-child has-text-centered">
+            <p class="title is-5">STARTPLATZ</p>
+            <p class="subtitle">Top tile</p>
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </div>
+          <div class="tile box is-child has-text-centered">
+            <p class="title is-5">RTL Mediengruppe</p>
+            <p class="subtitle">Top tile</p>
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="section">
     </section>
@@ -88,5 +96,8 @@ export default {
 <style scoped>
 .mx-auto {
   margin: 0 auto;
+}
+.image {
+  margin: auto;
 }
 </style>

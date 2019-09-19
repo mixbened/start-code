@@ -4,7 +4,7 @@
         <div class="card courseContainer">
           <div class="hero" style="background: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60') center">
             <h2 class="title is-2 has-text-centered" style="color: white;">{{ course.title }}</h2>
-            <h6 class="title is-6" style="color: white;">{{ course.date }}, {{ course.location }}</h6>
+            <h5 class="title is-5" style="color: white;">{{ course.date }}, {{ course.location }}</h5>
           </div>
           <div class="container content">
             <div class="columns">
@@ -64,9 +64,10 @@
                   </p>
                 </div>
                 <h4 class="title is-4">Anmeldung</h4>
+                <div id="eventbrite-widget"></div>
               </div>
               <div class="column is-one-quarter info">
-                <h6 class="title is-6">Facts</h6>
+                <h4 class="title is-4 has-text-centered">Facts</h4>
                 <div>
                     <div class="level-item has-text-centered">
                       <div class="p-2">
@@ -90,6 +91,12 @@
                       <div class="p-2">
                         <p class="heading">Lesson Duration</p>
                         <p class="title">1.5h</p>
+                      </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                      <div class="p-2">
+                        <p class="heading">Preis</p>
+                        <p class="title">299 €</p>
                       </div>
                     </div>
                 </div>
@@ -150,9 +157,28 @@ export default {
       }
     }
   },
+  mounted(){
+    this.loadCheckout()
+  },
   methods: {
     toggleModal: function(){
       this.warteliste = !this.warteliste
+    },
+    loadCheckout: function(){
+      console.log('Load Checkout!')
+      var exampleCallback = function() {
+          console.log('Order complete!');
+      };
+
+      window.EBWidgets.createWidget({
+          // Required
+          widgetType: 'checkout',
+          eventId: '71213023069',
+          iframeContainerId: 'eventbrite-widget',
+
+          // Optional
+          onOrderComplete: exampleCallback,
+      });
     }
   }
 }
@@ -160,6 +186,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#eventbrite-widget {
+  height: 270px !important;
+}
 .profile {
   width: 5em;
   height: 5em;
@@ -170,8 +199,8 @@ export default {
   background-position: center;
   background-image: url('https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
 }
-.title {
-  font-size: 1.5em;
+p.title {
+  font-size: 1.3em;
 }
 .p-2 {
   padding: 2em;

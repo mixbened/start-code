@@ -98,12 +98,11 @@ h6 {
   word-break: normal;
 }
 h1  {
-  font-size: 5em !important;
+  font-size: 3em !important;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-decoration: underline;
-  margin-bottom: 2em;
 }
 .circle {
 	background-image: linear-gradient(to top right, #ffffff, #eee);
@@ -146,5 +145,16 @@ h1  {
 	right: -50px;
 	width: 400px;
 	height: 400px;
+}
+iframe {
+  height: 100% !important;
+}
+@media (max-width: 768px){
+  .section {
+    padding: 1em 0;
+  }
+  .container {
+    padding: 0 0.5em;
+  }
 }
 </style>

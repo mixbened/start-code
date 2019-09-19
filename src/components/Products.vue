@@ -15,12 +15,7 @@
         <div class="level facts">
             <div class="level-item has-text-centered">
                 <div>
-                <img src="../assets/img/tectrion.gif" alt="" width="200">
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <img src="../assets/img/roland.png" alt="" width="200">
+                <img src="../assets/img/oscar.png" alt="" width="200">
                 </div>
             </div>
             <div class="level-item has-text-centered">
@@ -43,13 +38,13 @@
                         <img src="https://img.icons8.com/color/96/000000/e-learning.png">
                         <h5 class="title is-4 has-text-centered">CODE.INONEDAY</h5>
                         <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
-                        <router-link to="/coid"><b-button type="is-primary">Details</b-button></router-link>
+                        <router-link to="/coid"><b-button type="is-primary">Mehr erfahren</b-button></router-link>
                     </div>
                     <div class="card column has-text-centered">
                         <img src="https://img.icons8.com/color/96/000000/teacher.png">
                         <h5 class="title is-4 has-text-centered">Coaching</h5>
                         <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
-                        <router-link to="/coaching"><b-button type="is-primary">Details</b-button></router-link>
+                        <router-link to="/coaching"><b-button type="is-primary">Mehr erfahren</b-button></router-link>
                     </div>
                 </div>
             </div>
@@ -63,18 +58,13 @@
                     “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
                     </p>
                     <p class="subtitle">
-                    Jeff Atwood
+                        Johan Hacklin, Unitymeda Agile Coach
                     </p>
                 </div>
                 <footer class="card-footer">
                     <p class="card-footer-item">
                     <span>
-                        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-                    </span>
-                    </p>
-                    <p class="card-footer-item">
-                    <span>
-                        Share on <a href="#">Facebook</a>
+                        Wie interdisziplinäre Teams mit CODE.INONEDAY geschaffen werden: <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
                     </span>
                     </p>
                 </footer>
@@ -143,7 +133,7 @@ export default {
 }
 
 .card {
-    margin: 5%;
+    margin: 5% auto;
     padding: 3%;
 }
 

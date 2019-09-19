@@ -3,9 +3,9 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container">
-                    <h1 style="color: white;" class="title has-text-centered">
+                    <h2 style="color: white;" class="title has-text-centered">
                     Code In One Day
-                    </h1>
+                    </h2>
                     <h2 style="color: white;" class="subtitle has-text-centered">
                     Digital denken und Digital umsetzen
                     </h2>
@@ -65,7 +65,7 @@
             </div>
         </section>
         <section class="section">
-            <h1 class="title is-4 has-text-centered">So funktioniert CODE IN ONE DAY</h1>
+            <h2 class="title is-4 has-text-centered">So funktioniert CODE IN ONE DAY</h2>
             <div class="container steps">
                 <b-steps size="is-medium">
                     <b-step-item label="Identifikation" icon="account-key">

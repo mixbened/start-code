@@ -153,6 +153,9 @@ export default {
 .is-one-quarter.card {
   margin: 0 auto;
 }
+.hero-body {
+  padding-bottom: 0;
+}
 .fact {
   margin-top: 3em;
 }
@@ -177,7 +180,7 @@ export default {
   color: white;
 }
 .header-image {
-  height: 50%;
+  height: 60%;
   background: url('../assets/img/course1.jpg');
   background-size: cover;
   background-position: center;
@@ -185,7 +188,7 @@ export default {
   position: absolute;
   width: 100%;
   z-index: -1;
-  top: 45%;
+  top: 35%;
 }
 @media (max-width: 768px){
   .head-title {
@@ -196,6 +199,12 @@ export default {
   }
   p {
     text-align: center;
+  }
+  h1 {
+    font-size: 2em !important;
+  }
+  .hero-body {
+    padding: 1em 0;
   }
 }
 </style>
