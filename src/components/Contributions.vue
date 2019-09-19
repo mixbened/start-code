@@ -18,7 +18,10 @@ export default {
   data(){
        return {
             data: [
-                { 'id': 1, 'type': 'Icon', 'url': 'https://icons8.com/icon/20119/e-learning'}
+                { 'id': 1, 'type': 'Icon', 'url': 'https://icons8.com/icon/20119/e-learning'},
+                { 'id': 2, 'type': 'Icon', 'url': 'https://icons8.com/icon/mBzT9ySeO_go/lehrer'},
+                { 'id': 2, 'type': 'Statistik', 'url': 'https://icons8.com/icon/mBzT9ySeO_go/lehrer'},
+                { 'id': 2, 'type': 'Statistik', 'url': 'https://icons8.com/icon/mBzT9ySeO_go/lehrer'},
             ],
             columns: [
                 {

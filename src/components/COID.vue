@@ -12,28 +12,6 @@
                 </div>
             </div>
         </section>
-        <div class="level facts">
-            <div class="level-item has-text-centered">
-                <div>
-                <img src="../assets/img/tectrion.gif" alt="" width="200">
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <img src="../assets/img/roland.png" alt="" width="200">
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <img src="../assets/img/unity.png" alt="" width="150">
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <img src="../assets/img/kommit.jpg" alt="" width="150">
-                </div>
-            </div>
-        </div>
         <section>
             <div class="container">
                 <section class="section">
@@ -90,7 +68,7 @@
 import Nav from './Nav.vue'
 
 export default {
-  name: 'Products',
+  name: 'COID',
   components: {
   },
   props: {

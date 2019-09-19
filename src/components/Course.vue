@@ -104,7 +104,7 @@
             </div>
           </div>
           <div class="level warteliste-banner is-vcentered">
-            <h3 class="title is-3 is-white" style="margin: 0;">Termine passen nicht?</h3>
+            <h3 class="title is-3" style="margin: 0; color: #2a3758">Termine passen nicht?</h3>
             <h6 class="title is-6 is-white" style="margin-right: 2em;">
               <b-button @click="toggleModal" class="is-primary">
                 Warteliste
@@ -253,7 +253,7 @@ p.title {
   padding: 3%;
 }
 .warteliste-banner {
-  background: #ff7057;
+  background: #ffdd57;
   padding: 5%;
 }
 .is-white {
