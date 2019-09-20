@@ -4,25 +4,24 @@
       <div class="hero-body">
         <div class="container">
           <div class="columns">
-            <div class="column is-three-quarters">
-              <h1 class="title head-title">
+            <div class="column">
+              <h1 class="title" style="">
                 Digitale Skills <br> für jeden.
               </h1>
-              <div class="columns">
+              <div class="columns section">
                 <div class="column card action-card blue-card">
-                  <h5 class="title is-5 text-white">Kurse</h5>
+                  <router-link to="/teams"><h5 class="title is-5 text-white">Kurse <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
 
                 </div>
                 <div class="column card action-card green-card">
-                  <h5 class="title is-5 text-white">Für Unternehmen</h5>
+                  <router-link to="/teams"><h5 class="title is-5 text-white">Für Unternehmen <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
                 </div>
               </div>
-            </div>
-            <div class="column is-one-quarter">
             </div>
           </div>
         </div>
       </div>
+      <div class="header-image"></div>
     </section>
     <section class="section">
       <div class="container">
@@ -42,6 +41,89 @@
           <h5 class="title is-5 fact-title">Gemeinsam Programmieren lernen</h5>
         </div>
         <p>Lorem Ipsum dolor sit amet</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container has-text-centered">
+        <h3 class="title is-3 has-text-left">Für wen ist START.CODE?</h3>
+        <div class="columns section">
+          <div class="is-one-quarter column card is-vcentered has-text-centered">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">Web Development</p>
+                </div>
+              </div>
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.
+                <a href="#">Code In One Day</a>
+              </div>
+            </div>
+          </div>
+          <div class="is-one-quarter card column is-vcentered has-text-centered">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">Python für Beginner</p>
+                </div>
+              </div>
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.
+                <a href="#">Code In One Day</a>
+              </div>
+            </div>
+          </div>
+          <div class="is-one-quarter card column is-vcentered has-text-centered">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">Code In One Day</p>
+                </div>
+              </div>
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.
+                <a href="#">Code In One Day</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <router-link to="/kurse"><b-button class="is-primary" icon-right="arrow-right">Kurse entdecken</b-button></router-link>
       </div>
     </section>
     <section class="section">
@@ -65,25 +147,27 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.head-title {
-  font-size: 5em;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-decoration: underline;
-  margin-bottom: 2em;
+.some-style {
+  color: white;
 }
-.hero {
-  min-height: 100vh;
+.is-one-quarter.card {
+  margin: 0 auto;
+}
+.hero-body {
+  padding-bottom: 0;
 }
 .fact {
   margin-top: 3em;
+}
+.hero {
+  min-height: 100vh;
+  position: relative;
 }
 .fact-title {
   margin-left: 1em;
 }
 .action-card {
-  min-height: 15em;
+  min-height: 8em;
   padding: 2em;
 }
 .green-card {
@@ -95,6 +179,17 @@ export default {
 .text-white {
   color: white;
 }
+.header-image {
+  height: 60%;
+  background: url('../assets/img/course1.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(50%);
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  top: 35%;
+}
 @media (max-width: 768px){
   .head-title {
     font-size: 2em;
@@ -104,6 +199,12 @@ export default {
   }
   p {
     text-align: center;
+  }
+  h1 {
+    font-size: 2em !important;
+  }
+  .hero-body {
+    padding: 1em 0;
   }
 }
 </style>

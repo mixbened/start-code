@@ -1,6 +1,6 @@
 <template>
     <section class="section">
-        <h1 class="title is-2 has-text-centered">{{ title }}</h1>
+        <h2 class="title is-2 has-text-centered">{{ title }}</h2>
         <h5 class="title is-6 has-text-centered">{{ subtitle }}</h5>
     </section>
 </template>
@@ -22,7 +22,7 @@ export default {
 h1, h5 {
     letter-spacing: 0.1em;
 }
-h1 {
+h2 {
     color: white;
     background: #17a2b8;
     width: 40%;

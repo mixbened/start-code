@@ -4,6 +4,7 @@ import axios from 'axios'
 import Buefy from 'buefy'
 import VueRouter from 'vue-router'
 import router from './router'
+import Chart from 'chart.js';
 
 // middleware
 Vue.use(VueRouter)

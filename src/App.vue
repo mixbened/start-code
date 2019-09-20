@@ -97,6 +97,13 @@ h6 {
 .title {
   word-break: normal;
 }
+h1  {
+  font-size: 3em !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: underline;
+}
 .circle {
 	background-image: linear-gradient(to top right, #ffffff, #eee);
 	border-radius: 50%;
@@ -138,5 +145,16 @@ h6 {
 	right: -50px;
 	width: 400px;
 	height: 400px;
+}
+iframe {
+  height: 100% !important;
+}
+@media (max-width: 768px){
+  .section {
+    padding: 1em 0;
+  }
+  .container {
+    padding: 0 0.5em;
+  }
 }
 </style>

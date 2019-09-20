@@ -4,7 +4,7 @@
         <div class="card courseContainer">
           <div class="hero" style="background: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60') center">
             <h2 class="title is-2 has-text-centered" style="color: white;">{{ course.title }}</h2>
-            <h6 class="title is-6" style="color: white;">{{ course.date }}, {{ course.location }}</h6>
+            <h5 class="title is-5" style="color: white;">{{ course.date }}, {{ course.location }}</h5>
           </div>
           <div class="container content">
             <div class="columns">
@@ -40,6 +40,16 @@
                   <p class="content">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                   </p>
+                  <section class="testimonial-box columns section">
+                    <div class="column is-one-third">
+                      <div class="profile column"></div>
+                    </div>
+                    <div class="column is-two-thirds">
+                      <small>
+                        <i>"Ich hatte ... lorem Ipsum"</i>
+                      </small>
+                    </div>
+                  </section>
                 </div>
                 <h4 class="title is-4">Was benötige ich für den Kurs?</h4>
                 <div class="container">
@@ -54,9 +64,10 @@
                   </p>
                 </div>
                 <h4 class="title is-4">Anmeldung</h4>
+                <div id="eventbrite-widget"></div>
               </div>
               <div class="column is-one-quarter info">
-                <h6 class="title is-6">Facts</h6>
+                <h4 class="title is-4 has-text-centered">Facts</h4>
                 <div>
                     <div class="level-item has-text-centered">
                       <div class="p-2">
@@ -82,12 +93,18 @@
                         <p class="title">1.5h</p>
                       </div>
                     </div>
+                    <div class="level-item has-text-centered">
+                      <div class="p-2">
+                        <p class="heading">Preis</p>
+                        <p class="title">299 €</p>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="level warteliste-banner is-vcentered">
-            <h3 class="title is-3 is-white" style="margin: 0;">Termine passen nicht?</h3>
+            <h3 class="title is-3" style="margin: 0; color: #2a3758">Termine passen nicht?</h3>
             <h6 class="title is-6 is-white" style="margin-right: 2em;">
               <b-button @click="toggleModal" class="is-primary">
                 Warteliste
@@ -140,9 +157,28 @@ export default {
       }
     }
   },
+  mounted(){
+    this.loadCheckout()
+  },
   methods: {
     toggleModal: function(){
       this.warteliste = !this.warteliste
+    },
+    loadCheckout: function(){
+      console.log('Load Checkout!')
+      var exampleCallback = function() {
+          console.log('Order complete!');
+      };
+
+      window.EBWidgets.createWidget({
+          // Required
+          widgetType: 'checkout',
+          eventId: '71213023069',
+          iframeContainerId: 'eventbrite-widget',
+
+          // Optional
+          onOrderComplete: exampleCallback,
+      });
     }
   }
 }
@@ -150,8 +186,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.title {
-  font-size: 1.5em;
+#eventbrite-widget {
+  height: 270px !important;
+}
+.profile {
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+  background-size: cover;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+}
+p.title {
+  font-size: 1.3em;
 }
 .p-2 {
   padding: 2em;
@@ -204,7 +253,7 @@ export default {
   padding: 3%;
 }
 .warteliste-banner {
-  background: #ff7057;
+  background: #ffdd57;
   padding: 5%;
 }
 .is-white {

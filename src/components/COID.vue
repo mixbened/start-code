@@ -3,37 +3,15 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container">
-                    <h1 style="color: white;" class="title has-text-centered">
+                    <h2 style="color: white;" class="title has-text-centered">
                     Code In One Day
-                    </h1>
+                    </h2>
                     <h2 style="color: white;" class="subtitle has-text-centered">
                     Digital denken und Digital umsetzen
                     </h2>
                 </div>
             </div>
         </section>
-        <div class="level facts">
-            <div class="level-item has-text-centered">
-                <div>
-                <img src="../assets/img/tectrion.gif" alt="" width="200">
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <img src="../assets/img/roland.png" alt="" width="200">
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <img src="../assets/img/unity.png" alt="" width="150">
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <img src="../assets/img/kommit.jpg" alt="" width="150">
-                </div>
-            </div>
-        </div>
         <section>
             <div class="container">
                 <section class="section">
@@ -65,7 +43,7 @@
             </div>
         </section>
         <section class="section">
-            <h1 class="title is-4 has-text-centered">So funktioniert CODE IN ONE DAY</h1>
+            <h2 class="title is-4 has-text-centered">So funktioniert CODE IN ONE DAY</h2>
             <div class="container steps">
                 <b-steps size="is-medium">
                     <b-step-item label="Identifikation" icon="account-key">
@@ -90,7 +68,7 @@
 import Nav from './Nav.vue'
 
 export default {
-  name: 'Products',
+  name: 'COID',
   components: {
   },
   props: {

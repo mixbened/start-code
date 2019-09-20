@@ -94,4 +94,9 @@ figure:hover {
   transform: scale(1.02);
   transition: 0.6s;
 }
+@media (max-width: 768px){
+  .card {
+    width: 80% !important;
+  }
+}
 </style>
