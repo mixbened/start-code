@@ -32,8 +32,8 @@
         </div>
     </div>
     <footer class="card-footer">
-        <router-link v-bind:to="'/kurs/'+id" class="card-footer-item">Syllabus</router-link>
-        <router-link v-bind:to="'/kurs/'+id" class="card-footer-item">Anmeldung</router-link>
+        <router-link v-bind:to="'/kurs/'+id" class="card-footer-item blue">Weitere Infos</router-link>
+        <router-link v-bind:to="'/kurs/'+id" class="card-footer-item green">Anmeldung</router-link>
     </footer>
     </div>
 </template>
@@ -47,7 +47,7 @@ export default {
   props: {
     'title': String,
     'date': String,
-    'id': Number,
+    'id': String,
     'desc': String,
     'price': Number,
     'picUrl': String,
@@ -68,5 +68,18 @@ export default {
 .card {
     width: 60%;
     margin: 5% auto;
+}
+.blue {
+    background-color: #2a3758;
+    color: white;
+    font-weight: 800;
+}
+.green {
+    background-color: #17a2b8;
+    color: white;
+    font-weight: 800;
+}
+.card-header-title {
+    font-size: 1.4em;
 }
 </style>
