@@ -1,8 +1,9 @@
 <template>
   <section>
     <Title title="Kurse" subtitle="Programmieren für Beginner"/>
-    <section class="section">
-        <CourseCard v-for="(course,index) in courses" v-bind:key="index" v-bind:id="course.id" v-bind:title="course.title" v-bind:desc="course.desc" v-bind:picUrl="course.picUrl" v-bind:date="course.date" v-bind:price="course.price" v-bind:location="course.location"/>
+    <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
+    <section class="section full">
+        <CourseCard v-for="(course,index) in courses" v-bind:key="index" v-bind:id="course.id" v-bind:title="course.name.text" v-bind:desc="course.summary" v-bind:picUrl="course.picUrl" v-bind:date="course.start.utc + ' - ' +course.end.utc" v-bind:price="course.price" v-bind:location="course.location"/>
     </section>
     <section class="section">
       <div class="container">
@@ -42,6 +43,7 @@
 <script>
 import CourseCard from './CourseCard.vue'
 import Title from './Title.vue'
+import axios from 'axios'
 
 export default {
   name: 'Courses',
@@ -51,16 +53,31 @@ export default {
   },
   data(){
     return {
-      courses: [{id:223 ,title: "Frontend Developer", desc: "In diesem Kurs werden wir mittels der Technologien HTML, CSS und JavaScript lernen, schöne Frontends im Web zu gestalten und zu programmieren.", date: "26.10.2019", price: "999", longDesc: "Lorem Ipsum"}]
+      courses: [],
+      isLoading: true,
+      isFullPage: true
     }
   },
   props: {
+  },
+  mounted(){
+    // in the future maybe we secure the key, but right now it's about public events, so no need to secure in MVP
+    axios
+      .get('https://www.eventbriteapi.com/v3/organizations/306112625124/events/?token=PMPLOOAVBFA3TSHBWX4U')
+      .then(response => {
+        console.log('API Response: ', response)
+        this.courses = response.data.events
+        this.isLoading = false;
+      })
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.full {
+  min-height: 50vh;
+}
 .tabs.is-toggle li.is-active a {
   background-color: #2a3758;
   border-color: #2a3758;

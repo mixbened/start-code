@@ -63,8 +63,6 @@
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                   </p>
                 </div>
-                <h4 class="title is-4">Anmeldung</h4>
-                <div id="eventbrite-widget"></div>
               </div>
               <div class="column is-one-quarter info">
                 <h4 class="title is-4 has-text-centered">Facts</h4>
@@ -102,6 +100,8 @@
                 </div>
               </div>
             </div>
+            <h4 class="title is-4">Anmeldung</h4>
+            <div id="eventbrite-widget"></div>
           </div>
           <div class="level warteliste-banner is-vcentered">
             <h3 class="title is-3" style="margin: 0; color: #2a3758">Termine passen nicht?</h3>
