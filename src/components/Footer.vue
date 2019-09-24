@@ -9,11 +9,10 @@
                 <router-link to="/" class="mx-2">Impressum</router-link>
         </div>
         <div class="navbar-item">
-                <router-link to="/" class="mx-2">Datenschutzerklärung</router-link>
+                <router-link to="/data-privacy" class="mx-2">Datenschutzerklärung</router-link>
         </div>
         <div class="navbar-item">
                 <router-link to="/cont" class="mx-2">Contributions</router-link>
-        </div>
         </div>
         <div class="navbar-end">
             <div class="navbar-item">

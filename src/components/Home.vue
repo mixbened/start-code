@@ -5,23 +5,24 @@
         <div class="container">
           <div class="columns">
             <div class="column">
-              <h1 class="title" style="">
-                Digitale Skills <br> für jeden.
+              <h1 class="title" style="display: inline-block; position: relative; font-size: 4em; margin-top: 0.3em;">
+                Digitale Skills für jeden
+                <div class="underline"></div>
               </h1>
-              <div class="columns section">
-                <div class="column card action-card blue-card">
-                  <router-link to="/teams"><h5 class="title is-5 text-white">Kurse <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
-
-                </div>
-                <div class="column card action-card green-card">
-                  <router-link to="/teams"><h5 class="title is-5 text-white">Für Unternehmen <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
-                </div>
-              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-image">
+          <div class="columns action-container">
+            <div class="column card action-card blue-card">
+              <router-link to="/teams"><h5 class="title is-5 text-white">Kurse <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
+            </div>
+            <div class="column card action-card green-card">
+              <router-link to="/teams"><h5 class="title is-5 text-white">Für Unternehmen <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
             </div>
           </div>
         </div>
       </div>
-      <div class="header-image"></div>
     </section>
     <section class="section">
       <div class="container">
@@ -44,8 +45,8 @@
       </div>
     </section>
     <section class="section">
-      <div class="container has-text-centered">
-        <h3 class="title is-3 has-text-left">Für wen ist START.CODE?</h3>
+      <div class="container">
+        <h3 class="title is-3 has-text-left">Für wen ist START.CODE?<div class="underline"></div></h3>
         <div class="columns section">
           <div class="is-one-quarter column card is-vcentered has-text-centered">
             <div class="card-image">
@@ -155,6 +156,7 @@ export default {
 }
 .hero-body {
   padding-bottom: 0;
+  position: relative;
 }
 .fact {
   margin-top: 3em;
@@ -166,9 +168,17 @@ export default {
 .fact-title {
   margin-left: 1em;
 }
+.action-container {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  padding: 0 5%;
+  top: -5%;
+}
 .action-card {
   min-height: 8em;
   padding: 2em;
+  margin: auto;
 }
 .green-card {
   background-color: #17a2b8;
@@ -180,15 +190,14 @@ export default {
   color: white;
 }
 .header-image {
-  height: 60%;
   background: url('../assets/img/course1.jpg');
   background-size: cover;
   background-position: center;
   filter: grayscale(50%);
-  position: absolute;
   width: 100%;
   z-index: -1;
-  top: 35%;
+  height: 65vh;
+  margin-top: 10vh;
 }
 @media (max-width: 768px){
   .head-title {

@@ -31,6 +31,10 @@ export default {
 </script>
 
 <style>
+.is-3 {
+  position: relative;
+  display: inline-block;
+}
 .container {
   padding: 0 2em;
 }
@@ -97,13 +101,6 @@ h6 {
 .title {
   word-break: normal;
 }
-h1  {
-  font-size: 3em !important;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-decoration: underline;
-}
 .circle {
 	background-image: linear-gradient(to top right, #ffffff, #eee);
 	border-radius: 50%;
@@ -149,6 +146,18 @@ h1  {
 iframe {
   height: 100% !important;
 }
+.underline {
+  height: .08em;
+  width: 100%;
+  background: #17a2b8;
+  position: absolute;
+  bottom: -.2em;
+  animation-name: underline;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+  animation-direction: alternate;
+}
 @media (max-width: 768px){
   .section {
     padding: 1em 0;
@@ -156,5 +165,10 @@ iframe {
   .container {
     padding: 0 0.5em;
   }
+}
+@keyframes underline {
+  0% {width: 0%}
+  60% {width: 100%}
+  100% {width: 100%}
 }
 </style>
