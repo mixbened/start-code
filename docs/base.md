@@ -47,19 +47,13 @@ git push -u origin master
 
 #### Courses
 
-* title
-* desc
-* instructor
-* price
-* date
-* picUrl
-* targetGroup
-* topics (sub data points)
-* prerequesites
-* goals
-* location
-* lessons
-* duration
+Course Details are created and stored in Organisators Eventbrite Account.
+
+Courses are loaded from the Eventbrite API. Information coming in:
+
+https://www.eventbrite.com/platform/api#/reference/event/list/list-events-by-organization
+
+When clicking on a specific Course, the Application makes another request and getting information for a specific ID.
 
 #### Posts
 

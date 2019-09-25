@@ -1,10 +1,11 @@
 <template>
     <section>
       <section class="section">
+        <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
         <div class="card courseContainer">
           <div class="hero" style="background: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60') center">
-            <h2 class="title is-2 has-text-centered" style="color: white;">{{ course.title }}</h2>
-            <h5 class="title is-5" style="color: white;">{{ course.date }}, {{ course.location }}</h5>
+            <h2 class="title is-2 has-text-centered" style="color: white;">{{ course.name.text }}</h2>
+            <h5 class="title is-5" style="color: white;">{{ course.start.utc }}, {{ course.location }}</h5>
           </div>
           <div class="container content">
             <div class="columns">
@@ -60,7 +61,7 @@
                 <h4 class="title is-4">Was kann ich nach dem Kurs?</h4>
                 <div class="container">
                   <p class="content">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    {{ course.description.text }}
                   </p>
                 </div>
               </div>
@@ -70,6 +71,7 @@
                     <div class="level-item has-text-centered">
                       <div class="p-2">
                         <p class="heading">Instructor</p>
+                        <img src="https://www.startplatz.de/wp-content/uploads/2019/09/steins-1566198432-1.jpeg" alt="instructor course" width="100" style="border-radius: 20%;">
                         <p class="title">Frederik Schütte</p>
                       </div>
                     </div>
@@ -138,33 +140,47 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
-  name: 'CourseCart',
+  name: 'Course',
   components: {
   },
   data(){
     return {
       warteliste: false,
+      isLoading: false,
+      isFullPage: true,
       course: {
-        title: "Frontend Developer",
-        desc: "Short Description",
-        longDesc: "Lorem Ipsum",
-        date: "26.10.2019",
-        price: 999,
-        picUrl: "",
-        location: "Startplatz Köln"
+        name: {
+          text: ""
+        },
+        description: {
+          text: ""
+        },
+        start: {
+          utc: ""
+        }
       }
     }
   },
   mounted(){
-    this.loadCheckout()
+    // in the future maybe we secure the key, but right now it's about public events, so no need to secure in MVP
+    const id = this.$route.params .id
+    axios
+      .get(`https://www.eventbriteapi.com/v3/events/${id}/?token=PMPLOOAVBFA3TSHBWX4U`)
+      .then(response => {
+        console.log('API Response: ', response)
+        this.course = response.data
+        this.isLoading = false;
+        this.loadCheckout(response.data.id)
+      })
   },
   methods: {
     toggleModal: function(){
       this.warteliste = !this.warteliste
     },
-    loadCheckout: function(){
+    loadCheckout: function(id){
       console.log('Load Checkout!')
       var exampleCallback = function() {
           console.log('Order complete!');
@@ -173,7 +189,7 @@ export default {
       window.EBWidgets.createWidget({
           // Required
           widgetType: 'checkout',
-          eventId: '71213023069',
+          eventId: id,
           iframeContainerId: 'eventbrite-widget',
 
           // Optional
@@ -258,6 +274,9 @@ p.title {
 }
 .is-white {
   color: white;
+}
+p.heading {
+  border-bottom: 2px solid #ffdd57;
 }
 @media (max-width: 768px){
   .info {

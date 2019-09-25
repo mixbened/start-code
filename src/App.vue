@@ -66,7 +66,7 @@ hr {
   background-color: #17a2b8;
 }
 .button.is-primary:hover {
-  background-color: #4964a9;
+  background-color: #354b82;
 }
 .button.is-link:hover {
   background-color: #38bed3;

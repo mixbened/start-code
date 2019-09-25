@@ -17,7 +17,7 @@
         <div class="content columns">
             <div class="column is-one-third">
                 <div class="card-image">
-                    <figure class="courseImage" style="background-image: url('https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')">
+                    <figure class="courseImage" :style="{ 'background-image': 'url(' + picUrl + ')'}">
                     </figure>
                 </div>
             </div>
@@ -74,10 +74,16 @@ export default {
     color: white;
     font-weight: 800;
 }
+.blue:hover {
+  background-color: #354b82;
+}
 .green {
     background-color: #17a2b8;
     color: white;
     font-weight: 800;
+}
+.green:hover {
+  background-color: #38bed3;
 }
 .card-header-title {
     font-size: 1.4em;
