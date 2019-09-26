@@ -2,26 +2,28 @@
     <section class="section">
         <Title title="Kontakt" subtitle="Stelle uns alle deine Fragen"/>
         <section class="section">
-            <div class="container small-content">
+            <div v-if="!messageSuccess" class="container small-content">
                 <div class="field">
-                    <label class="label">Name</label>
+                    <label class="label">Name*</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Gib deinen Namen ein">
+                            <b-input type="text" placeholder="Gib deinen Namen ein" v-model="name"></b-input>
                         </div>
                 </div>
-                <div class="field">
-                    <label class="label">Email</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Gib deine Email Adresse ein">
-                        </div>
-                </div>
+                <b-field label="Email*">
+                        <b-input type="email"
+                            value=""
+                            maxlength="30"
+                            placeholder="Gib deine Email-Adresse ein"
+                            >
+                        </b-input>
+                </b-field>
 
                 <div class="field">
-                <label class="label">Subject</label>
+                <label class="label">Subject*</label>
                     <div class="control">
                         <div class="select">
-                            <select>
-                                <option>Frage zu einem Kurs</option>
+                            <select v-model="subject">
+                                <option selected>Frage zu einem Kurs</option>
                                 <option>Frage zu den Terminen</option>
                                 <option>Anfrage Team-Workshop</option>
                                 <option>Sonstiges</option>
@@ -33,39 +35,74 @@
                 <div class="field">
                 <label class="label">Deine Nachricht an uns</label>
                     <div class="control">
-                        <textarea class="textarea" placeholder="Nachricht"></textarea>
+                        <b-input type="textarea" placeholder="Nachricht" v-model="text" maxlength="100"></b-input>
                     </div>
                 </div>
 
                 <div class="field">
                     <div class="control">
                         <label class="checkbox">
-                        <input type="checkbox">
-                        Ich bestätige die <a href="#">Datenschutzbestimmungen</a> gelesen zu haben.
+                        <input type="checkbox" v-model="dataPrivacy">
+                        Ich bestätige die <router-link to="/data-privacy">Datenschutzbestimmungen</router-link> gelesen zu haben.
                         </label>
                     </div>
                 </div>
 
                 <div class="field">
                     <div class="control">
-                        <button class="button is-primary">Submit</button>
+                        <button class="button is-primary" @click="sendMessage">Senden</button>
                     </div>
                 </div>
             </div>
         </section>
+        <b-message v-if="messageSuccess" style="width: 80%; margin: auto;" size="is-large" title="Danke für deine Nachricht" type="is-success" has-icon aria-close-label="Close message">
+            Wir haben deine Nachricht erhalten, und werden sie so schnell wie möglich beantworten. In ganz dringenden Fällen, kannst du uns auch anrufen.
+        </b-message>
     </section>
 </template>
 
 <script>
 import Title from './Title'
+import axios from 'axios'
 
 export default {
   name: 'Contact',
   components: {
       Title
   },
+  data(){
+      return {
+          name: '',
+          mail: '',
+          subject: '',
+          text: '',
+          messageSuccess: false,
+          dataPrivacy: false
+      }
+  },
   props: {
-    }
+    },
+  methods: {
+      // zapier blocks request with body value with cors policy, bc axios sets a content type. Workaround is sending it as querystring
+      sendMessage: function(){
+          if(dataPrivacy){              
+              axios.get('https://hooks.zapier.com/hooks/catch/4921789/o2d5p6v/', {params: {name: this.name, mail: this.mail,subject: this.subject, text: this.text}})
+              .then(res => {
+                 //  console.log('Response: ', res)
+                 if(res.data.status == "success"){
+                     this.messageSuccess = true;
+                     setTimeout(() => {
+                         this.$router.push('/')
+                     }, 10000)
+                 } else {
+ 
+                 }
+              })
+          } else {
+              alert('Du musst die Datenschutzbestimmungen akzeptieren, um uns eine Nachricht zu schicken.')
+          }
+      }
+  }
 }
 </script>
 

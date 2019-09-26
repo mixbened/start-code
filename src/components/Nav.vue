@@ -22,10 +22,31 @@
                     </router-link>
                 </div>
 
-                <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/teams">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
                         Für Unternehmen
-                    </router-link>
+                    </a>
+
+                    <div class="navbar-dropdown">
+
+                        <router-link to="/teams">
+                            <a class="navbar-item" v-on:click="toggleMenu">
+                                Übersicht
+                            </a>
+                        </router-link>
+
+                        <router-link to="/coid">
+                        <a class="navbar-item" v-on:click="toggleMenu">
+                            CODE.INONEDAY
+                        </a>
+                        </router-link>
+
+                        <router-link to="/coaching">
+                            <a class="navbar-item" v-on:click="toggleMenu">
+                                Coaching
+                            </a>
+                        </router-link>
+                    </div>
                 </div>
 
                 <div class="navbar-item" v-on:click="toggleMenu">
@@ -39,41 +60,15 @@
                         Partner
                     </router-link>
                 </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
+                <div class="navbar-item" v-on:click="toggleMenu">
+                    <router-link to="/faqs">
+                        FAQ
+                    </router-link>
+                </div>
+                <div class="navbar-item" v-on:click="toggleMenu">
+                    <router-link to="/kontakt">
                         Kontakt
-                    </a>
-
-                    <div class="navbar-dropdown">
-
-                        <router-link to="/faqs">
-                            <a class="navbar-item" v-on:click="toggleMenu">
-                                FAQs
-                            </a>
-                        </router-link>
-
-                        <router-link to="/kurse">
-                        <a class="navbar-item" v-on:click="toggleMenu">
-                            Kursauswahl
-                        </a>
-                        </router-link>
-
-                        <router-link to="/kontakt">
-                            <a class="navbar-item" v-on:click="toggleMenu">
-                                Direkte Nachricht
-                            </a>
-                        </router-link>
-
-                        <hr class="navbar-divider">
-
-                        <router-link to="/über-uns">
-                            <a class="navbar-item" v-on:click="toggleMenu">
-                                Über Uns
-                            </a>
-                        </router-link>
-
-                    </div>
-
+                    </router-link>
                 </div>
 
             </div>

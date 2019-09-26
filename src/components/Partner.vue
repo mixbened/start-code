@@ -76,16 +76,20 @@
     </section>
     <section class="section">
     </section>
+    <Banner title="Interesse an einer Partnerschaft?" text="Wir beantworten Fragen zu unseren Themenschwerpunkten oder dem Verfahren unseres Coaching sehr gerne persönlich. Unsere Leistungen werden von Kunde zu Kunde individuell zugeschnitten." cta="/kontakt"  action="Schick uns eine Nachricht"/>
   </section>
 </template>
 
 <script>
 import Title from './Title.vue'
+import Banner from './Banner.vue'
+
 
 export default {
   name: 'Partner',
   components: {
-      Title
+      Title,
+      Banner
   },
   props: {
   }

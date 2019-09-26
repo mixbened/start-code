@@ -2,23 +2,24 @@
     <section>
       <section class="hero">
       <div class="hero-body">
-        <div class="container">
+        <div class="container has-text-centered" style="padding: 2em;">
           <div class="columns">
             <div class="column">
               <h1 class="title" style="display: inline-block; position: relative; font-size: 4em; margin-top: 0.3em;">
                 Digitale Skills für jeden
                 <div class="underline"></div>
               </h1>
+              <h3 class="title is-3">Erlerne die Skills des 21. Jahrhunderts</h3>
             </div>
           </div>
         </div>
         <div class="header-image">
           <div class="columns action-container">
-            <div class="column card action-card blue-card">
-              <router-link to="/teams"><h5 class="title is-5 text-white">Kurse <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
+            <div class="column card action-card blue-card box">
+              <router-link to="/kurse"><h5 class="title is-3 text-white">Kurse <b-icon icon="arrow-right" size="is-medium"></b-icon> </h5></router-link>
             </div>
-            <div class="column card action-card green-card">
-              <router-link to="/teams"><h5 class="title is-5 text-white">Für Unternehmen <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
+            <div class="column card action-card green-card box">
+              <router-link to="/teams"><h5 class="title is-3 text-white">Für Unternehmen <b-icon icon="arrow-right" size="is-medium"></b-icon></h5></router-link>
             </div>
           </div>
         </div>
@@ -46,7 +47,7 @@
     </section>
     <section class="section">
       <div class="container">
-        <h3 class="title is-3 has-text-left">Für wen ist START.CODE?<div class="underline"></div></h3>
+        <h3 class="title is-3 has-text-left">Für wen ist START.CODE?</h3>
         <div class="columns section">
           <div class="is-one-quarter column card is-vcentered has-text-centered">
             <div class="card-image">

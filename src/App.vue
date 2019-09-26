@@ -31,6 +31,9 @@ export default {
 </script>
 
 <style>
+.mt-5 {
+  margin-top: 5em;
+}
 .is-3 {
   position: relative;
   display: inline-block;
@@ -155,7 +158,7 @@ iframe {
   animation-name: underline;
   animation-duration: 10s;
   animation-iteration-count: infinite;
-  animation-delay: 3s;
+  animation-delay: 1s;
   animation-direction: alternate;
 }
 @media (max-width: 768px){

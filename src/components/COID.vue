@@ -14,14 +14,16 @@
         </section>
         <section>
             <div class="container">
-                <section class="section">
-                    <div class="columns container">
-                        <div class="column content">
+                <section class="section mt-5">
+                    <div class="columns container is-vcentered">
+                        <div class="column content p-2">
                             <h3 class="title is-5">Was ist CODE IN ONE DAY</h3>
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                         </div>
                         <div class="column">
-
+                            <figure class="image">
+                                <img src="../assets/img/workshop-graphics.png">
+                            </figure>
                         </div>
                     </div>
                 </section>
@@ -29,47 +31,34 @@
         </section>
         <section>
             <div class="container">
-                <section class="section">
-                    <div class="columns container">
-                        <div class="column content">
+                <section class="section mt-5">
+                    <div class="columns container is-vcentered">
+                        <div class="column content p-2">
                             <h3 class="title is-5">Das bringt CODE IN ONE DAY</h3>
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                         </div>
                         <div class="column">
-
+                            <figure class="image">
+                                <img src="../assets/img/team-graphics.png">
+                            </figure>
                         </div>
                     </div>
                 </section>
             </div>
         </section>
-        <section class="section">
-            <h2 class="title is-4 has-text-centered">So funktioniert CODE IN ONE DAY</h2>
-            <div class="container steps">
-                <b-steps size="is-medium">
-                    <b-step-item label="Identifikation" icon="account-key">
-                        <div class="box">Im ersten Schritt wird ein Ziel definiert. Beispielsweise sollen alle Projektteilnehmer ein einheitliches Verstädnnis von Web-Anwendungen haben. Oder alle Beteiligten sollen den Umgang mit Datenbanken beherrschen.</div>
-                    </b-step-item>
-                    <b-step-item label="Basics" icon="account">
-                        <div class="box">In einem angepassten Workshops werden Grundkenntnisse des Fachs gemeinsam gelernt. Beispielsweise Python Programmierung. HTML & CSS oder auch Tools wie Tableau oder Power BI.</div>
-                    </b-step-item>
-                    <b-step-item label="Digitale Lösung" icon="account-plus">
-                        <div class="box">Mit dem erlernten kann nun gemeinsam ein erste Prototyp entwickelt werden. Alle Themen sollen direkt an realen Beispielen umgesetzt werden.</div>
-                    </b-step-item>
-                    <b-step-item label="Refinement" icon="account-plus">
-                        <div class="box">Im Anschluss an den Workshop wird überlegt, ob weitere Skills für die Zielerfüllung notwendig sind. So kann im nachhinein eine Roadmap zur Weiterbildung erstellt werden.</div>
-                    </b-step-item>
-                </b-steps>
-            </div>
-        </section>
+        <Banner title="Noch Fragen?" text="Wir beantworten Fragen zu unseren Themenschwerpunkten oder dem Verfahren unseres Coaching sehr gerne persönlich. Unsere Leistungen werden von Kunde zu Kunde individuell zugeschnitten." cta="/kontakt" action="Schick uns eine Nachricht"/>
     </section>
 </template>
 
 <script>
 import Nav from './Nav.vue'
+import Banner from './Banner.vue'
+
 
 export default {
   name: 'COID',
   components: {
+      Banner
   },
   props: {
   }
@@ -78,6 +67,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+figure {
+    box-shadow: none;
+    width: 50%;
+    margin: auto;
+}
+.p-2 {
+    padding: 3em 2em 1em 2em;
+}
 .box {
     margin: 5%;
 }

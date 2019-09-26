@@ -37,19 +37,24 @@
         </b-tabs>
       </div>
     </section>
+    <section>
+      <Banner title="Fragen zu den Kursen?" text="Suche in den am meisten gestellten Fragen zu unseren Kursen nach Antworten." cta="/faqs" action="FAQs"/>
+    </section>
   </section>
 </template>
 
 <script>
 import CourseCard from './CourseCard.vue'
 import Title from './Title.vue'
+import Banner from './Banner.vue'
 import axios from 'axios'
 
 export default {
   name: 'Courses',
   components: {
     CourseCard,
-    Title
+    Title,
+    Banner
   },
   data(){
     return {
