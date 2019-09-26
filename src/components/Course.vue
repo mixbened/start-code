@@ -3,7 +3,7 @@
       <section class="section">
         <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
         <div class="card courseContainer">
-          <div class="hero" style="background: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60') center">
+          <div class="hero" :style="{ 'background-image': 'url(' + course.logo.url + ')'}">
             <h2 class="title is-2 has-text-centered" style="color: white;">{{ course.name.text }}</h2>
             <h5 class="title is-5" style="color: white;">{{ course.start.utc }}, {{ course.location }}</h5>
           </div>
@@ -152,6 +152,9 @@ export default {
       isLoading: false,
       isFullPage: true,
       course: {
+        logo: {
+          url: ""
+        },
         name: {
           text: ""
         },
@@ -209,10 +212,7 @@ export default {
   width: 5em;
   height: 5em;
   border-radius: 100%;
-  background-size: cover;
   margin: auto;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url('https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
 }
 p.title {
@@ -253,6 +253,7 @@ p.title {
   align-items: center;
   justify-content: center;
   margin-bottom: 2em;
+  background-size: cover;
 }
 .hero:before {
   content: "";

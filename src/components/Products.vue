@@ -2,12 +2,12 @@
     <section>
         <section class="hero">
             <div class="hero-body">
-                <div class="container">
-                    <h2 style="color: white;" class="title is-2 has-text-centered">
-                    Für Innovative Teams
+                <div class="container header-line">
+                    <h2 style="color: white; font-size: 4em;" class="title is-1 has-text-centered">
+                        Innovation von innen
                     </h2>
                     <h2 style="color: white;" class="subtitle has-text-centered">
-                    Lebenslanges lernen bleibt keine Ausnahme
+                        Jetzt Team in digitalen Skills schulen
                     </h2>
                 </div>
             </div>
@@ -15,17 +15,22 @@
         <div class="level facts">
             <div class="level-item has-text-centered">
                 <div>
-                <img src="../assets/img/oscar.png" alt="" width="200">
+                    <img src="../assets/img/partner/oscar.png" alt="" width="100">
                 </div>
             </div>
             <div class="level-item has-text-centered">
                 <div>
-                <img src="../assets/img/unity.png" alt="" width="150">
+                    <img src="../assets/img/partner/unity.png" alt="" width="100">
                 </div>
             </div>
             <div class="level-item has-text-centered">
                 <div>
-                <img src="../assets/img/kommit.jpg" alt="" width="150">
+                    <img src="../assets/img/partner/kommit.jpg" alt="" width="100">
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <img src="https://www.mediapark.de/wp-content/uploads/2019/03/2019-03-26-STARTPLATZ_Logo_RGB-1024x504.png" alt="" width="100">
                 </div>
             </div>
         </div>
@@ -35,13 +40,13 @@
                 <p></p>
                 <div class="columns">
                     <div class="card column has-text-centered">
-                        <img src="https://img.icons8.com/color/96/000000/e-learning.png">
+                        <img src="../assets/img/workshop-graphics.png" width="300">
                         <h5 class="title is-4 has-text-centered">CODE.INONEDAY</h5>
                         <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
                         <router-link to="/coid"><b-button type="is-primary">Mehr erfahren</b-button></router-link>
                     </div>
                     <div class="card column has-text-centered">
-                        <img src="https://img.icons8.com/color/96/000000/teacher.png">
+                        <img src="../assets/img/coach-graphics.png" width="300">
                         <h5 class="title is-4 has-text-centered">Coaching</h5>
                         <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
                         <router-link to="/coaching"><b-button type="is-primary">Mehr erfahren</b-button></router-link>
@@ -62,10 +67,8 @@
                     </p>
                 </div>
                 <footer class="card-footer">
-                    <p class="card-footer-item">
-                    <span>
-                        Wie interdisziplinäre Teams mit CODE.INONEDAY geschaffen werden: <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-                    </span>
+                    <p class="content card-footer-item">
+                        Wie interdisziplinäre Teams mit CODE.INONEDAY geschaffen werden: <router-link to="/article/unitymedia">Artikel</router-link>
                     </p>
                 </footer>
                 </div>
@@ -124,6 +127,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.header-line {
+    background-color: rgb(23, 162, 184, 0.6);
+    padding: 2%;
+    width: 60%;
+}
+.card.column {
+    margin-left: 1em;
+    margin-right: 1em;
+}
 .facts {
     /* background: #f9fdfd; */
     padding: 1em 2em;

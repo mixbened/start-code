@@ -2,9 +2,9 @@
     <section>
         <section class="hero">
             <div class="hero-body">
-                <div class="container">
-                    <h2 style="color: white;" class="title has-text-centered">
-                    Code In One Day
+                <div class="container header-line">
+                    <h2 style="color: white; font-size: 4em;" class="title is-1 has-text-centered">
+                        Code In One Day
                     </h2>
                     <h2 style="color: white;" class="subtitle has-text-centered">
                     Digital denken und Digital umsetzen
@@ -46,6 +46,9 @@
                 </section>
             </div>
         </section>
+        <section class="section">
+
+        </section>
         <Banner title="Noch Fragen?" text="Wir beantworten Fragen zu unseren Themenschwerpunkten oder dem Verfahren unseres Coaching sehr gerne persönlich. Unsere Leistungen werden von Kunde zu Kunde individuell zugeschnitten." cta="/kontakt" action="Schick uns eine Nachricht"/>
     </section>
 </template>
@@ -67,6 +70,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.header-line {
+    background-color: rgb(23, 162, 184, 0.6);
+    padding: 2%;
+    width: 60%;
+}
 figure {
     box-shadow: none;
     width: 50%;
@@ -94,21 +102,13 @@ p.title {
 }
 .hero {
     width: 100%;
-    height: 35vh;
-    background: url();
+    height: 40vh;
+    background: url('../assets/img/course2.jpg');
+    filter: grayscale(20%);
     background-size: cover;
     background-position: center;
     position: relative;
     flex-direction: row;
     align-items: center;
-}
-.hero:before {
-    content: ' ';
-    position: absolute;
-    left: 0;
-    right: 0;   
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.582);
 }
 </style>

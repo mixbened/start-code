@@ -2,12 +2,12 @@
     <section>
         <section class="hero">
             <div class="hero-body">
-                <div class="container">
-                    <h2 style="color: white;" class="title has-text-centered">
-                    Coaching
+                <div class="container header-line">
+                    <h2 style="color: white; font-size: 4em;" class="title is-1 has-text-centered">
+                        Coaching
                     </h2>
                     <h2 style="color: white;" class="subtitle has-text-centered">
-                    Neue Skills für Ihr Team
+                        Digitalkompetenz in Action
                     </h2>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                         </div>
                         <div class="column">
                             <figure class="figure">
-                                <img src="../assets/img/team-graphics.png">
+                                <img src="../assets/img/learning-graphics.png">
                             </figure>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="column">
                             <figure class="figure">
-                                <img src="../assets/img/team-graphics.png">
+                                <img src="../assets/img/coach-graphics.png">
                             </figure>
                         </div>
                     </div>
@@ -66,6 +66,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.header-line {
+    background-color: rgb(23, 162, 184, 0.6);
+    padding: 2%;
+    width: 60%;
+}
 figure {
     box-shadow: none;
     width: 50%;
@@ -93,22 +98,14 @@ p.title {
 }
 .hero {
     width: 100%;
-    height: 35vh;
-    background: url();
+    height: 40vh;
+    background: url('../assets/img/course2.jpg');
+    filter: grayscale(20%);
     background-size: cover;
     background-position: center;
     position: relative;
     flex-direction: row;
     align-items: center;
-}
-.hero:before {
-    content: ' ';
-    position: absolute;
-    left: 0;
-    right: 0;   
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.582);
 }
 </style>
 
