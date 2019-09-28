@@ -125,7 +125,9 @@
             </div>
           </div>
         </div>
-        <router-link to="/kurse"><b-button class="is-primary" icon-right="arrow-right">Kurse entdecken</b-button></router-link>
+        <div class="has-text-centered">
+          <router-link to="/kurse"><b-button class="is-primary" icon-right="arrow-right">Kurse entdecken</b-button></router-link>
+        </div>
       </div>
     </section>
     <section class="section">

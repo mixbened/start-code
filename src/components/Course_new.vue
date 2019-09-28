@@ -12,14 +12,34 @@
               <div class="column is-three-quarter steps">
                 <h4 class="title is-4">Was wird im Kurs gelehrt?</h4>
                 <div class="container">
-                  <p class="content">
-                    {{ course.description.text }}
-                  </p>
+                  <div class="progress-line">
+                    <section class="step">
+                      <span class="progress-bullet"></span>
+                      <b>Frontend Development</b>
+                      <p class="content">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                      </p>
+                    </section>
+                    <section class="step">
+                      <span class="progress-bullet"></span>
+                      <b>Frontend Development</b>
+                      <p class="content">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                      </p>
+                    </section>
+                    <section class="step">
+                      <span class="progress-bullet"></span>
+                      <b>Frontend Development</b>
+                      <p class="content">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                      </p>
+                    </section>
+                  </div>
                 </div>
                 <h4 class="title is-4">Für wen ist der Kurs gedacht?</h4>
                 <div class="container">
                   <p class="content">
-                    {{ content[3] }}
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                   </p>
                   <section class="testimonial-box columns section">
                     <div class="column is-one-third">
@@ -35,13 +55,13 @@
                 <h4 class="title is-4">Was benötige ich für den Kurs?</h4>
                 <div class="container">
                   <p class="content">
-                    {{ content[4] }}
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                   </p>
                 </div>
                 <h4 class="title is-4">Was kann ich nach dem Kurs?</h4>
                 <div class="container">
                   <p class="content">
-                    {{ content[5] }}
+                    {{ course.description.text }}
                   </p>
                 </div>
               </div>
@@ -51,32 +71,32 @@
                     <div class="level-item has-text-centered">
                       <div class="p-2">
                         <p class="heading">Instructor</p>
-                        <img :src="instructor_image" alt="instructor course" width="100" style="border-radius: 20%;">
-                        <p class="title">{{ content[1] }}</p>
+                        <img src="https://www.startplatz.de/wp-content/uploads/2019/09/steins-1566198432-1.jpeg" alt="instructor course" width="100" style="border-radius: 20%;">
+                        <p class="title">Frederik Schütte</p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered">
                       <div class="p-2">
                         <p class="heading">Location</p>
-                        <p class="title">{{ location }}</p>
+                        <p class="title">Startplatz Köln</p>
                       </div>
                     </div>
                     <div class="has-text-centered">
                       <div class="p-2">
                         <p class="heading">Lessons</p>
-                        <p class="title">{{ content[6] }}</p>
+                        <p class="title">8</p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered">
                       <div class="p-2">
                         <p class="heading">Lesson Duration</p>
-                        <p class="title">{{ content[7] }}</p>
+                        <p class="title">1.5h</p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered">
                       <div class="p-2">
                         <p class="heading">Preis</p>
-                        <p class="title">{{ content[8] }}</p>
+                        <p class="title">299 €</p>
                       </div>
                     </div>
                 </div>
@@ -144,48 +164,28 @@ export default {
         start: {
           utc: ""
         },
-        summary: "",
-      },
-      content: [],
-      instructor_image: "",
-      location: ""
+        summary: ""
+      }
     }
   },
   mounted(){
     // in the future maybe we secure the key, but right now it's about public events, so no need to secure in MVP
-    // to get all information 3 calls are made: first for the while event information, then event description, then venue, then checkout
     const id = this.$route.params .id
     axios
       .get(`https://www.eventbriteapi.com/v3/events/${id}/?token=PMPLOOAVBFA3TSHBWX4U`)
-      .then(response_course => {
-        this.course = response_course.data
-        this.loadCheckout(response_course.data.id)
-        axios
-        .get(`https://www.eventbriteapi.com/v3/events/${id}/structured_content/?token=PMPLOOAVBFA3TSHBWX4U`)
-        .then(response_content => {
-          // console.log('API Response Content: ', response_content.data)
-          let raw_content = response_content.data.modules[0].data.body.text
-          let arr_content = raw_content.split('<p>')
-          let content = arr_content.map(el => el.replace("</p>", ""))
-          this.content = content
-          this.instructor_image = response_content.data.modules[1].data.image.url
-        })
-        // end content request
-        axios.get(`https://www.eventbriteapi.com/v3/venues/${response_course.data.venue_id}/?token=PMPLOOAVBFA3TSHBWX4U`)
-        .then(response_venue => {
-          // console.log('API Response Venue: ', response_venue)
-          this.location = response_venue.data.name
-        })
+      .then(response => {
+        console.log('API Response: ', response)
+        this.course = response.data
         this.isLoading = false;
+        this.loadCheckout(response.data.id)
       })
-      // end all requests
   },
   methods: {
     toggleModal: function(){
       this.warteliste = !this.warteliste
     },
     loadCheckout: function(id){
-      // console.log('Load Checkout!')
+      console.log('Load Checkout!')
       var exampleCallback = function() {
           console.log('Order complete!');
       };

@@ -58,6 +58,9 @@
         <b-message v-if="messageSuccess" style="width: 80%; margin: auto;" size="is-large" title="Danke für deine Nachricht" type="is-success" has-icon aria-close-label="Close message">
             Wir haben deine Nachricht erhalten, und werden sie so schnell wie möglich beantworten. In ganz dringenden Fällen, kannst du uns auch anrufen.
         </b-message>
+        <b-message v-if="warning" style="width: 80%; margin: auto;" size="is-small" title="Datenschutz" type="is-warning" has-icon aria-close-label="Close message">
+            Bitte akzeptiere die Datenschutzbestimmungen, damit wir deine Anfrage bearbeiten können.
+        </b-message>
     </section>
 </template>
 
@@ -77,7 +80,8 @@ export default {
           subject: '',
           text: '',
           messageSuccess: false,
-          dataPrivacy: false
+          dataPrivacy: false,
+          warning: false
       }
   },
   props: {
@@ -85,7 +89,7 @@ export default {
   methods: {
       // zapier blocks request with body value with cors policy, bc axios sets a content type. Workaround is sending it as querystring
       sendMessage: function(){
-          if(dataPrivacy){              
+          if(this.dataPrivacy){              
               axios.get('https://hooks.zapier.com/hooks/catch/4921789/o2d5p6v/', {params: {name: this.name, mail: this.mail,subject: this.subject, text: this.text}})
               .then(res => {
                  //  console.log('Response: ', res)
@@ -95,11 +99,14 @@ export default {
                          this.$router.push('/')
                      }, 10000)
                  } else {
- 
+                     
                  }
               })
           } else {
-              alert('Du musst die Datenschutzbestimmungen akzeptieren, um uns eine Nachricht zu schicken.')
+                this.warning = true
+                setTimeout(() => {
+                    this.warning = false
+                }, 5000)
           }
       }
   }
