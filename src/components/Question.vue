@@ -54,4 +54,9 @@ section {
 section:first-child {
     margin-top: 5%;
 }
+@media (max-width: 768px) {
+    .card {
+        width: 100% !important;
+    }
+}
 </style>

@@ -31,7 +31,18 @@ export default {
   },
   data(){
       return {
-          questions: [{title: 'Question Title', content: 'Lorem Ipsum'},{title: 'Milk Title', content: 'Lorem Ipsum'}],
+          questions: [
+              {title: 'Was ist START.CODE?', content: 'START.CODE ist eine Coding Schule, wo du aktuelle Programmiersprachen in kleinen Klassen von 10-12 Leuten lernen kannst. Unsere Mission ist es IT-Skills auf eine spannende Art und Weise zu unterrichten.'},
+              {title: 'Welche Skills erlerne ich mit START.CODE?', content: 'Bei uns lernst du aktuelle Coding Skills, die bei IT-Unternehmen nachgefragt werden. Unsere Coding Kurse richten sich sowohl an AnfängerInnen als auch an Fortgeschrittene.'},
+              {title: 'Wer unterrichtet die START.CODE Kurse?', content: 'Die SmartNinja TrainerInnen sind IT-Profis: Sie arbeiten entweder als ProgrammiererInnen oder sind IT-Selbstständige. Sie sind erfahren und können dir Coding beibringen und dir zeigen, wie das Leben einer/s CoderIn aussieht.'},
+              {title: 'Warum sollte ich das Programmieren lernen?', content: 'Digitale Skills sind heutzutage in jedem Beruf von Nutzen. Egal ob als Praktikant, Angestellter oder Gründer - mit einem Grundwissen im Programmieren bist du vielen anderen einen Schritt voraus! In unserem Kurs Web Development 1 lernst du die Basics des Programmierens und kannst für dich herausfinden, ob das Programmieren etwas für dich ist und inwieweit du deine Kenntnisse noch vertiefen möchtest. :)'},
+              {title: 'Woher weiß ich, welche Programmiersprache die richtige für mich ist?', content: 'Das ist eine Frage, die sich viele am Anfang stellen. Am Ende des Tages ist es nicht entscheidend, welche Sprache du lernst, weil die Grundprinzipien des Programmierens in jeder Programmiersprache die gleichen sind. Wir unterrichten Python (im Web Development 1 Kurs), da es eine sehr Anfänger/innen-freundliche Programmiesprache ist.'},
+              {title: 'Welchen Kurs soll ich besuchen?', content: 'Wenn du Coding AnfängerIn bist, solltest du das Web Development 1 zuerst besuchen, damit du herausfinden kannst, ob Programmieren überhaupt das Richtige für dich ist und ob es etwas ist, was du künftig machen willst (entweder als Hobby oder beruflich).'},
+              {title: 'Ich habe keinen IT-Background, ist es das Richtige für mich?', content: 'Wenn du Anfänger bist, bist du bei uns richtig. Um die Grundlagen des Programmierens zu erlernen kannst du super den Web Development Kurs besuchen. Unser Curriculum ist so aufgebaut, dass die Folgekurse auf dem erlernten Grundwissen aufbauen und du dein Wissen in jedem Kurs erweitern kannst. :)'},
+              {title: 'Ich habe keine Erfahrung im Programmieren, kann ich trotzdem teilnehmen?', content: 'Unsere Grundlagenkurse sind perfekt für Personen ohne Coding-Background. Schau Dir doch einmal den Kurs Web Development 1 an, dieser ist auf Anfänger ausgerichtet.'},
+              {title: 'Ab wann darf ich an einem Kurs teilnehmen?', content: 'Normalerweise sind die Kurse für Personen ab 18 Jahren vorgesehen, solltest du aber älter als 15 Jahre alt sein, darfst du gerne an einem Kurs teilnehmen. Sprich uns hierzu auch gerne an. :)'},
+              {title: 'Bekomme ich eine Teilnahmebescheinigung oder ein Zertifikat?', content: 'Natürlich stellen wir dir am Ende eines jeden Kurses eine Teilnahmebestätigung aus. :)'},
+              ],
           winner: null
       }
   },

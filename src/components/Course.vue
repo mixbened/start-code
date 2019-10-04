@@ -3,7 +3,7 @@
       <section class="section">
         <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
         <div class="card courseContainer">
-          <div class="hero" :style="{ 'background-image': 'url(' + course.logo.url + ')'}">
+          <div class="hero" style="background-image: url('https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')">
             <h2 class="title is-2 has-text-centered" style="color: white;">{{ course.name.text }}</h2>
             <h5 class="title is-5" style="color: white;">{{ course.start.utc }}, {{ course.location }}</h5>
           </div>

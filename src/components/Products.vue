@@ -56,11 +56,10 @@
         </section>
         <section class="section">
         <div class="container">
-            <h3 class="title is-3">Erahrungsbericht</h3>
-            <div class="card">
+            <div class="banner">
                 <div class="card-content">
                     <p class="title">
-                    “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+                    “Teams werden interdisziplinär? Dazu muss das Skillset auch interdisziplinär sein. Ziel ist es nicht, neue Coder zu finden. Wir wollen ein gesamtes digitales und agiles Team sein.”
                     </p>
                     <p class="subtitle">
                         Johan Hacklin, Unitymeda Agile Coach
@@ -68,7 +67,7 @@
                 </div>
                 <footer class="card-footer">
                     <p class="content card-footer-item">
-                        Wie interdisziplinäre Teams mit CODE.INONEDAY geschaffen werden: <router-link to="/article/unitymedia">Artikel</router-link>
+                        Wie interdisziplinäre Teams mit CODE.INONEDAY geschaffen werden:<router-link to="/article/unitymedia"> Artikel</router-link>
                     </p>
                 </footer>
                 </div>
@@ -76,12 +75,14 @@
         </section>
         <section class="section">
             <div class="container">
-                <h3 class="title is-3">Statistik</h3>
-                <div class="columns">
+                <h3 class="title is-3">Fakten - Bitkom Studie aus dem Jahr 2018</h3>
+                <div class="columns mt-5">
                     <div class="column">
+                        <h5 class="title is-5">Digitalkompetenz wird...</h5>
                         <canvas id="statistics-1"></canvas>
                     </div>
                     <div class="column">
+                        <h5 class="title is-5">Nachfrage IT-Fachkräfte</h5>
                         <canvas id="statistics-2"></canvas>
                     </div>
                 </div>
@@ -117,8 +118,8 @@ export default {
     }
   },
   mounted() {
-      this.createChart('statistics-1', this.chartData)
-      this.createChart('statistics-2', this.chartData)
+      this.createChart('statistics-1', this.chartData[0])
+      this.createChart('statistics-2', this.chartData[1])
   },
   props: {
   }
@@ -162,5 +163,9 @@ export default {
 }
 .hero-body {
     width: 50%;
+}
+.banner {
+    width: 80%;
+    margin: auto;
 }
 </style>
