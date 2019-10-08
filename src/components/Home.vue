@@ -235,8 +235,25 @@ p.content {
   h1 {
     font-size: 2em !important;
   }
+  h3 {
+    font-size: 1em !important;
+  }
   .hero-body {
     padding: 1em 0;
+  }
+  .hero-body > .container {
+    padding: 0 1em !important;
+  }
+  .action-card {
+    min-height: 0;
+    font-size: 0.6em !important;
+  }
+  p.content {
+    padding: 0;
+    font-size: 0.8em;
+  }
+  .validate {
+    width: 80% !important;
   }
 }
 </style>

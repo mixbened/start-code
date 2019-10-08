@@ -34,4 +34,9 @@ h2 {
     width: 50%;
     margin: 3% auto;
 }
+@media (max-width: 768px){
+    .banner > * .content {
+        width: 80%;
+    }
+}
 </style>
