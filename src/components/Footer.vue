@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="navbar-item">
-                <router-link to="/" class="mx-2">Impressum</router-link>
+                <router-link to="/impressum" class="mx-2">Impressum</router-link>
         </div>
         <div class="navbar-item">
                 <router-link to="/data-privacy" class="mx-2">Datenschutzerklärung</router-link>

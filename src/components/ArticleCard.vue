@@ -1,10 +1,11 @@
 <template>
     <div class="card postCard">
-        <router-link to="/article/">
+        <router-link :to="'/article/'+id">
             <div class="postImage" :style="{ 'background-image': 'url(' + imageUrl + ')'}"></div>
             <section class="section">
-                <h2 class="title is-2">{{ title }}</h2>
-                <p class="content" v-html="content"></p>
+                <h3 class="title is-3">{{ title }}</h3>
+                <p class="content wrapper" v-html="content"></p>
+                <b-button>Zum Artikel</b-button>
             </section>
         </router-link>
     </div>
@@ -19,7 +20,8 @@ export default {
   props: {
       title: String,
       content: String,
-      author: String
+      author: String,
+      id: String
     },
     data(){
         return {
@@ -28,7 +30,7 @@ export default {
     },
     methods: {
         getImage: function(){
-            // get first image from blog
+            // get first image from blog and then remove it from the dom (blogger has no title images)
             let img = document.querySelector('.separator > a > img')
             let source = img['attributes']['src'].value
             this.imageUrl = source
@@ -44,12 +46,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .postImage {
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
-    height: 200px;
+    min-height: 200px;
 }
 .postCard {
     width: 60%;
     margin: auto;
+}
+.wrapper {
+    max-height: 100px;
+    overflow: hidden;
 }
 </style>

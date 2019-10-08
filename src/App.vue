@@ -34,6 +34,9 @@ export default {
 .mt-5 {
   margin-top: 5em;
 }
+.mt-2 {
+  margin-top: 2em;
+}
 .is-3 {
   position: relative;
   display: inline-block;
@@ -53,6 +56,9 @@ body, .title {
   color: #323232;
   font-family: 'Montserrat';
   position: relative;
+}
+.f-white {
+  color: white;
 }
 a {
   color: #17a2b8;

@@ -6,7 +6,7 @@
           <div class="columns">
             <div class="column">
               <h1 class="title" style="display: inline-block; position: relative; font-size: 4em; margin-top: 0.3em;">
-                Digitale Skills für jeden
+                Digitale Skills für Jeden
                 <div class="underline"></div>
               </h1>
               <h3 class="title is-3">Erlerne die Skills des 21. Jahrhunderts</h3>
@@ -112,9 +112,25 @@
         </div>
       </div>
     </section>
-    <section class="section">
-      <div class="container">
-        <h3 class="title is-3">Newsletter Sign Up</h3>
+    <section class="section sign-up">
+      <div class="container has-text-centered">
+        <h3 class="title is-3" style="color: white;">Melde dich für den START.CODE Newsletter an!</h3>
+        <div class="container">
+          <form action="https://start-code.us20.list-manage.com/subscribe/post?u=e8429b1b1cc6f7df4af8fbf90&amp;id=2e53d86122" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="width: 50%; margin: auto" novalidate>
+            <div class="columns mt-2">
+            <b-field style="width: 100%;">
+                <b-input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required></b-input>
+            </b-field>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e8429b1b1cc6f7df4af8fbf90_2e53d86122" tabindex="-1" value=""></div>
+            <div style="padding: 0 1em;" class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+            <p class="content">
+              <input type="checkbox" required>
+              Ich stimme zu, Informationen und kommerzielle Angebote über SmartNinja zu erhalten (z.B. Newsletter, die Veröffentlichung von Kurs- oder Blog-Posts, das Auslaufen von Early-Bird Tickets, ...) in Übereinstimmung mit der <router-link to="/data-privacy" style="color: #ffdd57;"> Datenschutzerklärung</router-link>.
+            </p>
+          </form>
+        </div>
       </div>
     </section>
   </section>
@@ -133,6 +149,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.sign-up {
+  background-color: #17a2b8;
+  color: white;
+}
 figure.image {
   margin: auto;
   border-radius: 100%

@@ -14,6 +14,8 @@ import Blog from './components/Blog'
 import Partner from './components/Partner'
 import Contributions from './components/Contributions'
 import Data from './components/Data'
+import Impressum from './components/Impressum'
+import Article from './components/Article'
 
 // define routes 
 const routes = [
@@ -26,9 +28,11 @@ const routes = [
     { path: '/coid', component: COID },
     { path: '/coaching', component: Coaching },
     { path: '/blog', component: Blog },
+    { path: '/article/:id', component: Article },
     { path: '/partner', component: Partner },
     { path: '/cont', component: Contributions },
     { path: '/data-privacy', component: Data },
+    { path: '/impressum', component: Impressum },
     { path: '/', component: Home }
 ]
 
