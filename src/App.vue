@@ -107,7 +107,7 @@ h6 {
     position: relative;
     overflow: hidden;
 }
-.title {
+.title, .subtitle {
   word-break: normal;
 }
 .circle {
@@ -173,6 +173,15 @@ iframe {
   }
   .container {
     padding: 0 0.5em;
+  }
+  .container.header-line {
+    width: 100% !important;
+  }
+  .title.is-2 {
+    font-size: 2em !important;
+  }
+  .hero-body {
+    padding: 0;
   }
 }
 @keyframes underline {

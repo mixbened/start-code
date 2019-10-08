@@ -220,6 +220,7 @@ p.content {
   z-index: -1;
   height: 65vh;
   margin-top: 10vh;
+  position: relative;
 }
 @media (max-width: 768px){
   .head-title {

@@ -3,11 +3,11 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container header-line">
-                    <h2 style="color: white; font-size: 4em;" class="title is-1 has-text-centered">
-                        Code In One Day
+                    <h2 style="color: white; font-size: 4em;" class="title is-2 has-text-centered">
+                        CODE IN ONE DAY
                     </h2>
                     <h2 style="color: white;" class="subtitle has-text-centered">
-                    Digital denken und Digital umsetzen
+                        Digitl denken & umsetzen
                     </h2>
                 </div>
             </div>

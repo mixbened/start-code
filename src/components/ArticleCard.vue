@@ -54,6 +54,7 @@ export default {
 }
 .postCard {
     width: 60%;
+    padding: 1em;
     margin: auto;
 }
 .wrapper {

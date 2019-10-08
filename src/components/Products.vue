@@ -3,7 +3,7 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container header-line">
-                    <h2 style="color: white; font-size: 4em;" class="title is-1 has-text-centered">
+                    <h2 style="color: white; font-size: 4em;" class="title is-2 has-text-centered">
                         Innovation von innen
                     </h2>
                     <h2 style="color: white;" class="subtitle has-text-centered">
