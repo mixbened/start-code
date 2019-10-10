@@ -35,7 +35,7 @@
                             </a>
                         </router-link>
 
-                        <router-link to="/coid">
+                        <router-link to="/ciod">
                         <a class="navbar-item" v-on:click="toggleMenu">
                             CODE.INONEDAY
                         </a>

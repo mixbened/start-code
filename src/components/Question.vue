@@ -58,5 +58,8 @@ section:first-child {
     .card {
         width: 100% !important;
     }
+    .card-header-title {
+        font-size: 0.8em;
+    }
 }
 </style>

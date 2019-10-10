@@ -59,7 +59,7 @@ import Banner from './Banner.vue'
 
 
 export default {
-  name: 'COID',
+  name: 'CIOD',
   components: {
       Banner
   },

@@ -43,7 +43,7 @@
                         <img src="../assets/img/workshop-graphics.png" width="300">
                         <h5 class="title is-4 has-text-centered">CODE.INONEDAY</h5>
                         <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
-                        <router-link to="/coid"><b-button type="is-primary">Mehr erfahren</b-button></router-link>
+                        <router-link to="/ciod"><b-button type="is-primary">Mehr erfahren</b-button></router-link>
                     </div>
                     <div class="card column has-text-centered">
                         <img src="../assets/img/coach-graphics.png" width="300">
@@ -92,14 +92,14 @@
 </template>
 
 <script>
-import COID from './COID.vue'
+import CIOD from './CIOD.vue'
 import Title from './Title'
 import chartData from '../resources/chart-data.js'
 
 export default {
   name: 'Products',
   components: {
-      COID,
+      CIOD,
       Title
   },
   data(){
@@ -167,5 +167,16 @@ export default {
 .banner {
     width: 80%;
     margin: auto;
+}
+@media (max-width: 768px){
+    p.title {
+        font-size: 1em;
+    }
+    p.subtitle {
+        font-size: 1em;
+    }
+    .banner {
+        width: 100%;
+    }
 }
 </style>

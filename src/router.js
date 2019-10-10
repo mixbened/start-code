@@ -8,7 +8,7 @@ import Course from './components/Course'
 import Home from './components/Home'
 import Contact from './components/Contact'
 import Products from './components/Products'
-import COID from './components/COID'
+import CIOD from './components/CIOD'
 import Coaching from './components/Coaching'
 import Blog from './components/Blog'
 import Partner from './components/Partner'
@@ -25,7 +25,7 @@ const routes = [
     { path: '/faqs', component: Faqs },
     { path: '/kurs/:id', component: Course },
     { path: '/teams', component: Products },
-    { path: '/coid', component: COID },
+    { path: '/ciod', component: CIOD },
     { path: '/coaching', component: Coaching },
     { path: '/blog', component: Blog },
     { path: '/article/:id', component: Article },

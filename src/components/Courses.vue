@@ -13,11 +13,13 @@
               <div class="columns">
                 <div class="column is-half">
                   <h5 class="title is-5">Startplatz Köln</h5>
-                  <p class="content"></p>
+                  <p class="content" style="padding-right: 20%;">
+                    STARTPLATZ ist Startup Inkubator und Accelerator mit Standorten in Köln sowie Düsseldorf und Treffpunkt der rheinischen Gründerszene. Gegründet wurde er 2012 von den Geschäftsführern der Familie Gräf Holding GmbH, Dr. Lorenz und Matthias Gräf. Auf rund 4.500 qm im Kölner Mediapark und 1.900 qm im Düsseldorfer Medienhafen entstand ein Ökosystem, das aufstrebenden Startups und innovativen Unternehmen Raum zum Wachsen, Beratung und Coaching, Workshops & Events sowie Anschluss an das große Netzwerk bietet.
+                  </p>
                 </div>
                 <div class="column is-half">
-                    <div class="impressionImage">
-                      <div class="impressionImage-inner"></div>
+                    <div class="impressionImage course-k1">
+                      <div class="impressionImage-inner course-k2"></div>
                     </div>
                 </div>
               </div>
@@ -26,12 +28,14 @@
               <div class="columns">
                 <div class="column is-half">
                   <h5 class="title is-5">Startplatz Düsseldorf</h5>
-                  <p class="content"></p>
+                  <p class="content" style="padding-right: 20%;">
+                    Mehr als 200 Startups arbeiteten hier bereits an ihren Geschäftsideen, über 100 Millionen Euro wurden in sie investiert und es wurden mehr als 175 Teams im Accelerator gefördert. Gemeinsam mit Partnern aus dem Ökosystem bietet der STARTPLATZ zudem Konzernen und mittelständischen Unternehmen verschiedene Lösungsansätze aus der Startup-Welt, um die Digitalisierung und Innovationsprozesse erfolgreich umzusetzen und voranzutreiben.
+                  </p>
                 </div>
                 <div class="column is-half">
-                    <div class="impressionImage">
-                      <div class="impressionImage-inner"></div>
-                    </div>                </div>
+                    <div class="impressionImage course-d1">
+                      <div class="impressionImage-inner course-d2"></div>
+                    </div></div>
               </div>
             </b-tab-item>
         </b-tabs>
@@ -93,7 +97,6 @@ figure {
 }
 .impressionImage {
   height: 300px;
-  background-image: url('../assets/img/course2.jpg');
   background-size: cover;
   background-position: center;
   filter: grayscale(10%);
@@ -103,7 +106,6 @@ figure {
 .impressionImage-inner {
   width: 50%;
   height: 150px;
-  background-image: url('../assets/img/party.jpg');
   background-size: cover;
   background-position: center;
   filter: grayscale(10%);
@@ -111,6 +113,18 @@ figure {
   bottom: -20%;
   left: -10%;
   border-radius: 5px;
+}
+.course-d2 {
+    background-image: url('https://www.startplatz.de/wp-content/uploads/2018/05/design_thinking_im_startplatz_duesseldorf.jpg');
+}
+.course-d1 {
+  background-image: url('../assets/img/course1.jpg');
+}
+.course-k1 {
+  background-image: url('../assets/img/course2.jpg');
+}
+.course-k2 {
+  background-image: url('../assets/img/course3.jpg');
 }
 figure:hover {
   transform: scale(1.02);

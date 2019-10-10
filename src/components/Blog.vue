@@ -1,6 +1,7 @@
 <template>
   <section>
     <Title title="Blog" subtitle="Infos rund um das Thema Programmieren lernen"/>
+    <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
     <section class="section">
         <ArticleCard v-for="(article,index) in posts" v-bind:key="index" v-bind:id="article.id" v-bind:title="article.title" v-bind:content="article.content" v-bind:picUrl="article.image"/>
     </section>
@@ -20,7 +21,9 @@ export default {
   },
   data(){
     return {
-      posts: []
+      posts: [],
+      isFullPage: true,
+      isLoading: true,
     }
   },
   props: {
@@ -32,6 +35,7 @@ export default {
       .then(res => {
         // console.log('API Response: ', res)
         this.posts = res.data.items
+        this.isLoading = false
       })
   }
 }

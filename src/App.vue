@@ -180,8 +180,21 @@ iframe {
   .title.is-2 {
     font-size: 2em !important;
   }
+  .title.is-3 {
+    font-size: 1.5em !important;
+  }
   .hero-body {
     padding: 0;
+  }
+  .mt-5 {
+    margin-top: 2em;
+  }
+  p.content {
+    padding: 0;
+    font-size: 0.8em;
+  }
+  div.content {
+    font-size: 0.8em;
   }
 }
 @keyframes underline {

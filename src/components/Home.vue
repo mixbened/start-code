@@ -248,10 +248,6 @@ p.content {
     min-height: 0;
     font-size: 0.6em !important;
   }
-  p.content {
-    padding: 0;
-    font-size: 0.8em;
-  }
   .validate {
     width: 80% !important;
   }

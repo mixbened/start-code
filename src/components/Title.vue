@@ -29,4 +29,9 @@ h2 {
     margin: 0 auto;
     text-transform: uppercase;
 }
+@media (max-width: 768px){
+  h2 {
+    width: 80%;
+  }
+}
 </style>
