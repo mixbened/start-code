@@ -149,6 +149,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.place {
+  
+}
 .sign-up {
   background-color: #17a2b8;
   color: white;
