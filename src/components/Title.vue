@@ -1,5 +1,5 @@
 <template>
-    <section class="section">
+    <section class="section" style="padding-top: 7em;">
         <h2 class="title is-2 has-text-centered">{{ title }}</h2>
         <h5 class="title is-6 has-text-centered">{{ subtitle }}</h5>
     </section>

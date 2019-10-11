@@ -102,7 +102,7 @@ p.title {
 }
 .hero {
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     background: url('../assets/img/course2.jpg');
     filter: grayscale(20%);
     background-size: cover;

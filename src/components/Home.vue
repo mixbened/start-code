@@ -1,28 +1,21 @@
 <template>
     <section>
       <section class="hero">
-      <div class="hero-body">
-        <div class="container has-text-centered" style="padding: 2em;">
-          <div class="columns">
-            <div class="column">
-              <h1 class="title" style="display: inline-block; position: relative; font-size: 4em; margin-top: 0.3em;">
-                Digitale Skills für Jeden
-                <div class="underline"></div>
-              </h1>
-              <h3 class="title is-3">Erlerne die Skills des 21. Jahrhunderts</h3>
-            </div>
-          </div>
+      <div class="hero-body columns is-centered is-vcentered">
+        <div class="bg-overlay"></div>
+        <div class="column is-half" style="padding-left: 10%">
+            <section class="teaser">
+                <h1 class="title" style="display: inline-block; position: relative; font-size: 3em; margin: 0.3em auto;color: white;">
+                  Bock auf digitale Skills?
+                  <!-- <div class="underline"></div> -->
+                </h1>
+                <h5 class="title is-5" style="color: white;">
+                  We know Tech and we know how to teach.
+                </h5>
+                <b-button type="is-warning">Zu den Kursen</b-button>
+            </section>
         </div>
-        <div class="header-image">
-          <div class="columns action-container">
-            <div class="column card action-card blue-card">
-              <router-link to="/kurse"><h5 class="title is-5 text-white">Kurse <b-icon icon="arrow-right" size="is-small"></b-icon> </h5></router-link>
-            </div>
-            <div class="column card action-card green-card">
-              <router-link to="/teams"><h5 class="title is-5 text-white">Für Unternehmen <b-icon icon="arrow-right" size="is-small"></b-icon></h5></router-link>
-            </div>
-          </div>
-        </div>
+        <div class="column"></div>
       </div>
     </section>
     <section class="section big-section">
@@ -34,15 +27,42 @@
         </div>
         <p class="content">START.CODE Kurse finden gemeinsam in entspannter Atmosphäre statt. Online-Anegbote sind super Möglichkeiten zum schnuppern oder falls man Themen vertiefen möchte. Im Kurs arbeitet man gemeinsam, was den Spaßfaktor erhöht und kann auch direkt vor Ort fragen klären, falls ein Thema schwerer zu verstehen ist.</p>
         <div class="columns is-vcentered fact">
-          <img src="../assets/img/icons8-zusammenspiel-96.png" alt="Icon Zusammenspiel" width="50">
+          <img src="https://img.icons8.com/color/48/000000/mission-of-a-company.png" alt="Icon Zusammenspiel" width="50">
           <h5 class="title is-5 fact-title">Digitalkompetenz für den Arbeitsalltag</h5>
         </div>
         <p class="content">Mit den bei uns erlernten Skills, können Macher eigene digitale Lösungen entwickeln. Auch jemand, der Themen der Digitalisierung einfach besser verstehen möchte und einen Überblick bekommen möchte, sollte Coding Kurse besuchen. Wir glaube daran, dass das eigene Ausprobieren den größten Lerneffekt hat.</p>
         <div class="columns is-vcentered fact">
-          <img src="../assets/img/icons8-zusammenspiel-96.png" alt="Icon Zusammenspiel" width="50">
+          <img src="https://img.icons8.com/color/96/000000/working-with-a-laptop.png" alt="Icon Zusammenspiel" width="50">
           <h5 class="title is-5 fact-title">Technologie für jeden</h5>
         </div>
         <p class="content">Unsere Kurse sind für Anfänger konzipiert. Wir verfolgen nicht das Ziel einer klassischen IT-Schulung, bei der Vokabeln und Fachbegriffe gepaukt werden. Wir möchten Technologie für jeden greifbar machen.</p>
+      </div>
+    </section>
+    <section class="section big-section">
+      <div class="container mx-3">
+        <h3 class="title is-3">Wofür interessierst du dich?</h3>
+        <div class="columns mt-5">
+            <div class="column box" style="background: rgb(23, 162, 184, 0.3)">
+                <div class="number" style="background: rgb(23, 162, 184)">
+                  <b-icon icon="school" size="is-small"></b-icon>
+                </div>
+                <div>
+                    <h5 class="title is-5">Kurse</h5>
+                    <p>Ob Start-Up in Aussicht, eine neue Position oder einfach der Wunsch nach tiefergehendem Verständnis. Coding ist für alle!</p>
+                    <router-link to="/kurse"><b-button type="is-primary" class="mt-2">Mehr dazu</b-button></router-link>
+                </div>
+            </div>
+            <div class="column box" style="background: rgba(255, 221, 87,0.5)">
+                <div class="number" style="background: rgb(255, 221, 87)">
+                  <b-icon icon="domain" size="is-small"></b-icon>
+                </div>
+                <div>
+                    <h5 class="title is-5">Für Unternehmen</h5>
+                    <p>Nicht nur Softwareentwickler profitieren von IT-Skills. Wir schlauen Ihre Mitarbeiten auf um die digitale Welt gemeinsam zu gestalten.</p>
+                    <router-link to="/teams"><b-button type="is-primary" class="mt-2">Mehr dazu</b-button></router-link>
+                </div>
+            </div>
+        </div>
       </div>
     </section>
     <section class="section big-section">
@@ -127,7 +147,7 @@
             </div>
             <p class="content">
               <input type="checkbox" required>
-              Ich stimme zu, Informationen und kommerzielle Angebote über SmartNinja zu erhalten (z.B. Newsletter, die Veröffentlichung von Kurs- oder Blog-Posts, das Auslaufen von Early-Bird Tickets, ...) in Übereinstimmung mit der <router-link to="/data-privacy" style="color: #ffdd57;"> Datenschutzerklärung</router-link>.
+              Ich stimme zu, Informationen und kommerzielle Angebote über START.CODE zu erhalten (z.B. Newsletter, die Veröffentlichung von Kurs- oder Blog-Posts, das Auslaufen von Tickets, ...) in Übereinstimmung mit der <router-link to="/data-privacy" style="color: #ffdd57;"> Datenschutzerklärung</router-link>.
             </p>
           </form>
         </div>
@@ -143,6 +163,13 @@ export default {
   components: {
   },
   props: {
+  },
+  data(){
+    return {
+      bg: true
+    }
+  },
+  methods: {
   }
 }
 </script>
@@ -150,10 +177,41 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .place {
-  
+
+}
+.number {
+    position: absolute;
+    top: -1.5em;
+    border-radius: 100%;
+    background: rgb(23, 162, 184);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.box {
+    background: rgba(110, 255, 219,0.3);
+    margin: 1em;
+    text-align: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 2em 1em;
+}
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  background-color: rgba(42, 55, 88, 0.4);
+  height: 100%;
+  width: 100%;
+}
+.teaser {
+  /* margin: 6em 1em; */
 }
 .sign-up {
-  background-color: #17a2b8;
+  background-color: rgb(23, 162, 184);
   color: white;
 }
 figure.image {
@@ -170,6 +228,9 @@ figure.image > img {
 .big-section {
   padding: 8rem 1.5rem;
 }
+.teaser > p {
+  padding: 2% 15% 0 0;
+}
 p.content {
   padding-right: 10%;
 }
@@ -180,50 +241,39 @@ p.content {
   margin: 0 auto;
 }
 .hero-body {
-  padding: 3em 0 0 0;
   position: relative;
+  background-image: url('../assets/img/course1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3%;
+  min-height: 100vh;
 }
 .fact {
   margin-top: 3em;
 }
 .hero {
-  min-height: 100vh;
   position: relative;
 }
 .fact-title {
   margin-left: 1em;
 }
 .action-container {
-  position: absolute;
   width: 100%;
   margin: auto;
-  padding: 0 5%;
-  top: -5%;
 }
 .action-card {
-  min-height: 8em;
-  padding: 2em;
-  margin: auto;
+  min-height: 6em;
+  padding: 1em;
+  width: 100% !important;
 }
 .green-card {
   background-color: #17a2b8;
 }
 .blue-card {
-  background-color: #2a3758;
+  background-color: rgb(42, 55, 88);
 }
 .text-white {
   color: white;
-}
-.header-image {
-  background: url('../assets/img/course1.jpg');
-  background-size: cover;
-  background-position: center;
-  filter: grayscale(50%);
-  width: 100%;
-  z-index: -1;
-  height: 65vh;
-  margin-top: 10vh;
-  position: relative;
 }
 @media (max-width: 768px){
   .head-title {

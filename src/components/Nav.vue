@@ -78,7 +78,7 @@
                 <div class="navbar-item">
                     <div class="buttons">
 
-                    <a class="button is-primary">
+                    <a class="button is-link">
                         <strong>Students</strong>
                     </a>
 
@@ -93,12 +93,16 @@
 </template>
 
 <script>
+
 export default {
     name: 'Nav',
     data() {
         return {
-            mobileMenu: false
+            mobileMenu: false,
         } 
+    },
+    props: {
+        change: Boolean
     },
     methods: {
         toggleMenu: function(){
@@ -110,13 +114,21 @@ export default {
 </script>
 
 <style scoped>
+    .transparentBg {
+        background: transparent !important;
+        transition: 0.5s;
+    }
     .navbar {
         padding: 0.5em 0.3em;
+        position: fixed;
+        width: 100%;
+        background: white;
     }
     .navbar-item > a {
-        color: #2a3758;
+        /* color: white; */
         font-weight: 800;
     }
+
 </style>
 
 

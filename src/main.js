@@ -5,10 +5,14 @@ import Buefy from 'buefy'
 import VueRouter from 'vue-router'
 import router from './router'
 import Chart from 'chart.js';
+import checkView from 'vue-check-view'
+
 
 // middleware
 Vue.use(VueRouter)
 Vue.use(Buefy)
+Vue.use(checkView)
+
 
 Vue.config.productionTip = false
 

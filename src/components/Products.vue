@@ -152,7 +152,7 @@ export default {
 
 .hero {
     width: 100%;
-    min-height: 35vh;
+    min-height: 50vh;
     background: url('../assets/img/course2.jpg');
     background-size: cover;
     background-position: center;

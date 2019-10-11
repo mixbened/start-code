@@ -5,10 +5,10 @@
     <div class="circle medium2"></div>
     <div class="circle medium3"></div>
     <div class="circle big"></div>
-    <Nav/>
-    <hr>
-    <div style="min-height: 100vh; margin-bottom: 3em;">
-      <router-view></router-view>
+    <Nav />
+    <!-- <hr> -->
+    <div style="margin-bottom: 3em;">
+      <router-view v-on:change-bg="doSomething"></router-view>
     </div>
     <router-link to="/kontakt">
       <b-button v-if="$route.path !== '/kontakt'" class="is-warning contact">Kontakt</b-button>
@@ -26,6 +26,12 @@ export default {
   components: {
     Nav,
     Footer
+  },
+  methods: {
+  },
+  data(){
+    return {
+    }
   }
 }
 </script>
@@ -45,7 +51,7 @@ export default {
   padding: 0 2em;
 }
 .input:active, .input:focus, .is-active.input, .is-active.textarea, .is-focused.input, .is-focused.textarea, .select select.is-active, .select select.is-focused, .select select:active, .select select:focus, .taginput .is-active.taginput-container.is-focusable, .taginput .is-focused.taginput-container.is-focusable, .taginput .taginput-container.is-focusable:active, .taginput .taginput-container.is-focusable:focus, .textarea:active, .textarea:focus {
-  border-color: #17a2b8;
+  border-color: rgb(23, 162, 184);
 }
 .contact {
   position: fixed;
@@ -70,7 +76,7 @@ hr {
   height: 1px;
 }
 .tag:not(body).is-primary {
-    background-color: #2a3758;
+    background-color: rgb(42, 55, 88);
 }
 .button.is-primary {
   background-color: #2a3758;
@@ -116,7 +122,6 @@ h6 {
 	position: absolute;
   z-index: -1;
 }
-
 .circle.small {
 	top: 30%;
 	left: 20%;
@@ -158,7 +163,7 @@ iframe {
 .underline {
   height: .08em;
   width: 100%;
-  background: #17a2b8;
+  background: white;
   position: absolute;
   bottom: -.2em;
   animation-name: underline;
