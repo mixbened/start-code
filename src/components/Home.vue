@@ -1,9 +1,9 @@
 <template>
     <section>
       <section class="hero">
-      <div class="hero-body columns is-centered is-vcentered">
+      <div class="hero-body columns is-centered is-vcentered is-desktop">
         <div class="bg-overlay"></div>
-        <div class="column is-half" style="padding-left: 10%">
+        <div class="column is-two-thirds" style="padding-left: 10%">
             <section class="teaser">
                 <h1 class="title" style="display: inline-block; position: relative; font-size: 3em; margin: 0.3em auto;color: white;">
                   Bock auf digitale Skills?
@@ -12,13 +12,13 @@
                 <h5 class="title is-5" style="color: white;">
                   We know Tech and we know how to teach.
                 </h5>
-                <b-button type="is-warning">Zu den Kursen</b-button>
+                <b-button @click="scrollDown" type="is-warning">Zu den Kursen</b-button>
             </section>
         </div>
         <div class="column"></div>
       </div>
     </section>
-    <section class="section big-section">
+    <section class="section big-section" id="section">
       <div class="container mx-3">
         <h3 class="title is-3">Was ist START.CODE?</h3>
         <div class="columns is-vcentered fact">
@@ -170,6 +170,9 @@ export default {
     }
   },
   methods: {
+    scrollDown: function(){
+      document.getElementById('section').scrollIntoView({behavior: 'smooth'})
+    }
   }
 }
 </script>
@@ -208,7 +211,7 @@ export default {
   width: 100%;
 }
 .teaser {
-  /* margin: 6em 1em; */
+  width: 100%;
 }
 .sign-up {
   background-color: rgb(23, 162, 184);
@@ -293,6 +296,7 @@ p.content {
   }
   .hero-body {
     padding: 1em 0;
+    display: flex;
   }
   .hero-body > .container {
     padding: 0 1em !important;

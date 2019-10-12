@@ -28,6 +28,9 @@ export default {
     Footer
   },
   methods: {
+    doSomething: function(){
+      console.log('Empty')
+    }
   },
   data(){
     return {
@@ -78,6 +81,11 @@ hr {
 .tag:not(body).is-primary {
     background-color: rgb(42, 55, 88);
 }
+.is-space-between {
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 20%;
+}
 .button.is-primary {
   background-color: #2a3758;
 }
@@ -92,12 +100,17 @@ hr {
 }
 .navbar-link:hover {
   color: #17a2b8;
+  background-color: transparent;
 }
 .navbar-item > a:hover {
   color: #17a2b8;
 }
+.navbar-item.has-dropdown:hover {
+  background: transparent;
+}
 .navbar-item > a:focus {
   color: #17a2b8;
+  background-color: transparent;
 }
 .navbar-link:not(.is-arrowless)::after {
   border-color: #17a2b8;

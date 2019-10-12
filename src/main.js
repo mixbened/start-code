@@ -18,7 +18,7 @@ Vue.config.productionTip = false
 
 // bind axios to prototype method
 Vue.prototype.$http = axios
-
+Vue.prototype.$window = window
 
 new Vue({
   render: h => h(App),

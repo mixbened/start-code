@@ -1,8 +1,8 @@
 <template>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar" :class="{transparentBg: transparent, whiteColor: start}" role="navigation" aria-label="main navigation"  v-view="changeBackground">
         
         <div class="navbar-brand">
-            <router-link class="navbar-item" to="/">
+            <router-link class="navbar-item" to="/" :class="{whiteColor: start && transparent}">
             <img alt="Vue logo" src="../assets/logo.png">
             </router-link>
 
@@ -17,32 +17,32 @@
             <div class="navbar-start">
 
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/kurse">
+                    <router-link to="/kurse" :class="{whiteColor: start && transparent}">
                         Kurse
                     </router-link>
                 </div>
 
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
+                <div class="navbar-item has-dropdown is-hoverable" :class="{whiteColor: start && transparent}">
+                    <a class="navbar-link" :class="{whiteColor: start && transparent}">
                         Für Unternehmen
                     </a>
 
                     <div class="navbar-dropdown">
 
                         <router-link to="/teams">
-                            <a class="navbar-item" v-on:click="toggleMenu">
+                            <a class="navbar-item" v-on:click="toggleMenu" :class="{whiteColor: start && transparent}">
                                 Übersicht
                             </a>
                         </router-link>
 
                         <router-link to="/ciod">
-                        <a class="navbar-item" v-on:click="toggleMenu">
+                        <a class="navbar-item" v-on:click="toggleMenu" :class="{whiteColor: start && transparent}">
                             CODE.INONEDAY
                         </a>
                         </router-link>
 
                         <router-link to="/coaching">
-                            <a class="navbar-item" v-on:click="toggleMenu">
+                            <a class="navbar-item" v-on:click="toggleMenu" :class="{whiteColor: start && transparent}">
                                 Coaching
                             </a>
                         </router-link>
@@ -50,23 +50,23 @@
                 </div>
 
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/blog">
+                    <router-link to="/blog" :class="{whiteColor: start && transparent}">
                         News
                     </router-link>
                 </div>
 
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/partner">
+                    <router-link to="/partner" :class="{whiteColor: start && transparent}">
                         Partner
                     </router-link>
                 </div>
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/faqs">
+                    <router-link to="/faqs" :class="{whiteColor: start && transparent}">
                         FAQ
                     </router-link>
                 </div>
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/kontakt">
+                    <router-link to="/kontakt" :class="{whiteColor: start && transparent}">
                         Kontakt
                     </router-link>
                 </div>
@@ -99,6 +99,8 @@ export default {
     data() {
         return {
             mobileMenu: false,
+            transparent: true,
+            start: true
         } 
     },
     props: {
@@ -108,24 +110,40 @@ export default {
         toggleMenu: function(){
             // console.log('Toggle Menu!')
             this.mobileMenu = !this.mobileMenu
-        }
+        },
+        // changeBackground: function(e){
+        //     if(e.scrollPercent === 0){
+        //         console.log('See!')
+        //         this.transparent = true
+        //         if(this.$route.path === '/'){
+        //             this.start = true
+        //         } else {
+        //             this.start = false
+        //         }
+        //     } else {
+        //         console.log('Dont See!')
+        //         this.transparent = false
+        //     }
+        // }
     }
 }
 </script>
 
 <style scoped>
-    .transparentBg {
+    /* .transparentBg {
         background: transparent !important;
         transition: 0.5s;
-    }
+    } */
+    /* .whiteColor {
+        color: white !important;
+    } */
     .navbar {
-        padding: 0.5em 0.3em;
         position: fixed;
         width: 100%;
         background: white;
     }
     .navbar-item > a {
-        /* color: white; */
+        color: #17a2b8;
         font-weight: 800;
     }
 
