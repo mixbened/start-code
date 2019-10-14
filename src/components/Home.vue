@@ -12,7 +12,7 @@
                 <h5 class="title is-5" style="color: white;">
                   We know Tech and we know how to teach.
                 </h5>
-                <b-button @click="scrollDown" type="is-warning">Zu den Kursen</b-button>
+                <b-button @click="scrollDown" type="is-warning">Learn to Code</b-button>
             </section>
         </div>
         <div class="column"></div>
@@ -49,7 +49,7 @@
                 <div>
                     <h5 class="title is-5">Kurse</h5>
                     <p>Ob Start-Up in Aussicht, eine neue Position oder einfach der Wunsch nach tiefergehendem Verständnis. Coding ist für alle!</p>
-                    <router-link to="/kurse"><b-button type="is-primary" class="mt-2">Mehr dazu</b-button></router-link>
+                    <router-link to="/kurse"><b-button type="is-primary" class="mt-2">Zu den Kursen</b-button></router-link>
                 </div>
             </div>
             <div class="column box" style="background: rgba(255, 221, 87,0.5)">
@@ -59,7 +59,7 @@
                 <div>
                     <h5 class="title is-5">Für Unternehmen</h5>
                     <p>Nicht nur Softwareentwickler profitieren von IT-Skills. Wir schlauen Ihre Mitarbeiten auf um die digitale Welt gemeinsam zu gestalten.</p>
-                    <router-link to="/teams"><b-button type="is-primary" class="mt-2">Mehr dazu</b-button></router-link>
+                    <router-link to="/teams"><b-button type="is-primary" class="mt-2">Für Teams</b-button></router-link>
                 </div>
             </div>
         </div>
@@ -134,12 +134,12 @@
     </section>
     <section class="section sign-up">
       <div class="container has-text-centered">
-        <h3 class="title is-3" style="color: white;">Melde dich für den START.CODE Newsletter an!</h3>
+        <h3 class="title is-3" style="color: white;"><b-icon icon="newspaper" size="is-medium" style="margin: 0 1em"></b-icon>Melde dich für den START.CODE Newsletter an!</h3>
         <div class="container">
           <form action="https://start-code.us20.list-manage.com/subscribe/post?u=e8429b1b1cc6f7df4af8fbf90&amp;id=2e53d86122" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="width: 50%; margin: auto" novalidate>
             <div class="columns mt-2">
             <b-field style="width: 100%;">
-                <b-input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required></b-input>
+                <b-input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required></b-input>
             </b-field>
               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e8429b1b1cc6f7df4af8fbf90_2e53d86122" tabindex="-1" value=""></div>
@@ -235,7 +235,7 @@ figure.image > img {
   padding: 2% 15% 0 0;
 }
 p.content {
-  padding-right: 10%;
+  max-width: 1023px;
 }
 .some-style {
   color: white;
@@ -307,6 +307,9 @@ p.content {
   }
   .validate {
     width: 80% !important;
+  }
+  .column.box {
+    margin-top: 20%;
   }
 }
 </style>

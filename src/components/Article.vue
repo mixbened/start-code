@@ -1,5 +1,6 @@
 <template>
     <section class="section">
+        <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
         <div class="container">
             <h1 class="title is-1 has-text-centered">{{ post.title }}</h1>
             <p class="content" v-html="post.content"></p>
@@ -27,18 +28,24 @@
                 <div>
                 <p class="heading">Social</p>
                 <p class="content">
+                    <a href="">
                     <b-icon
-                        icon="view-dashboard"
+                        icon="facebook"
                         size="is-medium">
                     </b-icon>
+                    </a>
+                    <router-link to="">
                     <b-icon
-                        icon="view-dashboard"
+                        icon="twitter"
                         size="is-medium">
                     </b-icon>
+                    </router-link>
+                    <router-link to="">
                     <b-icon
-                        icon="view-dashboard"
+                        icon="medium"
                         size="is-medium">
                     </b-icon>
+                    </router-link>
                 </p>
                 </div>
             </div>
@@ -67,7 +74,9 @@ export default {
             },
             published: ''
         },
-        imageUrl: ''
+        imageUrl: '',
+        isFullPage: true,
+        isLoading: true
     }
   },
   methods: {
@@ -86,6 +95,7 @@ export default {
     axios.get(`https://www.googleapis.com/blogger/v3/blogs/${bid}/posts/${id}?key=${k}`)
       .then(res => {
         this.post = res.data
+        this.isLoading = false
       })
       
   }

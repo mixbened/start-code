@@ -55,25 +55,6 @@
             </div>
         </section>
         <section class="section">
-        <div class="container">
-            <div class="banner">
-                <div class="card-content">
-                    <p class="title">
-                    “Teams werden interdisziplinär? Dazu muss das Skillset auch interdisziplinär sein. Ziel ist es nicht, neue Coder zu finden. Wir wollen ein gesamtes digitales und agiles Team sein.”
-                    </p>
-                    <p class="subtitle">
-                        Johan Hacklin, Unitymeda Agile Coach
-                    </p>
-                </div>
-                <footer class="card-footer">
-                    <p class="content card-footer-item">
-                        Wie interdisziplinäre Teams mit CODE.INONEDAY geschaffen werden:<router-link to="/article/unitymedia"> Artikel</router-link>
-                    </p>
-                </footer>
-                </div>
-        </div>
-        </section>
-        <section class="section">
             <div class="container">
                 <h3 class="title is-3">Fakten - Bitkom Studie aus dem Jahr 2018</h3>
                 <div class="columns mt-5">

@@ -7,7 +7,7 @@
         <a href="#" class="card-header-icon" aria-label="more options">
         <span class="icon">
             <b-icon
-                icon="view-dashboard"
+                icon="code-tags"
                 size="is-medium">
             </b-icon>
         </span>

@@ -3,6 +3,9 @@
     <Title title="Kurse" subtitle="Programmieren für Beginner"/>
     <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
     <section class="section full">
+        <b-message v-if="!this.isLoading && this.courses.length === 0" style="width: 80%; margin: auto;" size="is-large" title="Aktuell haben wir keinen Kurs geplant..." type="is-warning" aria-close-label="Close message">
+          Es dauert aber nicht mehr lange! Melde dich zum Newsletter an, um Up-to-date zu bleiben.
+        </b-message>
         <CourseCard v-for="(course,index) in courses" v-bind:key="index" v-bind:id="course.id" v-bind:title="course.name.text" v-bind:desc="course.summary" v-bind:date="course.start.utc + ' - ' +course.end.utc" v-bind:price="course.price" v-bind:location="course.location" v-bind:picUrl="course.logo.url"/>
     </section>
     <section class="section">
@@ -72,10 +75,10 @@ export default {
   mounted(){
     // in the future maybe we secure the key, but right now it's about public events, so no need to secure in MVP
     axios
-      .get('https://www.eventbriteapi.com/v3/organizations/306112625124/events/?token=PMPLOOAVBFA3TSHBWX4U')
+      .get('https://www.eventbriteapi.com/v3/organizations/334588197527/events/?token=CNL4QBETWEIPIIRYNLJ5')
       .then(response => {
-        console.log('API Response: ', response)
-        this.courses = response.data.events
+        // console.log('API Response: ', response)
+        this.courses = response.data.events.filter(course => course.status === 'live')
         this.isLoading = false;
       })
   }

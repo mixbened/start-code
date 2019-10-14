@@ -3,17 +3,22 @@
       <section class="section">
         <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
         <div class="card courseContainer">
-          <div class="hero" style="background-image: url('https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')">
+          <div class="hero" style="background-image: url('https://images.unsplash.com/photo-1520881363902-a0ff4e722963?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')">
             <h2 class="title is-2 has-text-centered" style="color: white;">{{ course.name.text }}</h2>
-            <h5 class="title is-5" style="color: white;">{{ course.start.utc }}, {{ course.location }}</h5>
+            <h5 class="title is-5" style="color: white;">{{ date }}, {{ location }}</h5>
           </div>
           <div class="container content">
             <div class="columns">
               <div class="column is-three-quarter steps">
+                <div class="container">
+                  <p class="content">
+                    <b>{{ course.description.text }}</b>
+                  </p>
+                </div>
                 <h4 class="title is-4">Was wird im Kurs gelehrt?</h4>
                 <div class="container">
                   <p class="content">
-                    {{ course.description.text }}
+                    {{ content[2] }}
                   </p>
                 </div>
                 <h4 class="title is-4">Für wen ist der Kurs gedacht?</h4>
@@ -23,11 +28,13 @@
                   </p>
                   <section class="testimonial-box columns section">
                     <div class="column is-one-third">
-                      <div class="profile column"></div>
+                      <div class="profile column">
+                      </div>
                     </div>
                     <div class="column is-two-thirds">
                       <small>
-                        <i>"Ich hatte ... lorem Ipsum"</i>
+                        <i>"Es wurde alles vom Trainer verständlich rübergebracht und mich hat dann überrascht, was wir alles ohn Vorwissen in der kurzen Zeot auf die Beine gestellt haben."</i>
+                        <br><b>Katharina, Web Development</b>
                       </small>
                     </div>
                   </section>
@@ -86,8 +93,10 @@
             <div id="eventbrite-widget"></div>
           </div>
           <div class="level warteliste-banner is-vcentered">
-            <h3 class="title is-3" style="margin: 0; color: #2a3758">Termine passen nicht?</h3>
-            <h6 class="title is-6 is-white" style="margin-right: 2em;">
+            <div>
+              <h3 class="title is-3" style="margin: 0; color: #2a3758">Termine passen nicht?</h3>
+              <p class="content">Wir machen's möglich. Trag dich ein und erhalte Meldung, wenn der Kurs wieder stattfindet!</p>
+            </div>
               <b-button @click="toggleModal" class="is-primary">
                 Warteliste
                 <b-icon
@@ -95,7 +104,6 @@
                     size="is-small">
                 </b-icon>
               </b-button>
-            </h6>
           </div>
         </div>
       </section>
@@ -148,17 +156,20 @@ export default {
       },
       content: [],
       instructor_image: "",
-      location: ""
+      location: "",
+      isLoading: true,
+      date: ""
     }
   },
   mounted(){
     // in the future maybe we secure the key, but right now it's about public events, so no need to secure in MVP
-    // to get all information 3 calls are made: first for the while event information, then event description, then venue, then checkout
+    // to get all information 4 calls are made: first for the event information, then event description, then venue, then checkout
     const id = this.$route.params .id
     axios
       .get(`https://www.eventbriteapi.com/v3/events/${id}/?token=PMPLOOAVBFA3TSHBWX4U`)
       .then(response_course => {
         this.course = response_course.data
+        this.date = this.formatDate(this.course.created)
         this.loadCheckout(response_course.data.id)
         axios
         .get(`https://www.eventbriteapi.com/v3/events/${id}/structured_content/?token=PMPLOOAVBFA3TSHBWX4U`)
@@ -169,6 +180,7 @@ export default {
           let content = arr_content.map(el => el.replace("</p>", ""))
           this.content = content
           this.instructor_image = response_content.data.modules[1].data.image.url
+          this.isLoading = false;
         })
         // end content request
         axios.get(`https://www.eventbriteapi.com/v3/venues/${response_course.data.venue_id}/?token=PMPLOOAVBFA3TSHBWX4U`)
@@ -176,7 +188,6 @@ export default {
           // console.log('API Response Venue: ', response_venue)
           this.location = response_venue.data.name
         })
-        this.isLoading = false;
       })
       // end all requests
   },
@@ -199,6 +210,14 @@ export default {
           // Optional
           onOrderComplete: exampleCallback,
       });
+    },
+    formatDate: function(str){
+      let date = str.substring(0,10)
+      let parts = date.split("-")
+      parts.reverse()
+      let newDate = parts.join(".")
+      return newDate
+
     }
   }
 }
@@ -210,14 +229,21 @@ export default {
   height: 270px !important;
 }
 .profile {
-  width: 5em;
-  height: 5em;
+  width: 6em;
+  height: 6em;
   border-radius: 100%;
   margin: auto;
-  background-image: url('https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+  background-size: cover;
+  background-image: url('../assets/img/profile-3.jpeg');
 }
 p.title {
   font-size: 1.3em;
+}
+h4.title.is-4 {
+  margin: 1em 0;
+}
+.warteliste-banner > div > .content {
+  padding: 2% 25% 0 0;
 }
 .p-2 {
   padding: 2em;
@@ -255,6 +281,7 @@ p.title {
   justify-content: center;
   margin-bottom: 2em;
   background-size: cover;
+  background-position: center;
 }
 .hero:before {
   content: "";
@@ -277,12 +304,16 @@ p.title {
 .is-white {
   color: white;
 }
-p.heading {
-  border-bottom: 2px solid #ffdd57;
-}
 @media (max-width: 768px){
   .info {
     border: 0;
+  }
+  .courseContainer {
+    width: 100% !important;
+    margin: 0;
+  }
+  p.heading {
+    font-size: 2em;
   }
 };
 </style>

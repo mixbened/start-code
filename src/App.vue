@@ -7,7 +7,7 @@
     <div class="circle big"></div>
     <Nav />
     <!-- <hr> -->
-    <div style="margin-bottom: 3em;">
+    <div style="margin-top: 2em; min-height: 95vh;">
       <router-view v-on:change-bg="doSomething"></router-view>
     </div>
     <router-link to="/kontakt">

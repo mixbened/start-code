@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar" :class="{transparentBg: transparent, whiteColor: start}" role="navigation" aria-label="main navigation"  v-view="changeBackground">
+    <nav class="navbar" role="navigation" aria-label="main navigation" >
         
         <div class="navbar-brand">
             <router-link class="navbar-item" to="/" :class="{whiteColor: start && transparent}">
