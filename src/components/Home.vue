@@ -2,20 +2,19 @@
     <section>
       <section class="hero">
       <div class="hero-body columns is-centered is-vcentered is-desktop">
-        <div class="bg-overlay"></div>
-        <div class="column is-two-thirds" style="padding-left: 10%">
+        <div class="column bg-overlay"></div>
+        <div class="column" style="padding: 0 20% 0 5%;">
             <section class="teaser">
-                <h1 class="title" style="display: inline-block; position: relative; font-size: 3em; margin: 0.3em auto;color: white;">
-                  Bock auf digitale Skills?
+                <h1 class="title" style="display: inline-block; position: relative; font-size: 4em; margin: 0.3em auto;color: white; font-weight: 1000">
+                  Digitale Skills für Jeden
                   <!-- <div class="underline"></div> -->
                 </h1>
                 <h5 class="title is-5" style="color: white;">
-                  We know Tech and we know how to teach.
+                  Wir lehren Programmieren verständlich vor Ort.
                 </h5>
                 <b-button @click="scrollDown" type="is-warning">Learn to Code</b-button>
             </section>
         </div>
-        <div class="column"></div>
       </div>
     </section>
     <section class="section big-section" id="section">
@@ -250,6 +249,7 @@ p.content {
   background-repeat: no-repeat;
   padding: 3%;
   min-height: 100vh;
+  display: flex;
 }
 .fact {
   margin-top: 3em;
@@ -290,6 +290,9 @@ p.content {
   }
   h1 {
     font-size: 2em !important;
+  }
+  .teaser > h1 {
+    font-size: 3em !important;
   }
   h3 {
     font-size: 1em !important;
