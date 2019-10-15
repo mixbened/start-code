@@ -4,6 +4,7 @@
       <div class="hero-body columns is-centered is-vcentered is-desktop">
         <div class="column bg-overlay"></div>
         <div class="column" style="padding: 0 20% 0 5%;">
+            <sequential-entrance delay="1500">
             <section class="teaser">
                 <h1 class="title" style="display: inline-block; position: relative; font-size: 4em; margin: 0.3em auto;color: white; font-weight: 1000">
                   Digitale Skills für Jeden
@@ -14,6 +15,7 @@
                 </h5>
                 <b-button @click="scrollDown" type="is-warning">Learn to Code</b-button>
             </section>
+            </sequential-entrance>
         </div>
       </div>
     </section>

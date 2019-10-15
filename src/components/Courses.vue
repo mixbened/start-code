@@ -6,7 +6,9 @@
         <b-message v-if="!this.isLoading && this.courses.length === 0" style="width: 80%; margin: auto;" size="is-large" title="Aktuell haben wir keinen Kurs geplant..." type="is-warning" aria-close-label="Close message">
           Es dauert aber nicht mehr lange! Melde dich zum Newsletter an, um Up-to-date zu bleiben.
         </b-message>
+        <sequential-entrance>
         <CourseCard v-for="(course,index) in courses" v-bind:key="index" v-bind:id="course.id" v-bind:title="course.name.text" v-bind:desc="course.summary" v-bind:date="course.start.utc + ' - ' +course.end.utc" v-bind:price="course.price" v-bind:location="course.location" v-bind:picUrl="course.logo.url"/>
+        </sequential-entrance>
     </section>
     <section class="section">
       <div class="container">

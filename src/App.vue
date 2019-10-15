@@ -46,6 +46,15 @@ export default {
 .mt-2 {
   margin-top: 2em;
 }
+#progress-container-el {
+  /* background */
+  background-color: white !important;
+}
+
+#progress-el {
+  /* progress bar */
+  background-color: #17a2b8 !important;
+}
 .is-3 {
   position: relative;
   display: inline-block;

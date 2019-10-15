@@ -3,7 +3,9 @@
     <Title title="Blog" subtitle="Infos rund um das Thema Programmieren lernen"/>
     <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
     <section class="section">
+        <sequential-entrance>
         <ArticleCard v-for="(article,index) in posts" v-bind:key="index" v-bind:id="article.id" v-bind:title="article.title" v-bind:content="article.content" v-bind:picUrl="article.image"/>
+        </sequential-entrance>
     </section>
   </section>
 </template>
