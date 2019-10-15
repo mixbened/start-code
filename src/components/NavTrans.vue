@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar" role="navigation" aria-label="main navigation" >
+    <nav class="navbar transparentBg whiteColor" role="navigation" aria-label="main navigation" >
 
         <div class="navbar-brand">
             <router-link class="navbar-item" to="/">
@@ -17,31 +17,31 @@
             <div class="navbar-start">
 
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/kurse">
+                    <router-link to="/kurse" class="whiteColor">
                         Kurse
                     </router-link>
                 </div>
 
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
+                    <a class="navbar-link whiteColor">
                         Für Unternehmen
                     </a>
 
                     <div class="navbar-dropdown">
 
-                        <router-link to="/teams">
+                        <router-link to="/teams"  class="whiteColor">
                             <a class="navbar-item" v-on:click="toggleMenu">
                                 Übersicht
                             </a>
                         </router-link>
 
-                        <router-link to="/ciod">
+                        <router-link to="/ciod"  class="whiteColor">
                         <a class="navbar-item" v-on:click="toggleMenu">
                             CODE.INONEDAY
                         </a>
                         </router-link>
 
-                        <router-link to="/coaching">
+                        <router-link to="/coaching" class="whiteColor">
                             <a class="navbar-item" v-on:click="toggleMenu">
                                 Coaching
                             </a>
@@ -50,23 +50,23 @@
                 </div>
 
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/blog">
+                    <router-link to="/blog" class="whiteColor">
                         News
                     </router-link>
                 </div>
 
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/partner">
+                    <router-link to="/partner" class="whiteColor">
                         Partner
                     </router-link>
                 </div>
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/faqs">
+                    <router-link to="/faqs" class="whiteColor">
                         FAQ
                     </router-link>
                 </div>
                 <div class="navbar-item" v-on:click="toggleMenu">
-                    <router-link to="/kontakt">
+                    <router-link to="/kontakt" class="whiteColor">
                         Kontakt
                     </router-link>
                 </div>
@@ -95,10 +95,10 @@
 <script>
 
 export default {
-    name: 'Nav',
+    name: 'NavTrans',
     data() {
         return {
-            mobileMenu: false,
+            mobileMenu: false
         }
     },
     props: {
@@ -128,13 +128,16 @@ export default {
 </script>
 
 <style scoped>
-    /* .transparentBg {
+    .transparentBg {
         background: transparent !important;
         transition: 0.5s;
-    } */
-    /* .whiteColor {
+    }
+    .whiteColor {
         color: white !important;
-    } */
+    }
+    .navbar-item.has-dropdown.is-active .navbar-link, .navbar-item.has-dropdown:focus .navbar-link, .navbar-item.has-dropdown:hover .navbar-link {
+      background-color: #2a3758;
+    }
     .navbar {
         position: fixed;
         width: 100%;
@@ -144,5 +147,9 @@ export default {
         color: #17a2b8;
         font-weight: 800;
     }
-
+    @media (max-width: 1023px){
+      .navbar-menu {
+        background-color: #17a2b8 !important;
+      }
+    }
 </style>

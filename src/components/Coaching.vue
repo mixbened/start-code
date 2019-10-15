@@ -97,15 +97,15 @@ p.title {
     color: white;
 }
 .hero {
-    width: 100%;
-    height: 50vh;
-    background: url('../assets/img/course2.jpg');
-    filter: grayscale(20%);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    flex-direction: row;
-    align-items: center;
+  width: 100%;
+  height: 55vh;
+  background: url('../assets/img/course2.jpg');
+  background-attachment: fixed;
+  filter: grayscale(20%);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
 }
 </style>
-

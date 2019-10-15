@@ -5,10 +5,11 @@
     <div class="circle medium2"></div>
     <div class="circle medium3"></div>
     <div class="circle big"></div>
-    <Nav />
+    <Nav v-show="!transparent"/>
+    <NavTrans v-show="transparent"/>
     <!-- <hr> -->
-    <div style="margin-top: 2em; min-height: 95vh;">
-      <router-view v-on:change-bg="doSomething"></router-view>
+    <div style="min-height: 95vh;" v-on:scroll.passive="someMethod">
+      <router-view v-on:top="someMethod"></router-view>
     </div>
     <router-link to="/kontakt">
       <b-button v-if="$route.path !== '/kontakt'" class="is-warning contact">Kontakt</b-button>
@@ -20,20 +21,23 @@
 <script>
 import Nav from './components/Nav.vue'
 import Footer from './components/Footer.vue'
+import NavTrans from './components/NavTrans.vue'
 
 export default {
   name: 'app',
   components: {
     Nav,
+    NavTrans,
     Footer
   },
   methods: {
-    doSomething: function(){
-      console.log('Empty')
-    }
+    someMethod: function(e){
+      this.transparent = e
+    },
   },
   data(){
     return {
+      transparent: false
     }
   }
 }

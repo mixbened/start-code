@@ -55,6 +55,21 @@ https://www.eventbrite.com/platform/api#/reference/event/list/list-events-by-org
 
 When clicking on a specific Course, the Application makes another request and getting information for a specific ID.
 
+This information has to be structured in the Eventbrite description in a very specific way. We load the event description as raw HTML and split it into raw strings that are displayed in another way than the HTML coming in. Also there is another call to the venue endpoint, to receive the name from an ID.
+
+Eventbrite information has to be structured like:
+
+All Paragraphs (new lines)
+
+* instructor
+* whats the content
+* for who
+* what to bring
+* goals of the course
+* count lessons
+* duration of lesson
+* price
+
 #### Posts
 
 * title

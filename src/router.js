@@ -17,7 +17,7 @@ import Data from './components/Data'
 import Impressum from './components/Impressum'
 import Article from './components/Article'
 
-// define routes 
+// define routes
 const routes = [
     { path: '/kurse', component: Courses },
     { path: '/kontakt', component: Contact },
@@ -42,6 +42,11 @@ const router = new VueRouter({
       },
     mode: 'history',
     routes
+})
+
+router.beforeEach((to, from, next) => {
+  // console.log('Router', to)
+  next()
 })
 
 export default router

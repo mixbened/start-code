@@ -173,7 +173,23 @@ export default {
   methods: {
     scrollDown: function(){
       document.getElementById('section').scrollIntoView({behavior: 'smooth'})
+    },
+    handleScroll: function(event) {
+      let top = document.scrollingElement.scrollTop
+      if(top > 100){
+        this.$emit('top', false)
+      } else {
+        this.$emit('top', true)
+      }
     }
+  },
+  created () {
+      this.$emit('top', true)
+      window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+      this.$emit('top', false)
+      window.removeEventListener('scroll', this.handleScroll);
   }
 }
 </script>
@@ -249,6 +265,7 @@ p.content {
   background-image: url('../assets/img/course1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 3%;
   min-height: 100vh;
   display: flex;
