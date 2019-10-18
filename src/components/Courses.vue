@@ -7,7 +7,7 @@
           Es dauert aber nicht mehr lange! Melde dich zum Newsletter an, um Up-to-date zu bleiben.
         </b-message>
         <sequential-entrance>
-        <CourseCard v-for="(course,index) in courses" v-bind:key="index" v-bind:id="course.id" v-bind:title="course.name.text" v-bind:desc="course.summary" v-bind:date="course.start.utc + ' - ' +course.end.utc" v-bind:price="course.price" v-bind:location="course.location" v-bind:picUrl="course.logo.url"/>
+        <CourseCard v-for="(course,index) in courses" v-bind:key="index" v-bind:id="course.id" v-bind:title="course.name.text" v-bind:desc="course.summary" v-bind:dateStart="course.start.utc" v-bind:dateEnd="course.end.utc" v-bind:venueId="course.venue_id" v-bind:price="course.price" v-bind:location="course.location" v-bind:picUrl="course.logo.url"/>
         </sequential-entrance>
     </section>
     <section class="section">

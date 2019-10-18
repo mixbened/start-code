@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
-        <div class="container">
+        <div class="container mt-5">
             <h1 class="title is-1 has-text-centered">{{ post.title }}</h1>
             <p class="content" v-html="post.content"></p>
             <nav class="level is-mobile">

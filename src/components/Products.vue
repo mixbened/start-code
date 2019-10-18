@@ -48,7 +48,7 @@
                     <div class="card column has-text-centered">
                         <img src="../assets/img/coach-graphics.png" width="300">
                         <h5 class="title is-4 has-text-centered">Coaching</h5>
-                        <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
+                        <p class="content has-text-justified">Mittels konkretem Training zu Themen aus Technik & Programmierung helfen wir Teams Projekte schnell umzusetzen. Bei Projekten, welche nicht die alltäglichen Kompetenzen der Mitarbeiter beanspruchen, können wir unterstützen und nachhaltig unter die Arme greifen.</p>
                         <router-link to="/coaching"><b-button type="is-primary">Mehr erfahren</b-button></router-link>
                     </div>
                 </div>

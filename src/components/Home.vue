@@ -13,7 +13,8 @@
                 <h5 class="title is-5" style="color: white;">
                   Wir lehren Programmieren verständlich vor Ort.
                 </h5>
-                <b-button @click="scrollDown" type="is-warning">Learn to Code</b-button>
+                <b-button @click="scrollDown" type="is-link" rounded>Entdecken</b-button>
+                <b-button @click="scrollDown" type="is-warning" class="mx-1" rounded>Kurse</b-button>
             </section>
             </sequential-entrance>
         </div>
@@ -229,6 +230,9 @@ export default {
 }
 .teaser {
   width: 100%;
+}
+.mx-1 {
+  margin: 0 1em;
 }
 .sign-up {
   background-color: rgb(23, 162, 184);

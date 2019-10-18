@@ -22,12 +22,23 @@
                 </div>
             </div>
             <div class="column">
-                <b-tag type="is-primary" size="is-small">
-                    <time v-bind:datetime="date">{{ date }}</time>
-                </b-tag>
                 <div class="is-size-6 content">
                     {{ desc }}
                 </div>
+                <div class="is-size-6 content">
+                    <b>{{ formatDate(dateStart) }}</b> - <b>{{ formatDate(dateEnd) }} | {{ location }} </b>
+                </div>
+                <b-taglist>
+                    <b-tag class="mx-1" type="is-success" size="is-small">
+                        <time>{{ tags[selectTag()] }}</time>
+                    </b-tag>
+                    <b-tag class="mx-1" type="is-info" size="is-small">
+                        <time>{{ tags[selectTag()] }}</time>
+                    </b-tag>
+                    <b-tag class="mx-1" type="is-danger" size="is-small">
+                        <time>{{ tags[selectTag()] }}</time>
+                    </b-tag>
+                </b-taglist>
             </div>
         </div>
     </div>
@@ -39,25 +50,59 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
   name: 'CourseCard',
   components: {
   },
+  data(){
+      return {
+          location: "",
+          tags: ["#software", "#learning", "#teilzeit", "#code", "#einfachmalmachen", "#tech", "#justdoit", "#learntocode", "#immerweiter"]
+      }
+  },
   props: {
     'title': String,
-    'date': String,
+    'dateStart': String,
+    'dateEnd': String,
     'id': String,
     'desc': String,
     'price': Number,
     'picUrl': String,
-    'location': String
-    }
+    'venueId': String
+    },
+    methods: {
+        formatDate: function(str){
+            let date = str.substring(0,10)
+            let parts = date.split("-")
+            parts.reverse()
+            let newDate = parts.join(".")
+            return newDate
+        },
+        selectTag: function(){
+            let tags = this.tags
+            let number = Math.floor(Math.random() * this.tags.length) + 1
+            // let tag = tags[number]
+            // this.tags.splice(number,1)
+            return number
+        }
+    },
+    mounted() {
+        axios.get(`https://www.eventbriteapi.com/v3/venues/${this.venueId}/?token=PMPLOOAVBFA3TSHBWX4U`)
+        .then(response_venue => {
+          // console.log('API Response Venue: ', response_venue)
+          this.location = response_venue.data.name
+        })
+    },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.mx-1 {
+    margin: 0 1em;
+}
 .courseImage {
     height: 150px;
     background-position: center;
@@ -87,5 +132,8 @@ export default {
 }
 .card-header-title {
     font-size: 1.4em;
+}
+div.content {
+    padding: 0.5em 0;
 }
 </style>
