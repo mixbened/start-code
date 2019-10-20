@@ -1,10 +1,10 @@
 <template>
-    <div class="card postCard">
+    <div class="postCard">
         <router-link :to="'/article/'+id">
-            <div class="postImage" :style="{ 'background-image': 'url(' + imageUrl + ')'}"></div>
+            <div class="postImage" :style="{ 'background-image': 'url(' + picUrl + ')'}"></div>
             <section class="section">
-                <h3 class="title is-3">{{ title }}</h3>
-                <p class="content wrapper" v-html="content"></p>
+                <h4 class="title is-4">{{ title }}</h4>
+                <p class="content" v-html="content"></p>
                 <b-button>Zum Artikel</b-button>
             </section>
         </router-link>
@@ -21,7 +21,8 @@ export default {
       title: String,
       content: String,
       author: String,
-      id: String
+      id: String,
+      picUrl: String
     },
     data(){
         return {
@@ -29,33 +30,28 @@ export default {
         }
     },
     methods: {
-        getImage: function(){
-            // get first image from blog and then remove it from the dom (blogger has no title images)
-            let img = document.querySelector('.separator > a > img')
-            let source = img['attributes']['src'].value
-            this.imageUrl = source
-            img.remove()
-        }
     },
     mounted(){
-        this.getImage()
     }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+p.content {
+    height: 60px;
+    overflow: hidden;
+}
 .postImage {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     width: 100%;
-    min-height: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
 }
 .postCard {
     width: 60%;
     padding: 1em;
-    margin: auto;
+    margin: 5% auto;
 }
 .wrapper {
     max-height: 100px;

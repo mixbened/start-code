@@ -24,31 +24,6 @@
                 <b-tag type="is-info">{{ post.published.substring(0,10) }}</b-tag>
                 </div>
             </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <p class="heading">Social</p>
-                <p class="content">
-                    <a href="">
-                    <b-icon
-                        icon="facebook"
-                        size="is-medium">
-                    </b-icon>
-                    </a>
-                    <router-link to="">
-                    <b-icon
-                        icon="twitter"
-                        size="is-medium">
-                    </b-icon>
-                    </router-link>
-                    <router-link to="">
-                    <b-icon
-                        icon="medium"
-                        size="is-medium">
-                    </b-icon>
-                    </router-link>
-                </p>
-                </div>
-            </div>
             </nav>
             <hr>
         </div>
@@ -90,8 +65,8 @@ export default {
   },
   mounted(){
     const id = this.$route.params.id
-    const bid = '3080711742135149867'
-    const k = 'AIzaSyBnM-ZB84vipaMjRrN8zFo59QizrI1VgKg'
+    const bid = '1782361453755391841'
+    const k = 'AIzaSyB8RldXEP0uEfcKzwrl02WbiZttSdqJlPo'
     axios.get(`https://www.googleapis.com/blogger/v3/blogs/${bid}/posts/${id}?key=${k}`)
       .then(res => {
         this.post = res.data
@@ -104,6 +79,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1.title.is-1 {
+    color: #444;
+}
 .author {
     border-radius: 100%;
 }
@@ -111,7 +89,7 @@ export default {
     padding: 0 2em;
 }
 p.content {
-    padding: 0 2em;
+    padding: 0 15%;
     font-size: 1.1em;
 }
 figure.image {
