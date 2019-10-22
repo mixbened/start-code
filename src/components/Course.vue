@@ -17,15 +17,13 @@
                 </div>
                 <h4 class="title is-4">Was wird im Kurs gelehrt?</h4>
                 <div class="container">
-                  <p class="content">
-                    {{ content[2] }}
-                  </p>
+                  <p class="content" v-html="content[1]"></p>
+                  <h5 class="title is-5">Curriculum</h5>
+                  <p class="content" v-html="content[2]"></p>
                 </div>
                 <h4 class="title is-4">Für wen ist der Kurs gedacht?</h4>
                 <div class="container">
-                  <p class="content">
-                    {{ content[3] }}
-                  </p>
+                  <p class="content" v-html="content[3]"></p>
                   <section class="testimonial-box columns section">
                     <div class="column is-one-third">
                       <div class="profile column">
@@ -33,7 +31,7 @@
                     </div>
                     <div class="column is-two-thirds">
                       <small>
-                        <i>"Es wurde alles vom Trainer verständlich rübergebracht und mich hat dann überrascht, was wir alles ohn Vorwissen in der kurzen Zeot auf die Beine gestellt haben."</i>
+                        <i>"Es wurde alles vom Trainer verständlich rübergebracht und mich hat dann überrascht, was wir alles ohne Vorwissen in der kurzen Zeit auf die Beine gestellt haben."</i>
                         <br><b>Katharina, Web Development</b>
                       </small>
                     </div>
@@ -41,15 +39,11 @@
                 </div>
                 <h4 class="title is-4">Was benötige ich für den Kurs?</h4>
                 <div class="container">
-                  <p class="content">
-                    {{ content[4] }}
-                  </p>
+                  <p class="content" v-html="content[4]"></p>
                 </div>
                 <h4 class="title is-4">Was kann ich nach dem Kurs?</h4>
                 <div class="container">
-                  <p class="content">
-                    {{ content[5] }}
-                  </p>
+                  <p class="content" v-html="content[5]"></p>
                 </div>
               </div>
               <div class="column is-one-quarter info">
@@ -59,7 +53,7 @@
                       <div class="p-2">
                         <p class="heading">Instructor</p>
                         <img :src="instructor_image" alt="instructor course" width="100" style="border-radius: 20%;">
-                        <p class="title">{{ content[1] }}</p>
+                        <p class="title" v-html="content[0]"></p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered">
@@ -71,19 +65,19 @@
                     <div class="has-text-centered">
                       <div class="p-2">
                         <p class="heading">Lessons</p>
-                        <p class="title">{{ content[6] }}</p>
+                        <p class="title" v-html="content[6]"></p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered">
                       <div class="p-2">
                         <p class="heading">Lesson Duration</p>
-                        <p class="title">{{ content[7] }}</p>
+                        <p class="title" v-html="content[7]"></p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered">
                       <div class="p-2">
                         <p class="heading">Preis</p>
-                        <p class="title">{{ content[8] }}</p>
+                        <p class="title" v-html="content[8]"></p>
                       </div>
                     </div>
                 </div>
@@ -154,7 +148,7 @@ export default {
         },
         summary: "",
       },
-      content: [],
+      content: [{}],
       instructor_image: "",
       location: "",
       isLoading: true,
@@ -164,22 +158,26 @@ export default {
   mounted(){
     // in the future maybe we secure the key, but right now it's about public events, so no need to secure in MVP
     // to get all information 4 calls are made: first for the event information, then event description, then venue, then checkout
-    const id = this.$route.params .id
+    const id = this.$route.params.id
     axios
       .get(`https://www.eventbriteapi.com/v3/events/${id}/?token=PMPLOOAVBFA3TSHBWX4U`)
       .then(response_course => {
         this.course = response_course.data
         this.date = this.formatDate(this.course.created)
         this.loadCheckout(response_course.data.id)
-        axios
-        .get(`https://www.eventbriteapi.com/v3/events/${id}/structured_content/?token=PMPLOOAVBFA3TSHBWX4U`)
+        axios.get(`https://www.eventbriteapi.com/v3/events/${id}/structured_content/?token=PMPLOOAVBFA3TSHBWX4U`)
         .then(response_content => {
           // console.log('API Response Content: ', response_content.data)
-          let raw_content = response_content.data.modules[0].data.body.text
-          let arr_content = raw_content.split('<p>')
-          let content = arr_content.map(el => el.replace("</p>", ""))
-          this.content = content
-          this.instructor_image = response_content.data.modules[1].data.image.url
+          this.content = response_content.data.modules.map(el =>{
+            // console.log(el)
+            if(el.type === "image"){
+              this.instructor_image = el.data.image.url
+              return
+            } else {
+              return el.data.body.text
+            }
+          })
+          // this.instructor_image = this.content[9].data.image.url
           this.isLoading = false;
         })
         // end content request
@@ -227,6 +225,9 @@ export default {
 <style scoped>
 #eventbrite-widget {
   height: 270px !important;
+}
+.title.is-5 {
+  margin: 0;
 }
 .profile {
   width: 6em;

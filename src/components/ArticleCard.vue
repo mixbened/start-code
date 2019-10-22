@@ -1,6 +1,6 @@
 <template>
     <div class="postCard">
-        <router-link :to="'/article/'+id">
+        <router-link :to="url">
             <div class="postImage" :style="{ 'background-image': 'url(' + picUrl + ')'}"></div>
             <section class="section">
                 <h4 class="title is-4">{{ title }}</h4>
@@ -26,12 +26,20 @@ export default {
     },
     data(){
         return {
-            imageUrl: ''
+            imageUrl: '',
+            url: ''
         }
     },
     methods: {
+        withPlaceholder: function(str){
+            let arr = str.split(' ')
+            let slug = arr.join('-')
+            console.log('Slug', slug)
+            return slug
+        }
     },
     mounted(){
+        this.url = "/blog/" + this.id + "/" + this.withPlaceholder(this.title)
     }
 }
 </script>

@@ -28,7 +28,7 @@ const routes = [
     { path: '/ciod', component: CIOD },
     { path: '/coaching', component: Coaching },
     { path: '/blog', component: Blog },
-    { path: '/article/:id', component: Article },
+    { path: '/blog/:id/:title', component: Article },
     { path: '/partner', component: Partner },
     { path: '/cont', component: Contributions },
     { path: '/data-privacy', component: Data },

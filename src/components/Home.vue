@@ -3,7 +3,7 @@
       <section class="hero">
       <div class="hero-body columns is-centered is-vcentered is-desktop">
         <div class="column bg-overlay"></div>
-        <div class="column" style="padding: 0 20% 0 5%;">
+        <div class="column" style="padding-bottom: 5%;">
             <sequential-entrance delay="1500">
             <section class="teaser">
                 <h1 class="title" style="display: inline-block; position: relative; font-size: 4em; margin: 0.3em auto;color: white; font-weight: 1000">
@@ -14,7 +14,7 @@
                   Wir lehren Programmieren verständlich vor Ort.
                 </h5>
                 <b-button @click="scrollDown" type="is-link" rounded>Entdecken</b-button>
-                <b-button @click="scrollDown" type="is-warning" class="mx-1" rounded>Kurse</b-button>
+                <router-link to="/kurse"><b-button type="is-light" class="mx-1" rounded>Kurse</b-button></router-link>
             </section>
             </sequential-entrance>
         </div>
@@ -230,6 +230,7 @@ export default {
 }
 .teaser {
   width: 100%;
+  text-align: center;
 }
 .mx-1 {
   margin: 0 1em;
