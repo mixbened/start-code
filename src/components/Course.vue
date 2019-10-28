@@ -9,39 +9,27 @@
           </div>
           <div class="container content">
             <div class="columns">
-              <div class="column is-three-quarter steps">
+              <div class="column is-three-quarters steps">
                 <div class="container">
                   <p class="content">
-                    <b>{{ course.description.text }}</b>
+                    {{ course.description.text }}
                   </p>
                 </div>
-                <h4 class="title is-4">Was wird im Kurs gelehrt?</h4>
                 <div class="container">
-                  <p class="content" v-html="content[1]"></p>
-                  <h5 class="title is-5">Curriculum</h5>
                   <p class="content" v-html="content[2]"></p>
                 </div>
-                <h4 class="title is-4">Für wen ist der Kurs gedacht?</h4>
                 <div class="container">
-                  <p class="content" v-html="content[3]"></p>
                   <section class="testimonial-box columns section">
                     <div class="column is-one-third">
-                      <div class="profile column">
+                      <div class="profile column" :style="{ 'background-image': 'url(' + content[3] + ')'}">
                       </div>
                     </div>
                     <div class="column is-two-thirds">
-                      <small>
-                        <i>"Es wurde alles vom Trainer verständlich rübergebracht und mich hat dann überrascht, was wir alles ohne Vorwissen in der kurzen Zeit auf die Beine gestellt haben."</i>
-                        <br><b>Katharina, Web Development</b>
+                      <small v-html="content[4]">
                       </small>
                     </div>
                   </section>
                 </div>
-                <h4 class="title is-4">Was benötige ich für den Kurs?</h4>
-                <div class="container">
-                  <p class="content" v-html="content[4]"></p>
-                </div>
-                <h4 class="title is-4">Was kann ich nach dem Kurs?</h4>
                 <div class="container">
                   <p class="content" v-html="content[5]"></p>
                 </div>
@@ -52,7 +40,7 @@
                     <div class="level-item has-text-centered">
                       <div class="p-2">
                         <p class="heading">Instructor</p>
-                        <img :src="instructor_image" alt="instructor course" width="100" style="border-radius: 20%;">
+                        <img :src="content[1]" alt="instructor course" width="100" style="border-radius: 20%;">
                         <p class="title" v-html="content[0]"></p>
                       </div>
                     </div>
@@ -171,8 +159,7 @@ export default {
           this.content = response_content.data.modules.map(el =>{
             // console.log(el)
             if(el.type === "image"){
-              this.instructor_image = el.data.image.url
-              return
+              return el.data.image.url
             } else {
               return el.data.body.text
             }
@@ -235,7 +222,6 @@ export default {
   border-radius: 100%;
   margin: auto;
   background-size: cover;
-  background-image: url('../assets/img/profile-3.jpeg');
 }
 p.title {
   font-size: 1.3em;
