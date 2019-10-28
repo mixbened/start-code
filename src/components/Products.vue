@@ -42,13 +42,13 @@
                     <div class="card column has-text-centered">
                         <img src="../assets/img/workshop-graphics.png" width="300">
                         <h5 class="title is-4 has-text-centered">CODE.INONEDAY</h5>
-                        <p class="content has-text-justified">Ziel von Code in one day ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen. </p>
+                        <p class="content has-text-justified">Ziel von CODE.INONEDAY ist es, ein interdisziplinäres Grundverständnis für digital-technische Themen im Unternehmen aufzubauen, um einen digitalen Denkansatz zu etablieren, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen.</p>
                         <router-link to="/ciod"><b-button type="is-primary">Mehr erfahren</b-button></router-link>
                     </div>
                     <div class="card column has-text-centered">
                         <img src="../assets/img/coach-graphics.png" width="300">
-                        <h5 class="title is-4 has-text-centered">Coaching</h5>
-                        <p class="content has-text-justified">Mittels konkretem Training zu Themen aus Technik & Programmierung helfen wir Teams Projekte schnell umzusetzen. Bei Projekten, welche nicht die alltäglichen Kompetenzen der Mitarbeiter beanspruchen, können wir unterstützen und nachhaltig unter die Arme greifen.</p>
+                        <h5 class="title is-4 has-text-centered">Expert Sessions & Coaching</h5>
+                        <p class="content has-text-justified">Mittels fachlichem Training zu Themen aus Technik & Programmierung helfen wir Teams dabei, Projekte schneller umzusetzen. Bei Projekten, die die fachlichen Kompetenzen von Mitarbeitern herausfordern, fördern wir in Digital Themen und bilden nachhaltig weiter.</p>
                         <router-link to="/coaching"><b-button type="is-primary">Mehr erfahren</b-button></router-link>
                     </div>
                 </div>
@@ -69,19 +69,52 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="container">
+                <section class="section mt-5">
+                    <div class="column container is-vcentered p-2">
+                        <div class="column content p-2">
+                            <h3 class="title is-5">Für wen ist das Angebot interessant?</h3>
+                            <section class="section">
+                                <div class="columns is-vcentered fact">
+                                <img src="../assets/img/icons8-zusammenspiel-96.png" alt="Icon Zusammenspiel" width="50">
+                                <h3 class="title is-5 fact-title">Projektmanagement & Produktmanagement</h3>
+                                </div>
+                                <p class="content">Personen in diesen Positionen betreuen oft digitale Produkte. Bei der Entwicklung arbeitet man viel mit Software-Architekten oder Entwicklern zusammen. Damit die Kommunikation zwischen diesen Domänen positiv verläuft, hilft es die Basics der Entwicklung zu beherrschen.
+                                </p>
+                                <div class="columns is-vcentered fact">
+                                <img src="../assets/img/icons8-kundeninformationen-48.png" alt="Icon Zusammenspiel" width="50">
+                                <h3 class="title is-5 fact-title">Online Marketing</h3>
+                                </div>
+                                <p class="content">Marketing wird in Zeiten von digitaler Wertschöpfung oft sehr technsich. Stichpunkte hierfür sind SEO, Analytics oder Web-Design. Mit Kompetenzen im Bereich der Programmierung, können Marketer ihre Tools und Maßnahmen auf das nächste Level bringen.</p>
+                                <div class="columns is-vcentered fact">
+                                <img src="../assets/img/icons8-ausbildung-96 (1).png" alt="Icon Zusammenspiel" width="50">
+                                <h3 class="title is-5 fact-title">Sales oder Controlling</h3>
+                                </div>
+                                <p class="content">Auch in Fachbereichen werden digitale Skills immer wichtiger. Ob das direkte Zusammenarbeiten mit der IT Abteilung, oder eigenes Umsetzen von Tätigkeiten mittels Programmierung.</p>
+                                <p><b>Und viele mehr!</b></p>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <Banner title="Interesse?" text="Wir beantworten Fragen zu unseren Themenschwerpunkten oder dem Verfahren unseren Inhouse Kursen sehr gerne persönlich. Unsere Leistungen werden von Kunde zu Kunde individuell zugeschnitten." cta="/kontakt" action="Schick uns eine Nachricht"/>
     </section>
 </template>
 
 <script>
 import CIOD from './CIOD.vue'
 import Title from './Title'
+import Banner from './Banner'
 import chartData from '../resources/chart-data.js'
 
 export default {
   name: 'Products',
   components: {
       CIOD,
-      Title
+      Title,
+      Banner
   },
   data(){
       return {
@@ -146,9 +179,17 @@ export default {
 .hero-body {
     width: 50%;
 }
-.banner {
-    width: 80%;
-    margin: auto;
+.number {
+    position: absolute;
+    top: -1.5em;
+    border-radius: 100%;
+    background: rgb(23, 162, 184);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 @media (max-width: 768px){
     p.title {
