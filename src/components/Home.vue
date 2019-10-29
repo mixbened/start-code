@@ -42,26 +42,56 @@
     </section>
     <section class="section big-section">
       <div class="container mx-3">
+        <h3 class="title is-3">Unsere Themengebiete</h3>
+        <div class="tile is-ancestor mt-5">
+            <div class="tile box" style="background: rgb(0, 0, 0, 0.05)">
+              <div class="number" style="background: rgb(23, 162, 184)">
+                  <b-icon icon="web" size="is-small"></b-icon>
+              </div>
+              <div>
+                <h5 class="title is-5 fact-title">Web Development</h5>
+                <p class="content">Von Frontend bis Backend - Von Kennenlern-Schulungen bishin zur Umschulung von Legacy Systemen zu modernen Technologien.</p>
+              </div>
+            </div>
+            <div class="tile box" style="background: rgb(0, 0, 0, 0.05)">
+              <div class="number" style="background: rgb(23, 162, 184)">
+                  <b-icon icon="google-analytics" size="is-small"></b-icon>
+              </div>
+              <div>
+                <h5 class="title is-5 fact-title">Data Analytics</h5>
+                <p class="content">Python für Controller, Tableau für Online Marketer...der Einsatz von Big Data und Analytics Tools ist überall möglich.</p>
+              </div>
+            </div>
+            <div class="tile box" style="background: rgb(0, 0, 0, 0.05)">
+              <div class="number" style="background: rgb(23, 162, 184)">
+                  <b-icon icon="cellphone-iphone" size="is-small"></b-icon>
+              </div>
+              <div>
+                <h5 class="title is-5 fact-title">Mobile App Development</h5>
+                <p class="content">Wir unterrichten ganze Teams, die das "Mobile First" Prinzip leben. Weiterbildung von Web- zu Mobile App Developern beispielsweise.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="section big-section">
+      <div class="container mx-3">
         <h3 class="title is-3">Wofür interessierst du dich?</h3>
-        <div class="columns mt-5">
-            <div class="column box" style="background: rgb(23, 162, 184, 0.3)">
-                <div class="number" style="background: rgb(23, 162, 184)">
-                  <b-icon icon="school" size="is-small"></b-icon>
-                </div>
-                <div>
+        <div class="columns">
+            <div class="column box-action">
+                <img alt="web development course" src="../assets/img/course1.jpg">
+                <div style="padding: 1em; text-align: center">
                     <h5 class="title is-5">Kurse</h5>
                     <p>Ob Start-Up in Aussicht, eine neue Position oder einfach der Wunsch nach tiefergehendem Verständnis. Coding ist für alle!</p>
-                    <router-link to="/kurse"><b-button type="is-primary" class="mt-2">Zu den Kursen</b-button></router-link>
+                    <router-link to="/kurse"><b-button type="is-link" class="mt-2">Zu den Kursen</b-button></router-link>
                 </div>
             </div>
-            <div class="column box" style="background: rgba(255, 221, 87,0.5)">
-                <div class="number" style="background: rgb(255, 221, 87)">
-                  <b-icon icon="domain" size="is-small"></b-icon>
-                </div>
-                <div>
+            <div class="column box-action">
+                <img alt="web development course" src="../assets/img/course1.jpg">
+                <div style="padding: 1em; text-align: center">
                     <h5 class="title is-5">Für Unternehmen</h5>
                     <p>Nicht nur Softwareentwickler profitieren von IT-Skills. Wir schlauen Ihre Mitarbeiten auf um die digitale Welt gemeinsam zu gestalten.</p>
-                    <router-link to="/teams"><b-button type="is-primary" class="mt-2">Für Teams</b-button></router-link>
+                    <router-link to="/teams"><b-button type="is-link" class="mt-2">Für Teams</b-button></router-link>
                 </div>
             </div>
         </div>
@@ -200,6 +230,13 @@ export default {
 .place {
 
 }
+.box-action {
+  border: 1px solid rgb(42, 55, 88, 0.2);
+  padding: 0;
+  margin: 5%;
+  text-align: center;
+  /* color: white; */
+}
 .number {
     position: absolute;
     top: -1.5em;
@@ -220,6 +257,12 @@ export default {
     position: relative;
     justify-content: center;
     padding: 2em 1em;
+}
+.mt-5 {
+  margin-top: 5em;
+}
+.mt-2 {
+  margin-top: 2em;
 }
 .bg-overlay {
   position: absolute;

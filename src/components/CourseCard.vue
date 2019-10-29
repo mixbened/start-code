@@ -59,7 +59,7 @@ export default {
   data(){
       return {
           location: "",
-          tags: ["#software", "#learning", "#teilzeit", "#code", "#einfachmalmachen", "#tech", "#justdoit", "#learntocode", "#immerweiter"]
+          tags: ["#software", "#learning", "#parttime", "#code", "#einfachmalmachen", "#tech", "#justdoit", "#learntocode", "#immerweiter"]
       }
   },
   props: {
@@ -82,7 +82,7 @@ export default {
         },
         selectTag: function(){
             let tags = this.tags
-            let number = Math.floor(Math.random() * this.tags.length) + 1
+            let number = Math.floor(Math.random() * this.tags.length-1) + 1
             // let tag = tags[number]
             // this.tags.splice(number,1)
             return number

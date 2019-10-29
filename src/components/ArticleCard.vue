@@ -34,7 +34,7 @@ export default {
         withPlaceholder: function(str){
             let arr = str.split(' ')
             let slug = arr.join('-')
-            console.log('Slug', slug)
+            // console.log('Slug', slug)
             return slug
         }
     },

@@ -4,7 +4,7 @@
             <div class="hero-body">
                 <div class="container header-line">
                     <h2 style="color: white; font-size: 4em;" class="title is-2 has-text-centered">
-                        Innovation von innen
+                        Inhouse Kurse
                     </h2>
                     <h2 style="color: white;" class="subtitle has-text-centered">
                         Jetzt Team in digitalen Skills schulen
@@ -69,12 +69,12 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container">
-                <section class="section mt-5">
+        <section class="section">
+            <div class="container mt-5">
+                <h3 class="title is-3">Für wen ist das Angebot interessant?</h3>
+                <section>
                     <div class="column container is-vcentered p-2">
                         <div class="column content p-2">
-                            <h3 class="title is-5">Für wen ist das Angebot interessant?</h3>
                             <section class="section">
                                 <div class="columns is-vcentered fact">
                                 <img src="../assets/img/icons8-zusammenspiel-96.png" alt="Icon Zusammenspiel" width="50">
