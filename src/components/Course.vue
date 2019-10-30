@@ -151,7 +151,8 @@ export default {
       .get(`https://www.eventbriteapi.com/v3/events/${id}/?token=PMPLOOAVBFA3TSHBWX4U`)
       .then(response_course => {
         this.course = response_course.data
-        this.date = this.formatDate(this.course.created)
+        console.log(this.course)
+        this.date = this.formatDate(this.course.start.utc)
         this.loadCheckout(response_course.data.id)
         axios.get(`https://www.eventbriteapi.com/v3/events/${id}/structured_content/?token=PMPLOOAVBFA3TSHBWX4U`)
         .then(response_content => {
