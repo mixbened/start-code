@@ -211,7 +211,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #eventbrite-widget {
-  height: 270px !important;
+  height: 470px !important;
 }
 .title.is-5 {
   margin: 0;

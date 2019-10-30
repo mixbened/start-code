@@ -26,7 +26,12 @@
                     {{ desc }}
                 </div>
                 <div class="is-size-6 content">
-                    <b>{{ formatDate(dateStart) }}</b> - <b>{{ formatDate(dateEnd) }} | {{ location }} </b>
+                    <div v-if="formatDate(dateStart) != formatDate(dateEnd)">
+                        <b>{{ formatDate(dateStart) }} - {{ formatDate(dateEnd) }} | {{ location }} </b>
+                    </div>
+                    <div v-if="formatDate(dateStart) === formatDate(dateEnd)">
+                        <b>{{ formatDate(dateStart) }} | {{ location }}</b>
+                    </div>
                 </div>
                 <b-taglist>
                     <b-tag class="mx-1" type="is-success" size="is-small">
