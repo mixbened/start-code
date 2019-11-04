@@ -21,28 +21,30 @@
                     </figure>
                 </div>
             </div>
-            <div class="column content">
+            <div class="column content" style="margin-left: 1em">
                 <div>{{ desc }}</div>
-                <div class="is-size-6 my-1">
-                    <div v-if="formatDate(dateStart) != formatDate(dateEnd)">
-                        <b-icon icon="calendar" size="is-small"></b-icon>
-                        <b>{{ formatDate(dateStart) }} - {{ formatDate(dateEnd) }}</b>
-                    </div>
-                    <div v-if="formatDate(dateStart) === formatDate(dateEnd)">
-                        <b-icon icon="calendar" size="is-small"></b-icon>
-                        <b>{{ formatDate(dateStart) }}</b>
-                    </div>
-                    <div>
-                        <b-icon icon="map-marker" size="is-small"></b-icon>
-                        <b>{{ location }}</b>
-                    </div>
-                    <div v-if="formatDate(dateStart) != formatDate(dateEnd)">
-                        <b-icon icon="clock-outline" size="is-small"></b-icon>
-                        <b>1.5 Stunden, 2x wöchentlich</b>
-                    </div>
-                    <div v-if="formatDate(dateStart) === formatDate(dateEnd)">
-                        <b-icon icon="clock-outline" size="is-small"></b-icon>
-                        <b>2 Stunden</b>
+                <div class="columns">
+                    <div class="is-size-6 my-1 column">
+                        <div v-if="formatDate(dateStart) != formatDate(dateEnd)">
+                            <b-icon icon="calendar" size="is-small"></b-icon>
+                            <b>{{ formatDate(dateStart) }} - {{ formatDate(dateEnd) }}</b>
+                        </div>
+                        <div v-if="formatDate(dateStart) === formatDate(dateEnd)">
+                            <b-icon icon="calendar" size="is-small"></b-icon>
+                            <b>{{ formatDate(dateStart) }}</b>
+                        </div>
+                        <div>
+                            <b-icon icon="map-marker" size="is-small"></b-icon>
+                            <b>{{ location }}</b>
+                        </div>
+                        <div v-if="formatDate(dateStart) != formatDate(dateEnd)">
+                            <b-icon icon="clock-outline" size="is-small"></b-icon>
+                            <b>1.5 Stunden, 2x wöchentlich</b>
+                        </div>
+                        <div v-if="formatDate(dateStart) === formatDate(dateEnd)">
+                            <b-icon icon="clock-outline" size="is-small"></b-icon>
+                            <b>2 Stunden</b>
+                        </div>
                     </div>
                 </div>
                 <b-taglist>
@@ -126,8 +128,12 @@ div > b {
 .mx-1 {
     margin: 0 1em;
 }
+.px-2 {
+    padding: 0 2em 0 2em;
+}
 .courseImage {
-    height: 150px;
+    height: 200px;
+    margin: 0;
     background-position: center;
     background-size: cover;
     border-radius: 5px;
@@ -149,6 +155,7 @@ div > b {
     background-color: #17a2b8;
     color: white;
     font-weight: 800;
+    flex: 2;
 }
 .green:hover {
   background-color: #38bed3;
