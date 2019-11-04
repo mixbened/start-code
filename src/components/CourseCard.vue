@@ -14,23 +14,35 @@
         </a>
     </header>
     <div class="card-content">
-        <div class="content columns">
+        <div class="content columns is-vcentered">
             <div class="column is-one-third">
                 <div class="card-image">
                     <figure class="courseImage" :style="{ 'background-image': 'url(' + picUrl + ')'}">
                     </figure>
                 </div>
             </div>
-            <div class="column">
-                <div class="is-size-6 content">
-                    {{ desc }}
-                </div>
-                <div class="is-size-6 content">
+            <div class="column content">
+                <div>{{ desc }}</div>
+                <div class="is-size-6 my-1">
                     <div v-if="formatDate(dateStart) != formatDate(dateEnd)">
-                        <b>{{ formatDate(dateStart) }} - {{ formatDate(dateEnd) }} | {{ location }} </b>
+                        <b-icon icon="calendar" size="is-small"></b-icon>
+                        <b>{{ formatDate(dateStart) }} - {{ formatDate(dateEnd) }}</b>
                     </div>
                     <div v-if="formatDate(dateStart) === formatDate(dateEnd)">
-                        <b>{{ formatDate(dateStart) }} | {{ location }}</b>
+                        <b-icon icon="calendar" size="is-small"></b-icon>
+                        <b>{{ formatDate(dateStart) }}</b>
+                    </div>
+                    <div>
+                        <b-icon icon="map-marker" size="is-small"></b-icon>
+                        <b>{{ location }}</b>
+                    </div>
+                    <div v-if="formatDate(dateStart) != formatDate(dateEnd)">
+                        <b-icon icon="clock-outline" size="is-small"></b-icon>
+                        <b>1.5 Stunden, 2x wöchentlich</b>
+                    </div>
+                    <div v-if="formatDate(dateStart) === formatDate(dateEnd)">
+                        <b-icon icon="clock-outline" size="is-small"></b-icon>
+                        <b>2 Stunden</b>
                     </div>
                 </div>
                 <b-taglist>
@@ -105,6 +117,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+div > b {
+    margin-left: 0.5em;
+}
+.my-1 {
+    margin: 1em 0 1em 0;
+}
 .mx-1 {
     margin: 0 1em;
 }
