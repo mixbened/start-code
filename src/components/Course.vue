@@ -97,12 +97,14 @@
             <button @click="toggleModal" class="delete" aria-label="close"></button>
           </header>
           <section class="modal-card-body">
-            <p class="content">Schreibe dich auf die Warteliste und gebe an, wann du am Kurs am liebsten teilnehmen möchtest. Wir planen zeitnah die nächsten Kurse und werden versuchen deinen Wunsch zu berücksichtigen. Wenn wir einen neuen Termin haben, melden wir uns bei dir.</p>
-            <!-- Warteliste Sign up ... -->
+            <h2 class="title is-2">Warteliste</h2>
+            <p class="content">Schreibe dich auf die Warteliste und gebe an, an welchem Kurs und zu welchem Zeitpunkt du am liebsten teilnehmen möchtest. Wir planen zeitnah die nächsten Kurse und werden versuchen deinen Wunsch zu berücksichtigen. Wenn wir einen neuen Termin haben, melden wir uns bei dir.</p>
+            <div class="typeform-widget" data-url="https://benediktmix651456.typeform.com/to/S4OD7M" style="width: 100%; height: 500px;">
+            <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=S4OD7M&utm_source=typeform.com-14949235-Free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a> </div>
+            </div>
           </section>
           <footer class="modal-card-foot">
-            <button  @click="toggleModal" class="button is-success">Einschreiben</button>
-            <button  @click="toggleModal" class="button">Zurück</button>
+            <button  @click="toggleModal" class="button is-success">Fertig</button>
           </footer>
         </div>
       </div>
@@ -176,6 +178,13 @@ export default {
         })
       })
       // end all requests
+      var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, tid="typef_orm", b="https://embed.typeform.com/";
+      if(!gi.call(d,tid)) {
+        js=ce.call(d,"script");
+        js.id=tid; js.src=b+"embed.js";
+        q=gt.call(d,"script")[0];
+        q.parentNode.insertBefore(js,q) 
+      }
   },
   methods: {
     toggleModal: function(){
@@ -211,6 +220,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.ktQFuV {
+  margin-top: 0;
+}
 #eventbrite-widget {
   height: 470px !important;
 }
