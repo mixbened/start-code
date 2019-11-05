@@ -91,7 +91,7 @@
                 <div style="padding: 1em; text-align: center">
                     <h5 class="title is-5">Für Unternehmen</h5>
                     <p>Nicht nur Softwareentwickler profitieren von IT-Skills. Wir schlauen Ihre Mitarbeiten auf um die digitale Welt gemeinsam zu gestalten.</p>
-                    <router-link to="/teams"><b-button type="is-link" class="mt-2">Für Teams</b-button></router-link>
+                    <router-link to="/fuer-unternehmen"><b-button type="is-link" class="mt-2">Für Teams</b-button></router-link>
                 </div>
             </div>
         </div>

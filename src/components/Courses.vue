@@ -6,8 +6,14 @@
         <b-message v-if="!this.isLoading && this.courses.length === 0" style="width: 80%; margin: auto;" size="is-large" title="Aktuell haben wir keinen Kurs geplant..." type="is-warning" aria-close-label="Close message">
           Es dauert aber nicht mehr lange! Melde dich zum Newsletter an, um Up-to-date zu bleiben.
         </b-message>
+        <b-tabs v-model="filterValue" type="is-toggle" size="is-small" @input="filterCourses(Number)">
+            <b-tab-item label="Alle Themen"></b-tab-item>
+            <b-tab-item label="Data Science" icon="google-analytics"></b-tab-item>
+            <b-tab-item label="App Development" icon="cellphone"></b-tab-item>
+            <b-tab-item label="Web Development" icon="web"></b-tab-item>
+        </b-tabs>
         <sequential-entrance>
-          <CourseCard v-for="(course,index) in courses" v-bind:key="index" v-bind:id="course.id" v-bind:title="course.name.text" v-bind:desc="course.summary" v-bind:dateStart="course.start.utc" v-bind:dateEnd="course.end.utc" v-bind:venueId="course.venue_id" v-bind:price="course.price" v-bind:location="course.location" v-bind:picUrl="course.logo.url"/>
+          <CourseCard v-for="(course,index) in filteredCourses" v-bind:key="index" v-bind:id="course.id" v-bind:title="course.name.text" v-bind:desc="course.summary" v-bind:dateStart="course.start.utc" v-bind:dateEnd="course.end.utc" v-bind:venueId="course.venue_id" v-bind:price="course.price" v-bind:location="course.location" v-bind:picUrl="course.logo.url"/>
         </sequential-entrance>
     </section>
     <section class="section">
@@ -68,8 +74,10 @@ export default {
   data(){
     return {
       courses: [],
+      filteredCourses: [],
       isLoading: true,
-      isFullPage: true
+      isFullPage: true,
+      filterValue: 0
     }
   },
   props: {
@@ -81,8 +89,43 @@ export default {
       .then(response => {
         // console.log('API Response: ', response)
         this.courses = response.data.events.filter(course => course.status === 'live')
+        this.courses = this.courses.map(el => {
+          let cat = this.findCategory(el)
+          el.category = cat
+          return el
+        })
+        this.filterCourses()
         this.isLoading = false;
       })
+  },
+  methods: {
+    findCategory: function(obj){
+      let title = obj.name.text
+      // console.log(title)
+      let matchW = title.search(/web/i);
+      let matchA = title.search(/app/i);
+      let matchD = title.search(/data/i);
+      if(matchW > -1){
+        return "Web Development"
+      } else if(matchA > -1){
+        return "App Development"
+      } else if(matchD > -1){
+        return "Data Science"
+      } else {
+        return "No Match"
+      }
+    },
+    filterCourses: function(match){
+      if(this.filterValue === 0){
+        this.filteredCourses = this.courses.filter(el => el)
+      } else if(this.filterValue === 1){
+        this.filteredCourses = this.courses.filter(el => el.category === "Data Science")
+      } else if(this.filterValue === 2){
+        this.filteredCourses = this.courses.filter(el => el.category === "App Development")
+      } else if(this.filterValue === 3){
+        this.filteredCourses = this.courses.filter(el => el.category === "Web Development")
+      }
+    }
   }
 }
 </script>
@@ -135,9 +178,18 @@ figure:hover {
   transform: scale(1.02);
   transition: 0.6s;
 }
+.tabs ul {
+  justify-content: center;
+}
+.is-toggle-rounded ul {
+  justify-content: flex-start;
+}
 @media (max-width: 768px){
   .card {
     width: 90% !important;
+  }
+  .tabs.is-small {
+    font-size: .5rem
   }
 }
 </style>

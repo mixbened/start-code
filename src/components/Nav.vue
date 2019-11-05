@@ -29,13 +29,13 @@
 
                     <div class="navbar-dropdown">
 
-                        <router-link to="/teams">
+                        <router-link to="/fuer-unternehmen">
                             <a class="navbar-item" v-on:click="toggleMenu">
                                 Übersicht
                             </a>
                         </router-link>
 
-                        <router-link to="/ciod">
+                        <router-link to="/code-in-one-day">
                         <a class="navbar-item" v-on:click="toggleMenu">
                             CODE.INONEDAY
                         </a>

@@ -25,6 +25,20 @@ import NavTrans from './components/NavTrans.vue'
 
 export default {
   name: 'app',
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'de',
+      amp: undefined
+    },
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Digitale Skills für jeden',
+    // all titles will be injected into this template
+    titleTemplate: '%s | START.CODE',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Fähigkeiten zählen, keine Zeugnisse! Erlerne die Werkzeuge des 21. Jahrhunderts.' }
+    ]
+  },
   components: {
     Nav,
     NavTrans,

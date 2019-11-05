@@ -62,8 +62,8 @@
         </div>
     </div>
     <footer class="card-footer">
-        <router-link v-bind:to="'/kurs/'+id" class="card-footer-item blue">Weitere Infos</router-link>
-        <router-link v-bind:to="'/kurs/'+id" class="card-footer-item green">Anmeldung</router-link>
+        <router-link :to="{ name: 'kurs', params: { id: id, name: slugTitle(title) }}" class="card-footer-item blue">Weitere Infos</router-link>
+        <router-link :to="'/kurs/'+id" class="card-footer-item green">Anmeldung</router-link>
     </footer>
     </div>
 </template>
@@ -105,6 +105,13 @@ export default {
             // let tag = tags[number]
             // this.tags.splice(number,1)
             return number
+        },
+        slugTitle: function(str){
+            let parts = str.split(' ')
+            let filtered = parts.filter(el => el !== "-")
+            // console.log(filtered)
+            let slug = filtered.join('-')
+            return slug
         }
     },
     mounted() {

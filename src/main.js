@@ -8,8 +8,11 @@ import Chart from 'chart.js';
 import vuescroll from 'vue-scroll'
 import SequentialEntrance from 'vue-sequential-entrance'
 import 'vue-sequential-entrance/vue-sequential-entrance.css'
+import VueMeta from 'vue-meta'
+
 
 // middleware
+Vue.use(VueMeta)
 Vue.use(vuescroll);
 Vue.use(SequentialEntrance)
 Vue.use(VueRouter)

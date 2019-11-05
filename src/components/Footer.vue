@@ -18,14 +18,14 @@
             <div class="navbar-item">
                 <div class="field is-grouped">
                     <p class="control">
-                        <router-link to="">
+                        <router-link to="/kurse">
                             <b-button type="is-primary" icon-left="book-multiple">
                                 Kurse
                             </b-button>
                         </router-link>
                     </p>
                     <p class="control">
-                        <router-link to="">
+                        <router-link to="/kontakt">
                             <b-button type="is-primary" icon-left="contact-mail">
                                 Kontakt
                             </b-button>
