@@ -8,6 +8,7 @@ const port = process.env.PORT || 80;
 const path = require('path');
 const app = express();
 
+app.use(require('prerender-node').set('prerenderToken', 'WJP64Rq1rCml9y2dxirN'));
 app.use(history())
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(serveStatic(path.join(__dirname, 'dist')));
