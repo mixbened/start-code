@@ -79,7 +79,7 @@
         <h3 class="title is-3">Wofür interessierst du dich?</h3>
         <div class="columns">
             <div class="column box-action">
-                <img alt="web development course" src="../assets/img/course1.jpg">
+                <img alt="web development course" src="../assets/img/course2.jpg">
                 <div style="padding: 1em; text-align: center">
                     <h5 class="title is-5">Kurse</h5>
                     <p>Ob Start-Up in Aussicht, eine neue Position oder einfach der Wunsch nach tiefergehendem Verständnis. Coding ist für alle!</p>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="column box-action">
-                <img alt="web development course" src="../assets/img/course1.jpg">
+                <img alt="web development course" src="../assets/img/course3.jpg">
                 <div style="padding: 1em; text-align: center">
                     <h5 class="title is-5">Für Unternehmen</h5>
                     <p>Nicht nur Softwareentwickler profitieren von IT-Skills. Wir schlauen Ihre Mitarbeiten auf um die digitale Welt gemeinsam zu gestalten.</p>
