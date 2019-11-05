@@ -63,7 +63,7 @@
     </div>
     <footer class="card-footer">
         <router-link :to="{ name: 'kurs', params: { id: id, name: slugTitle(title) }}" class="card-footer-item blue">Weitere Infos</router-link>
-        <router-link :to="'/kurs/'+id" class="card-footer-item green">Anmeldung</router-link>
+        <router-link :to="{ name: 'kurs', params: { id: id, name: slugTitle(title) }}" class="card-footer-item green">Anmeldung</router-link>
     </footer>
     </div>
 </template>

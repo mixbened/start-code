@@ -1,13 +1,11 @@
 <template>
     <div class="postCard">
-        <router-link :to="url">
             <div class="postImage" :style="{ 'background-image': 'url(' + picUrl + ')'}"></div>
             <section class="section">
                 <h4 class="title is-4">{{ title }}</h4>
                 <p class="content" v-html="content"></p>
-                <b-button>Zum Artikel</b-button>
+                <router-link :to="{ name: 'blog', params: { id: id, name: slugTitle(title) }}"><b-button>Zum Artikel</b-button></router-link>
             </section>
-        </router-link>
     </div>
 </template>
 
@@ -35,6 +33,13 @@ export default {
             let arr = str.split(' ')
             let slug = arr.join('-')
             // console.log('Slug', slug)
+            return slug
+        },
+        slugTitle: function(str){
+            let parts = str.split(' ')
+            let filtered = parts.filter(el => el !== "-")
+            // console.log(filtered)
+            let slug = filtered.join('-')
             return slug
         }
     },

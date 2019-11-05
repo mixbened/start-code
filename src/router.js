@@ -28,7 +28,7 @@ const routes = [
     { path: '/code-in-one-day', component: CIOD },
     { path: '/coaching', component: Coaching },
     { path: '/blog', component: Blog },
-    { path: '/blog/:id/:title', component: Article },
+    { path: '/blog/:id/:title', component: Article, name: 'blog' },
     { path: '/partner', component: Partner },
     { path: '/cont', component: Contributions },
     { path: '/data-privacy', component: Data },
