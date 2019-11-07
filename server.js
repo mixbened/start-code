@@ -13,7 +13,7 @@ app.use(history())
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.get('/sitemap.xml', (req, res) => {
     res.set('Content-Type', 'application/xml');
-    res.sendFile('sitemap.xml')
+    res.sendFile('./sitemap.xml')
 })
 app.use(serveStatic(path.join(__dirname, 'dist')));
 
