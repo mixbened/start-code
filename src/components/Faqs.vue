@@ -24,6 +24,18 @@ import Banner from './Banner'
 
 export default {
   name: 'Courses',
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'de',
+      amp: undefined
+    },
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Häufig gestellte Fragen',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Hast du Fragen zu START.CODE? Hier beantworten wir dir alle Fragen rund um die Kurse und Workshops, sowie den Unternehmenskooperationen. ' }
+    ]
+  },
   components: {
     Question,
     Title,

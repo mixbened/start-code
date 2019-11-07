@@ -17,6 +17,18 @@ import axios from 'axios'
 
 export default {
   name: 'Blog',
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'de',
+      amp: undefined
+    },
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Wissen und Erfolgsgeschichten rund um’s Programmieren lernen',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Erfahre alles über das Programmieren lernen, die Erfahrungen von unseren Kursteilnehmern und spannende Erfolgsgeschichten auf unserem START.CODE Blog!' }
+    ]
+  },
   components: {
       Title,
       ArticleCard

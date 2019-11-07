@@ -91,6 +91,19 @@ import Banner from './Banner.vue'
 
 export default {
   name: 'CIOD',
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'de',
+      amp: undefined
+    },
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'CODE.INONEDAY - Programmieren kennen lernen',
+    titleTemplate: '%s',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Programmieren lernen in einem Tag - Beim Tagesformat CODE.INONEDAY wird den Teilnehmern theoretisches Wissen zur Softwareentwicklung vermittelt, als auch Methoden zur Umsetzung von digitalen Lösungen nähergebracht.' }
+    ]
+  },
   components: {
       Banner
   },

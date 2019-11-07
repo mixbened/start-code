@@ -69,6 +69,18 @@ import Banner from './Banner.vue'
 
 export default {
   name: 'Partner',
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'de',
+      amp: undefined
+    },
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Partner',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Lerne unsere Partnerunternehmen kennen - START.CODE unterstützt Unternehmen bei der Umsetzung von digitaler Weiterbildung. Erfahre mehr zu unseren Kooperationen!' }
+    ]
+  },
   components: {
       Title,
       Banner

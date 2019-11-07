@@ -4,7 +4,7 @@
             <div class="hero-body">
                 <div class="container header-line">
                     <h2 style="color: white; font-size: 4em;" class="title is-2 has-text-centered">
-                        Inhouse Kurse
+                        Digitale Weiterbildung
                     </h2>
                     <h2 style="color: white;" class="subtitle has-text-centered">
                         Jetzt Team in digitalen Skills schulen
@@ -111,6 +111,23 @@ import chartData from '../resources/chart-data.js'
 
 export default {
   name: 'Products',
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'de',
+      amp: undefined
+    },
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Digitale Weiterbildung im Unternehmen',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Ein interdisziplinäres Grundverständnis für digitaltechnische Themen im Unternehmen, verhilft zu einem langfristig digitalen Denkansatz. Bilden Sie ihre Teams in der Programmierung und digitalen Fähigkeiten weiter, ohne den Ansatz einer klassischen Weiterbildung zu verfolgen.' }
+    ]
+  },
+  components: {
+    CourseCard,
+    Title,
+    Banner
+  },
   components: {
       CIOD,
       Title,

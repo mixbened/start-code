@@ -31,12 +31,12 @@ export default {
       amp: undefined
     },
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'Digitale Skills für jeden',
+    title: 'Programmieren lernen für Beginner',
     // all titles will be injected into this template
     titleTemplate: '%s | START.CODE',
     meta: [
       { charset: 'utf-8' },
-      { name: 'description', content: 'Fähigkeiten zählen, keine Zeugnisse! Erlerne die Werkzeuge des 21. Jahrhunderts.' }
+      { name: 'description', content: 'Programmieren lernen für Beginner in Köln - Keine klassische IT-Schulung, bei der Vokabeln und Fachbegriffe gepaukt werden. Wir machen Programmieren für jeden greifbar!' }
     ]
   },
   components: {

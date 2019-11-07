@@ -94,6 +94,19 @@ import Banner from './Banner.vue'
 
 export default {
   name: 'Coaching',
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'de',
+      amp: undefined
+    },
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Expert Sessions - Web Development | App Development | Data Analytics',
+    titleTemplate: '%s',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Manchmal sind Projekte anspruchsvoll und erfordern erweiterte digitale Kenntnisse. Hier unterstützen wir mit unserem Fachwissen und bringen ihr Projekt mit unseren Experts auf den richtigen Kurs.' }
+    ]
+  },
   components: {
       Banner
   },

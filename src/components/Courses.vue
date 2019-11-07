@@ -66,6 +66,18 @@ import axios from 'axios'
 
 export default {
   name: 'Courses',
+  metaInfo: {
+    htmlAttrs: {
+      lang: 'de',
+      amp: undefined
+    },
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'App & Web Development, Data Analytics',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Bei START.CODE kannst du alles rund um die Themen Web Development, App Development und Data Analytics lernen - praktisch und konkret! Unsere Kurse sind für Anfänger ausgelegt und verhelfen dir zu deinem digitalen Skillset.' }
+    ]
+  },
   components: {
     CourseCard,
     Title,
