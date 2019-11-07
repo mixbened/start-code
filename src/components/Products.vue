@@ -124,7 +124,6 @@ export default {
     ]
   },
   components: {
-    CourseCard,
     Title,
     Banner
   },
