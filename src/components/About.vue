@@ -4,25 +4,72 @@
         <Title title="Team & Vision" subtitle="Wer wir sind und was wir tun"/>
       </section>
       <section class="section">
-        <div class="container columns ">
-          <div class="column is-half">
-            <h3 class="title is-3">Team</h3>
-            <p>Lorem Ipsum dolor sit amet</p>
-          </div>
-          <div class="column is-half">
+        <div class="container">
+          <h3 class="title is-3 has-text-left">Das Team</h3>
+          <div class="columns section">
+            <div class="is-one-third column is-vcentered has-text-centered">
+              <div class="card-image">
+                <figure class="image is-128x128">
+                  <img src="../assets/img/profile-1.jpeg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content has-text-centered">
+                    <p class="title is-4">Dr. Lorenz Gräf</p>
+                    <p class="subtitle is-6">Geschäftsführer</p>
+                  </div>
+                </div>
+                <div class="content cite">
+                  
+                </div>
+                <router-link to="/kurse">Mehr dazu</router-link>
+              </div>
+            </div>
+            <div class="is-one-third column is-vcentered has-text-centered">
+              <div class="card-image">
+                <figure class="image is-128x128">
+                  <img src="../assets/img/profile-2.jpeg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content has-text-centered">
+                    <p class="title is-4">Christine Schlütz</p>
+                    <p class="subtitle is-6">Operations & Marketing Manager</p>
+                  </div>
+                </div>
+                <div class="content cite">
+                  
+                </div>
+                <router-link to="/kurse">Mehr dazu</router-link>
+              </div>
+            </div>
+            <div class="is-one-third column is-vcentered has-text-centered">
+              <div class="card-image">
+                <figure class="image is-128x128">
+                  <img src="../assets/img/profile-3.jpeg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content has-text-centered">
+                    <p class="title is-4">Benedikt Mix</p>
+                    <p class="subtitle is-6">Head Instructor</p>
+                  </div>
+                </div>
+                <div class="content cite">
+                </div>
+                <router-link to="/kurse">LinkedIn</router-link>
+              </div>
+            </div>
           </div>
         </div>
-        <b-button class="is-warning">Offene Positionen</b-button>
       </section>
       <section class="section">
-        <div class="container columns">
-          <div class="column">
-            <h3 class="title is-3">Motivation</h3>
-            <p>Wieso wir START.CODE sind</p>
-          </div>
-          <div class="column has-text-centered">
-            <img src="https://img.icons8.com/color/96/000000/school-building.png" width="96">
-          </div>
+        <div class="container">
+          <h3 class="title is-3 has-text-left">Unsere Vision</h3>
+          
         </div>
       </section>
     </section>
@@ -43,5 +90,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+figure.image {
+  margin: auto;
+  border-radius: 100%
+}
+figure.image > img {
+    border-radius: 100%
+}
+.is-one-quarter.card {
+  margin: 0 auto;
+}
 </style>

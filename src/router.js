@@ -21,7 +21,7 @@ import Article from './components/Article'
 const routes = [
     { path: '/kurse', component: Courses },
     { path: '/kontakt', component: Contact },
-    { path: '/über-uns', component: About },
+    { path: '/ueber-uns', component: About },
     { path: '/faqs', component: Faqs },
     { path: '/kurs/:id/:name', component: Course, name: 'kurs' },
     { path: '/fuer-unternehmen', component: Products },

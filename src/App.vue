@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style>
+.px-5 {
+  padding: 0 5em 0 5em;
+}
 .mt-5 {
   margin-top: 5em;
 }
