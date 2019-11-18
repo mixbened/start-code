@@ -10,7 +10,7 @@
             <div class="is-one-third column is-vcentered has-text-centered">
               <div class="card-image">
                 <figure class="image is-128x128">
-                  <img src="../assets/img/profile-1.jpeg" alt="Placeholder image">
+                  <img src="../assets/img/lorenz-graef.jpg" alt="Placeholder image">
                 </figure>
               </div>
               <div class="card-content">
@@ -23,13 +23,13 @@
                 <div class="content cite">
                   
                 </div>
-                <router-link to="/kurse">Mehr dazu</router-link>
+                <router-link to="/kurse">LinkedIn</router-link>
               </div>
             </div>
             <div class="is-one-third column is-vcentered has-text-centered">
               <div class="card-image">
                 <figure class="image is-128x128">
-                  <img src="../assets/img/profile-2.jpeg" alt="Placeholder image">
+                  <img src="../assets/img/christine-schluetz.jpg" alt="Placeholder image">
                 </figure>
               </div>
               <div class="card-content">
@@ -42,13 +42,13 @@
                 <div class="content cite">
                   
                 </div>
-                <router-link to="/kurse">Mehr dazu</router-link>
+                <router-link to="/kurse">LinkedIn</router-link>
               </div>
             </div>
             <div class="is-one-third column is-vcentered has-text-centered">
               <div class="card-image">
                 <figure class="image is-128x128">
-                  <img src="../assets/img/profile-3.jpeg" alt="Placeholder image">
+                  <img src="../assets/img/benedikt-mix.jpg" alt="Placeholder image" >
                 </figure>
               </div>
               <div class="card-content">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="content cite">
                 </div>
-                <router-link to="/kurse">LinkedIn</router-link>
+                <a target="_blank" href="https://www.linkedin.com/in/benedikt-mix-83329111b/">LinkedIn</a>
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="title is-3 has-text-left">Unsere Vision</h3>
+          <!-- <h3 class="title is-3 has-text-left">Unsere Vision</h3> -->
           
         </div>
       </section>
